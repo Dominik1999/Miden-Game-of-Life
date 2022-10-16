@@ -1,0 +1,15003 @@
+# GAME OF LIFE - and we can prove it
+
+
+# Rules:
+
+# 1. Any live cell with two or three live neighbours survives.
+
+# 2. Any dead cell with three live neighbours becomes a live cell.
+
+# 3. All other live cells die in the next generation. Similarly, all other dead cells stay dead.
+
+
+
+# We store the initial configuration
+proc.storecellsn.256
+   loc_store.0 drop
+   loc_store.1 drop
+   loc_store.2 drop
+   loc_store.3 drop
+   loc_store.4 drop
+   loc_store.5 drop
+   loc_store.6 drop
+   loc_store.7 drop
+   loc_store.8 drop
+   loc_store.9 drop
+   loc_store.10 drop
+   loc_store.11 drop
+   loc_store.12 drop
+   loc_store.13 drop
+   loc_store.14 drop
+   loc_store.15 drop
+   loc_store.16 drop
+   loc_store.17 drop
+   loc_store.18 drop
+   loc_store.19 drop
+   loc_store.20 drop
+   loc_store.21 drop
+   loc_store.22 drop
+   loc_store.23 drop
+   loc_store.24 drop
+   loc_store.25 drop
+   loc_store.26 drop
+   loc_store.27 drop
+   loc_store.28 drop
+   loc_store.29 drop
+   loc_store.30 drop
+   loc_store.31 drop
+   loc_store.32 drop
+   loc_store.33 drop
+   loc_store.34 drop
+   loc_store.35 drop
+   loc_store.36 drop
+   loc_store.37 drop
+   loc_store.38 drop
+   loc_store.39 drop
+   loc_store.40 drop
+   loc_store.41 drop
+   loc_store.42 drop
+   loc_store.43 drop
+   loc_store.44 drop
+   loc_store.45 drop
+   loc_store.46 drop
+   loc_store.47 drop
+   loc_store.48 drop
+   loc_store.49 drop
+   loc_store.50 drop
+   loc_store.51 drop
+   loc_store.52 drop
+   loc_store.53 drop
+   loc_store.54 drop
+   loc_store.55 drop
+   loc_store.56 drop
+   loc_store.57 drop
+   loc_store.58 drop
+   loc_store.59 drop
+   loc_store.60 drop
+   loc_store.61 drop
+   loc_store.62 drop
+   loc_store.63 drop
+   loc_store.64 drop
+   loc_store.65 drop
+   loc_store.66 drop
+   loc_store.67 drop
+   loc_store.68 drop
+   loc_store.69 drop
+   loc_store.70 drop
+   loc_store.71 drop
+   loc_store.72 drop
+   loc_store.73 drop
+   loc_store.74 drop
+   loc_store.75 drop
+   loc_store.76 drop
+   loc_store.77 drop
+   loc_store.78 drop
+   loc_store.79 drop
+   loc_store.80 drop
+   loc_store.81 drop
+   loc_store.82 drop
+   loc_store.83 drop
+   loc_store.84 drop
+   loc_store.85 drop
+   loc_store.86 drop
+   loc_store.87 drop
+   loc_store.88 drop
+   loc_store.89 drop
+   loc_store.90 drop
+   loc_store.91 drop
+   loc_store.92 drop
+   loc_store.93 drop
+   loc_store.94 drop
+   loc_store.95 drop
+   loc_store.96 drop
+   loc_store.97 drop
+   loc_store.98 drop
+   loc_store.99 drop
+   loc_store.100 drop
+   loc_store.101 drop
+   loc_store.102 drop
+   loc_store.103 drop
+   loc_store.104 drop
+   loc_store.105 drop
+   loc_store.106 drop
+   loc_store.107 drop
+   loc_store.108 drop
+   loc_store.109 drop
+   loc_store.110 drop
+   loc_store.111 drop
+   loc_store.112 drop
+   loc_store.113 drop
+   loc_store.114 drop
+   loc_store.115 drop
+   loc_store.116 drop
+   loc_store.117 drop
+   loc_store.118 drop
+   loc_store.119 drop
+   loc_store.120 drop
+   loc_store.121 drop
+   loc_store.122 drop
+   loc_store.123 drop
+   loc_store.124 drop
+   loc_store.125 drop
+   loc_store.126 drop
+   loc_store.127 drop
+   loc_store.128 drop
+   loc_store.129 drop
+   loc_store.130 drop
+   loc_store.131 drop
+   loc_store.132 drop
+   loc_store.133 drop
+   loc_store.134 drop
+   loc_store.135 drop
+   loc_store.136 drop
+   loc_store.137 drop
+   loc_store.138 drop
+   loc_store.139 drop
+   loc_store.140 drop
+   loc_store.141 drop
+   loc_store.142 drop
+   loc_store.143 drop
+   loc_store.144 drop
+   loc_store.145 drop
+   loc_store.146 drop
+   loc_store.147 drop
+   loc_store.148 drop
+   loc_store.149 drop
+   loc_store.150 drop
+   loc_store.151 drop
+   loc_store.152 drop
+   loc_store.153 drop
+   loc_store.154 drop
+   loc_store.155 drop
+   loc_store.156 drop
+   loc_store.157 drop
+   loc_store.158 drop
+   loc_store.159 drop
+   loc_store.160 drop
+   loc_store.161 drop
+   loc_store.162 drop
+   loc_store.163 drop
+   loc_store.164 drop
+   loc_store.165 drop
+   loc_store.166 drop
+   loc_store.167 drop
+   loc_store.168 drop
+   loc_store.169 drop
+   loc_store.170 drop
+   loc_store.171 drop
+   loc_store.172 drop
+   loc_store.173 drop
+   loc_store.174 drop
+   loc_store.175 drop
+   loc_store.176 drop
+   loc_store.177 drop
+   loc_store.178 drop
+   loc_store.179 drop
+   loc_store.180 drop
+   loc_store.181 drop
+   loc_store.182 drop
+   loc_store.183 drop
+   loc_store.184 drop
+   loc_store.185 drop
+   loc_store.186 drop
+   loc_store.187 drop
+   loc_store.188 drop
+   loc_store.189 drop
+   loc_store.190 drop
+   loc_store.191 drop
+   loc_store.192 drop
+   loc_store.193 drop
+   loc_store.194 drop
+   loc_store.195 drop
+   loc_store.196 drop
+   loc_store.197 drop
+   loc_store.198 drop
+   loc_store.199 drop
+   loc_store.200 drop
+   loc_store.201 drop
+   loc_store.202 drop
+   loc_store.203 drop
+   loc_store.204 drop
+   loc_store.205 drop
+   loc_store.206 drop
+   loc_store.207 drop
+   loc_store.208 drop
+   loc_store.209 drop
+   loc_store.210 drop
+   loc_store.211 drop
+   loc_store.212 drop
+   loc_store.213 drop
+   loc_store.214 drop
+   loc_store.215 drop
+   loc_store.216 drop
+   loc_store.217 drop
+   loc_store.218 drop
+   loc_store.219 drop
+   loc_store.220 drop
+   loc_store.221 drop
+   loc_store.222 drop
+   loc_store.223 drop
+   loc_store.224 drop
+   loc_store.225 drop
+   loc_store.226 drop
+   loc_store.227 drop
+   loc_store.228 drop
+   loc_store.229 drop
+   loc_store.230 drop
+   loc_store.231 drop
+   loc_store.232 drop
+   loc_store.233 drop
+   loc_store.234 drop
+   loc_store.235 drop
+   loc_store.236 drop
+   loc_store.237 drop
+   loc_store.238 drop
+   loc_store.239 drop
+   loc_store.240 drop
+   loc_store.241 drop
+   loc_store.242 drop
+   loc_store.243 drop
+   loc_store.244 drop
+   loc_store.245 drop
+   loc_store.246 drop
+   loc_store.247 drop
+   loc_store.248 drop
+   loc_store.249 drop
+   loc_store.250 drop
+   loc_store.251 drop
+   loc_store.252 drop
+   loc_store.253 drop
+   loc_store.254 drop
+   loc_store.255 drop
+end
+
+
+# We load the final configuration after each step
+proc.loadcellsnplus1.512
+   loc_load.256
+   loc_load.257
+   loc_load.258
+   loc_load.259
+   loc_load.260
+   loc_load.261
+   loc_load.262
+   loc_load.263
+   loc_load.264
+   loc_load.265
+   loc_load.266
+   loc_load.267
+   loc_load.268
+   loc_load.269
+   loc_load.270
+   loc_load.271
+   loc_load.272
+   loc_load.273
+   loc_load.274
+   loc_load.275
+   loc_load.276
+   loc_load.277
+   loc_load.278
+   loc_load.279
+   loc_load.280
+   loc_load.281
+   loc_load.282
+   loc_load.283
+   loc_load.284
+   loc_load.285
+   loc_load.286
+   loc_load.287
+   loc_load.288
+   loc_load.289
+   loc_load.290
+   loc_load.291
+   loc_load.292
+   loc_load.293
+   loc_load.294
+   loc_load.295
+   loc_load.296
+   loc_load.297
+   loc_load.298
+   loc_load.299
+   loc_load.300
+   loc_load.301
+   loc_load.302
+   loc_load.303
+   loc_load.304
+   loc_load.305
+   loc_load.306
+   loc_load.307
+   loc_load.308
+   loc_load.309
+   loc_load.310
+   loc_load.311
+   loc_load.312
+   loc_load.313
+   loc_load.314
+   loc_load.315
+   loc_load.316
+   loc_load.317
+   loc_load.318
+   loc_load.319
+   loc_load.320
+   loc_load.321
+   loc_load.322
+   loc_load.323
+   loc_load.324
+   loc_load.325
+   loc_load.326
+   loc_load.327
+   loc_load.328
+   loc_load.329
+   loc_load.330
+   loc_load.331
+   loc_load.332
+   loc_load.333
+   loc_load.334
+   loc_load.335
+   loc_load.336
+   loc_load.337
+   loc_load.338
+   loc_load.339
+   loc_load.340
+   loc_load.341
+   loc_load.342
+   loc_load.343
+   loc_load.344
+   loc_load.345
+   loc_load.346
+   loc_load.347
+   loc_load.348
+   loc_load.349
+   loc_load.350
+   loc_load.351
+   loc_load.352
+   loc_load.353
+   loc_load.354
+   loc_load.355
+   loc_load.356
+   loc_load.357
+   loc_load.358
+   loc_load.359
+   loc_load.360
+   loc_load.361
+   loc_load.362
+   loc_load.363
+   loc_load.364
+   loc_load.365
+   loc_load.366
+   loc_load.367
+   loc_load.368
+   loc_load.369
+   loc_load.370
+   loc_load.371
+   loc_load.372
+   loc_load.373
+   loc_load.374
+   loc_load.375
+   loc_load.376
+   loc_load.377
+   loc_load.378
+   loc_load.379
+   loc_load.380
+   loc_load.381
+   loc_load.382
+   loc_load.383
+   loc_load.384
+   loc_load.385
+   loc_load.386
+   loc_load.387
+   loc_load.388
+   loc_load.389
+   loc_load.390
+   loc_load.391
+   loc_load.392
+   loc_load.393
+   loc_load.394
+   loc_load.395
+   loc_load.396
+   loc_load.397
+   loc_load.398
+   loc_load.399
+   loc_load.400
+   loc_load.401
+   loc_load.402
+   loc_load.403
+   loc_load.404
+   loc_load.405
+   loc_load.406
+   loc_load.407
+   loc_load.408
+   loc_load.409
+   loc_load.410
+   loc_load.411
+   loc_load.412
+   loc_load.413
+   loc_load.414
+   loc_load.415
+   loc_load.416
+   loc_load.417
+   loc_load.418
+   loc_load.419
+   loc_load.420
+   loc_load.421
+   loc_load.422
+   loc_load.423
+   loc_load.424
+   loc_load.425
+   loc_load.426
+   loc_load.427
+   loc_load.428
+   loc_load.429
+   loc_load.430
+   loc_load.431
+   loc_load.432
+   loc_load.433
+   loc_load.434
+   loc_load.435
+   loc_load.436
+   loc_load.437
+   loc_load.438
+   loc_load.439
+   loc_load.440
+   loc_load.441
+   loc_load.442
+   loc_load.443
+   loc_load.444
+   loc_load.445
+   loc_load.446
+   loc_load.447
+   loc_load.448
+   loc_load.449
+   loc_load.450
+   loc_load.451
+   loc_load.452
+   loc_load.453
+   loc_load.454
+   loc_load.455
+   loc_load.456
+   loc_load.457
+   loc_load.458
+   loc_load.459
+   loc_load.460
+   loc_load.461
+   loc_load.462
+   loc_load.463
+   loc_load.464
+   loc_load.465
+   loc_load.466
+   loc_load.467
+   loc_load.468
+   loc_load.469
+   loc_load.470
+   loc_load.471
+   loc_load.472
+   loc_load.473
+   loc_load.474
+   loc_load.475
+   loc_load.476
+   loc_load.477
+   loc_load.478
+   loc_load.479
+   loc_load.480
+   loc_load.481
+   loc_load.482
+   loc_load.483
+   loc_load.484
+   loc_load.485
+   loc_load.486
+   loc_load.487
+   loc_load.488
+   loc_load.489
+   loc_load.490
+   loc_load.491
+   loc_load.492
+   loc_load.493
+   loc_load.494
+   loc_load.495
+   loc_load.496
+   loc_load.497
+   loc_load.498
+   loc_load.499
+   loc_load.500
+   loc_load.501
+   loc_load.502
+   loc_load.503
+   loc_load.504
+   loc_load.505
+   loc_load.506
+   loc_load.507
+   loc_load.508
+   loc_load.509
+   loc_load.510
+   loc_load.511
+end
+
+# We clean the stack
+proc.clearstack
+   repeat.256
+       drop
+   end
+end
+
+
+# State transition for cell 0
+proc.cell_0_transition.512
+   push.0
+   loc_store.256 drop
+
+   loc_load.1
+   loc_load.16
+   loc_load.17
+
+   loc_load.0
+
+   if.true
+      repeat.7
+         add
+      end
+
+      dup
+
+      push.2
+      eq
+
+      if.true
+         push.1
+         loc_store.256 drop
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.256 drop
+      end
+
+   else
+
+      repeat.7
+         add
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.256 drop
+      end
+   end
+end
+
+
+# State transition for cell 1
+proc.cell_1_transition.513
+   push.0
+   loc_store.257 drop
+
+   loc_load.0
+   loc_load.2
+   loc_load.16
+   loc_load.17
+   loc_load.18
+
+   loc_load.1
+
+   if.true
+      repeat.7
+         add
+      end
+
+      dup
+
+      push.2
+      eq
+
+      if.true
+         push.1
+         loc_store.257 drop
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.257 drop
+      end
+
+   else
+
+      repeat.7
+         add
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.257 drop
+      end
+   end
+end
+
+
+# State transition for cell 2
+proc.cell_2_transition.514
+   push.0
+   loc_store.258 drop
+
+   loc_load.1
+   loc_load.3
+   loc_load.17
+   loc_load.18
+   loc_load.19
+
+   loc_load.2
+
+   if.true
+      repeat.7
+         add
+      end
+
+      dup
+
+      push.2
+      eq
+
+      if.true
+         push.1
+         loc_store.258 drop
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.258 drop
+      end
+
+   else
+
+      repeat.7
+         add
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.258 drop
+      end
+   end
+end
+
+
+# State transition for cell 3
+proc.cell_3_transition.515
+   push.0
+   loc_store.259 drop
+
+   loc_load.2
+   loc_load.4
+   loc_load.18
+   loc_load.19
+   loc_load.20
+
+   loc_load.3
+
+   if.true
+      repeat.7
+         add
+      end
+
+      dup
+
+      push.2
+      eq
+
+      if.true
+         push.1
+         loc_store.259 drop
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.259 drop
+      end
+
+   else
+
+      repeat.7
+         add
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.259 drop
+      end
+   end
+end
+
+
+# State transition for cell 4
+proc.cell_4_transition.516
+   push.0
+   loc_store.260 drop
+
+   loc_load.3
+   loc_load.5
+   loc_load.19
+   loc_load.20
+   loc_load.21
+
+   loc_load.4
+
+   if.true
+      repeat.7
+         add
+      end
+
+      dup
+
+      push.2
+      eq
+
+      if.true
+         push.1
+         loc_store.260 drop
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.260 drop
+      end
+
+   else
+
+      repeat.7
+         add
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.260 drop
+      end
+   end
+end
+
+
+# State transition for cell 5
+proc.cell_5_transition.517
+   push.0
+   loc_store.261 drop
+
+   loc_load.4
+   loc_load.6
+   loc_load.20
+   loc_load.21
+   loc_load.22
+
+   loc_load.5
+
+   if.true
+      repeat.7
+         add
+      end
+
+      dup
+
+      push.2
+      eq
+
+      if.true
+         push.1
+         loc_store.261 drop
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.261 drop
+      end
+
+   else
+
+      repeat.7
+         add
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.261 drop
+      end
+   end
+end
+
+
+# State transition for cell 6
+proc.cell_6_transition.518
+   push.0
+   loc_store.262 drop
+
+   loc_load.5
+   loc_load.7
+   loc_load.21
+   loc_load.22
+   loc_load.23
+
+   loc_load.6
+
+   if.true
+      repeat.7
+         add
+      end
+
+      dup
+
+      push.2
+      eq
+
+      if.true
+         push.1
+         loc_store.262 drop
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.262 drop
+      end
+
+   else
+
+      repeat.7
+         add
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.262 drop
+      end
+   end
+end
+
+
+# State transition for cell 7
+proc.cell_7_transition.519
+   push.0
+   loc_store.263 drop
+
+   loc_load.6
+   loc_load.8
+   loc_load.22
+   loc_load.23
+   loc_load.24
+
+   loc_load.7
+
+   if.true
+      repeat.7
+         add
+      end
+
+      dup
+
+      push.2
+      eq
+
+      if.true
+         push.1
+         loc_store.263 drop
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.263 drop
+      end
+
+   else
+
+      repeat.7
+         add
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.263 drop
+      end
+   end
+end
+
+
+# State transition for cell 8
+proc.cell_8_transition.520
+   push.0
+   loc_store.264 drop
+
+   loc_load.7
+   loc_load.9
+   loc_load.23
+   loc_load.24
+   loc_load.25
+
+   loc_load.8
+
+   if.true
+      repeat.7
+         add
+      end
+
+      dup
+
+      push.2
+      eq
+
+      if.true
+         push.1
+         loc_store.264 drop
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.264 drop
+      end
+
+   else
+
+      repeat.7
+         add
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.264 drop
+      end
+   end
+end
+
+
+# State transition for cell 9
+proc.cell_9_transition.521
+   push.0
+   loc_store.265 drop
+
+   loc_load.8
+   loc_load.10
+   loc_load.24
+   loc_load.25
+   loc_load.26
+
+   loc_load.9
+
+   if.true
+      repeat.7
+         add
+      end
+
+      dup
+
+      push.2
+      eq
+
+      if.true
+         push.1
+         loc_store.265 drop
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.265 drop
+      end
+
+   else
+
+      repeat.7
+         add
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.265 drop
+      end
+   end
+end
+
+
+# State transition for cell 10
+proc.cell_10_transition.522
+   push.0
+   loc_store.266 drop
+
+   loc_load.9
+   loc_load.11
+   loc_load.25
+   loc_load.26
+   loc_load.27
+
+   loc_load.10
+
+   if.true
+      repeat.7
+         add
+      end
+
+      dup
+
+      push.2
+      eq
+
+      if.true
+         push.1
+         loc_store.266 drop
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.266 drop
+      end
+
+   else
+
+      repeat.7
+         add
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.266 drop
+      end
+   end
+end
+
+
+# State transition for cell 11
+proc.cell_11_transition.523
+   push.0
+   loc_store.267 drop
+
+   loc_load.10
+   loc_load.12
+   loc_load.26
+   loc_load.27
+   loc_load.28
+
+   loc_load.11
+
+   if.true
+      repeat.7
+         add
+      end
+
+      dup
+
+      push.2
+      eq
+
+      if.true
+         push.1
+         loc_store.267 drop
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.267 drop
+      end
+
+   else
+
+      repeat.7
+         add
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.267 drop
+      end
+   end
+end
+
+
+# State transition for cell 12
+proc.cell_12_transition.524
+   push.0
+   loc_store.268 drop
+
+   loc_load.11
+   loc_load.13
+   loc_load.27
+   loc_load.28
+   loc_load.29
+
+   loc_load.12
+
+   if.true
+      repeat.7
+         add
+      end
+
+      dup
+
+      push.2
+      eq
+
+      if.true
+         push.1
+         loc_store.268 drop
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.268 drop
+      end
+
+   else
+
+      repeat.7
+         add
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.268 drop
+      end
+   end
+end
+
+
+# State transition for cell 13
+proc.cell_13_transition.525
+   push.0
+   loc_store.269 drop
+
+   loc_load.12
+   loc_load.14
+   loc_load.28
+   loc_load.29
+   loc_load.30
+
+   loc_load.13
+
+   if.true
+      repeat.7
+         add
+      end
+
+      dup
+
+      push.2
+      eq
+
+      if.true
+         push.1
+         loc_store.269 drop
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.269 drop
+      end
+
+   else
+
+      repeat.7
+         add
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.269 drop
+      end
+   end
+end
+
+
+# State transition for cell 14
+proc.cell_14_transition.526
+   push.0
+   loc_store.270 drop
+
+   loc_load.13
+   loc_load.15
+   loc_load.29
+   loc_load.30
+   loc_load.31
+
+   loc_load.14
+
+   if.true
+      repeat.7
+         add
+      end
+
+      dup
+
+      push.2
+      eq
+
+      if.true
+         push.1
+         loc_store.270 drop
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.270 drop
+      end
+
+   else
+
+      repeat.7
+         add
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.270 drop
+      end
+   end
+end
+
+
+# State transition for cell 15
+proc.cell_15_transition.527
+   push.0
+   loc_store.271 drop
+
+   loc_load.14
+   loc_load.30
+   loc_load.31
+
+   loc_load.15
+
+   if.true
+      repeat.7
+         add
+      end
+
+      dup
+
+      push.2
+      eq
+
+      if.true
+         push.1
+         loc_store.271 drop
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.271 drop
+      end
+
+   else
+
+      repeat.7
+         add
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.271 drop
+      end
+   end
+end
+
+
+# State transition for cell 16
+proc.cell_16_transition.528
+   push.0
+   loc_store.272 drop
+
+   loc_load.0
+   loc_load.1
+   loc_load.17
+   loc_load.32
+   loc_load.33
+
+   loc_load.16
+
+   if.true
+      repeat.7
+         add
+      end
+
+      dup
+
+      push.2
+      eq
+
+      if.true
+         push.1
+         loc_store.272 drop
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.272 drop
+      end
+
+   else
+
+      repeat.7
+         add
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.272 drop
+      end
+   end
+end
+
+
+# State transition for cell 17
+proc.cell_17_transition.529
+   push.0
+   loc_store.273 drop
+
+   loc_load.0
+   loc_load.1
+   loc_load.2
+   loc_load.16
+   loc_load.18
+   loc_load.32
+   loc_load.33
+   loc_load.34
+
+   loc_load.17
+
+   if.true
+      repeat.7
+         add
+      end
+
+      dup
+
+      push.2
+      eq
+
+      if.true
+         push.1
+         loc_store.273 drop
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.273 drop
+      end
+
+   else
+
+      repeat.7
+         add
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.273 drop
+      end
+   end
+end
+
+
+# State transition for cell 18
+proc.cell_18_transition.530
+   push.0
+   loc_store.274 drop
+
+   loc_load.1
+   loc_load.2
+   loc_load.3
+   loc_load.17
+   loc_load.19
+   loc_load.33
+   loc_load.34
+   loc_load.35
+
+   loc_load.18
+
+   if.true
+      repeat.7
+         add
+      end
+
+      dup
+
+      push.2
+      eq
+
+      if.true
+         push.1
+         loc_store.274 drop
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.274 drop
+      end
+
+   else
+
+      repeat.7
+         add
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.274 drop
+      end
+   end
+end
+
+
+# State transition for cell 19
+proc.cell_19_transition.531
+   push.0
+   loc_store.275 drop
+
+   loc_load.2
+   loc_load.3
+   loc_load.4
+   loc_load.18
+   loc_load.20
+   loc_load.34
+   loc_load.35
+   loc_load.36
+
+   loc_load.19
+
+   if.true
+      repeat.7
+         add
+      end
+
+      dup
+
+      push.2
+      eq
+
+      if.true
+         push.1
+         loc_store.275 drop
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.275 drop
+      end
+
+   else
+
+      repeat.7
+         add
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.275 drop
+      end
+   end
+end
+
+
+# State transition for cell 20
+proc.cell_20_transition.532
+   push.0
+   loc_store.276 drop
+
+   loc_load.3
+   loc_load.4
+   loc_load.5
+   loc_load.19
+   loc_load.21
+   loc_load.35
+   loc_load.36
+   loc_load.37
+
+   loc_load.20
+
+   if.true
+      repeat.7
+         add
+      end
+
+      dup
+
+      push.2
+      eq
+
+      if.true
+         push.1
+         loc_store.276 drop
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.276 drop
+      end
+
+   else
+
+      repeat.7
+         add
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.276 drop
+      end
+   end
+end
+
+
+# State transition for cell 21
+proc.cell_21_transition.533
+   push.0
+   loc_store.277 drop
+
+   loc_load.4
+   loc_load.5
+   loc_load.6
+   loc_load.20
+   loc_load.22
+   loc_load.36
+   loc_load.37
+   loc_load.38
+
+   loc_load.21
+
+   if.true
+      repeat.7
+         add
+      end
+
+      dup
+
+      push.2
+      eq
+
+      if.true
+         push.1
+         loc_store.277 drop
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.277 drop
+      end
+
+   else
+
+      repeat.7
+         add
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.277 drop
+      end
+   end
+end
+
+
+# State transition for cell 22
+proc.cell_22_transition.534
+   push.0
+   loc_store.278 drop
+
+   loc_load.5
+   loc_load.6
+   loc_load.7
+   loc_load.21
+   loc_load.23
+   loc_load.37
+   loc_load.38
+   loc_load.39
+
+   loc_load.22
+
+   if.true
+      repeat.7
+         add
+      end
+
+      dup
+
+      push.2
+      eq
+
+      if.true
+         push.1
+         loc_store.278 drop
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.278 drop
+      end
+
+   else
+
+      repeat.7
+         add
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.278 drop
+      end
+   end
+end
+
+
+# State transition for cell 23
+proc.cell_23_transition.535
+   push.0
+   loc_store.279 drop
+
+   loc_load.6
+   loc_load.7
+   loc_load.8
+   loc_load.22
+   loc_load.24
+   loc_load.38
+   loc_load.39
+   loc_load.40
+
+   loc_load.23
+
+   if.true
+      repeat.7
+         add
+      end
+
+      dup
+
+      push.2
+      eq
+
+      if.true
+         push.1
+         loc_store.279 drop
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.279 drop
+      end
+
+   else
+
+      repeat.7
+         add
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.279 drop
+      end
+   end
+end
+
+
+# State transition for cell 24
+proc.cell_24_transition.536
+   push.0
+   loc_store.280 drop
+
+   loc_load.7
+   loc_load.8
+   loc_load.9
+   loc_load.23
+   loc_load.25
+   loc_load.39
+   loc_load.40
+   loc_load.41
+
+   loc_load.24
+
+   if.true
+      repeat.7
+         add
+      end
+
+      dup
+
+      push.2
+      eq
+
+      if.true
+         push.1
+         loc_store.280 drop
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.280 drop
+      end
+
+   else
+
+      repeat.7
+         add
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.280 drop
+      end
+   end
+end
+
+
+# State transition for cell 25
+proc.cell_25_transition.537
+   push.0
+   loc_store.281 drop
+
+   loc_load.8
+   loc_load.9
+   loc_load.10
+   loc_load.24
+   loc_load.26
+   loc_load.40
+   loc_load.41
+   loc_load.42
+
+   loc_load.25
+
+   if.true
+      repeat.7
+         add
+      end
+
+      dup
+
+      push.2
+      eq
+
+      if.true
+         push.1
+         loc_store.281 drop
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.281 drop
+      end
+
+   else
+
+      repeat.7
+         add
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.281 drop
+      end
+   end
+end
+
+
+# State transition for cell 26
+proc.cell_26_transition.538
+   push.0
+   loc_store.282 drop
+
+   loc_load.9
+   loc_load.10
+   loc_load.11
+   loc_load.25
+   loc_load.27
+   loc_load.41
+   loc_load.42
+   loc_load.43
+
+   loc_load.26
+
+   if.true
+      repeat.7
+         add
+      end
+
+      dup
+
+      push.2
+      eq
+
+      if.true
+         push.1
+         loc_store.282 drop
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.282 drop
+      end
+
+   else
+
+      repeat.7
+         add
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.282 drop
+      end
+   end
+end
+
+
+# State transition for cell 27
+proc.cell_27_transition.539
+   push.0
+   loc_store.283 drop
+
+   loc_load.10
+   loc_load.11
+   loc_load.12
+   loc_load.26
+   loc_load.28
+   loc_load.42
+   loc_load.43
+   loc_load.44
+
+   loc_load.27
+
+   if.true
+      repeat.7
+         add
+      end
+
+      dup
+
+      push.2
+      eq
+
+      if.true
+         push.1
+         loc_store.283 drop
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.283 drop
+      end
+
+   else
+
+      repeat.7
+         add
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.283 drop
+      end
+   end
+end
+
+
+# State transition for cell 28
+proc.cell_28_transition.540
+   push.0
+   loc_store.284 drop
+
+   loc_load.11
+   loc_load.12
+   loc_load.13
+   loc_load.27
+   loc_load.29
+   loc_load.43
+   loc_load.44
+   loc_load.45
+
+   loc_load.28
+
+   if.true
+      repeat.7
+         add
+      end
+
+      dup
+
+      push.2
+      eq
+
+      if.true
+         push.1
+         loc_store.284 drop
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.284 drop
+      end
+
+   else
+
+      repeat.7
+         add
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.284 drop
+      end
+   end
+end
+
+
+# State transition for cell 29
+proc.cell_29_transition.541
+   push.0
+   loc_store.285 drop
+
+   loc_load.12
+   loc_load.13
+   loc_load.14
+   loc_load.28
+   loc_load.30
+   loc_load.44
+   loc_load.45
+   loc_load.46
+
+   loc_load.29
+
+   if.true
+      repeat.7
+         add
+      end
+
+      dup
+
+      push.2
+      eq
+
+      if.true
+         push.1
+         loc_store.285 drop
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.285 drop
+      end
+
+   else
+
+      repeat.7
+         add
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.285 drop
+      end
+   end
+end
+
+
+# State transition for cell 30
+proc.cell_30_transition.542
+   push.0
+   loc_store.286 drop
+
+   loc_load.13
+   loc_load.14
+   loc_load.15
+   loc_load.29
+   loc_load.31
+   loc_load.45
+   loc_load.46
+   loc_load.47
+
+   loc_load.30
+
+   if.true
+      repeat.7
+         add
+      end
+
+      dup
+
+      push.2
+      eq
+
+      if.true
+         push.1
+         loc_store.286 drop
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.286 drop
+      end
+
+   else
+
+      repeat.7
+         add
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.286 drop
+      end
+   end
+end
+
+
+# State transition for cell 31
+proc.cell_31_transition.543
+   push.0
+   loc_store.287 drop
+
+   loc_load.14
+   loc_load.15
+   loc_load.30
+   loc_load.46
+   loc_load.47
+
+   loc_load.31
+
+   if.true
+      repeat.7
+         add
+      end
+
+      dup
+
+      push.2
+      eq
+
+      if.true
+         push.1
+         loc_store.287 drop
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.287 drop
+      end
+
+   else
+
+      repeat.7
+         add
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.287 drop
+      end
+   end
+end
+
+
+# State transition for cell 32
+proc.cell_32_transition.544
+   push.0
+   loc_store.288 drop
+
+   loc_load.16
+   loc_load.17
+   loc_load.33
+   loc_load.48
+   loc_load.49
+
+   loc_load.32
+
+   if.true
+      repeat.7
+         add
+      end
+
+      dup
+
+      push.2
+      eq
+
+      if.true
+         push.1
+         loc_store.288 drop
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.288 drop
+      end
+
+   else
+
+      repeat.7
+         add
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.288 drop
+      end
+   end
+end
+
+
+# State transition for cell 33
+proc.cell_33_transition.545
+   push.0
+   loc_store.289 drop
+
+   loc_load.16
+   loc_load.17
+   loc_load.18
+   loc_load.32
+   loc_load.34
+   loc_load.48
+   loc_load.49
+   loc_load.50
+
+   loc_load.33
+
+   if.true
+      repeat.7
+         add
+      end
+
+      dup
+
+      push.2
+      eq
+
+      if.true
+         push.1
+         loc_store.289 drop
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.289 drop
+      end
+
+   else
+
+      repeat.7
+         add
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.289 drop
+      end
+   end
+end
+
+
+# State transition for cell 34
+proc.cell_34_transition.546
+   push.0
+   loc_store.290 drop
+
+   loc_load.17
+   loc_load.18
+   loc_load.19
+   loc_load.33
+   loc_load.35
+   loc_load.49
+   loc_load.50
+   loc_load.51
+
+   loc_load.34
+
+   if.true
+      repeat.7
+         add
+      end
+
+      dup
+
+      push.2
+      eq
+
+      if.true
+         push.1
+         loc_store.290 drop
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.290 drop
+      end
+
+   else
+
+      repeat.7
+         add
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.290 drop
+      end
+   end
+end
+
+
+# State transition for cell 35
+proc.cell_35_transition.547
+   push.0
+   loc_store.291 drop
+
+   loc_load.18
+   loc_load.19
+   loc_load.20
+   loc_load.34
+   loc_load.36
+   loc_load.50
+   loc_load.51
+   loc_load.52
+
+   loc_load.35
+
+   if.true
+      repeat.7
+         add
+      end
+
+      dup
+
+      push.2
+      eq
+
+      if.true
+         push.1
+         loc_store.291 drop
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.291 drop
+      end
+
+   else
+
+      repeat.7
+         add
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.291 drop
+      end
+   end
+end
+
+
+# State transition for cell 36
+proc.cell_36_transition.548
+   push.0
+   loc_store.292 drop
+
+   loc_load.19
+   loc_load.20
+   loc_load.21
+   loc_load.35
+   loc_load.37
+   loc_load.51
+   loc_load.52
+   loc_load.53
+
+   loc_load.36
+
+   if.true
+      repeat.7
+         add
+      end
+
+      dup
+
+      push.2
+      eq
+
+      if.true
+         push.1
+         loc_store.292 drop
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.292 drop
+      end
+
+   else
+
+      repeat.7
+         add
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.292 drop
+      end
+   end
+end
+
+
+# State transition for cell 37
+proc.cell_37_transition.549
+   push.0
+   loc_store.293 drop
+
+   loc_load.20
+   loc_load.21
+   loc_load.22
+   loc_load.36
+   loc_load.38
+   loc_load.52
+   loc_load.53
+   loc_load.54
+
+   loc_load.37
+
+   if.true
+      repeat.7
+         add
+      end
+
+      dup
+
+      push.2
+      eq
+
+      if.true
+         push.1
+         loc_store.293 drop
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.293 drop
+      end
+
+   else
+
+      repeat.7
+         add
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.293 drop
+      end
+   end
+end
+
+
+# State transition for cell 38
+proc.cell_38_transition.550
+   push.0
+   loc_store.294 drop
+
+   loc_load.21
+   loc_load.22
+   loc_load.23
+   loc_load.37
+   loc_load.39
+   loc_load.53
+   loc_load.54
+   loc_load.55
+
+   loc_load.38
+
+   if.true
+      repeat.7
+         add
+      end
+
+      dup
+
+      push.2
+      eq
+
+      if.true
+         push.1
+         loc_store.294 drop
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.294 drop
+      end
+
+   else
+
+      repeat.7
+         add
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.294 drop
+      end
+   end
+end
+
+
+# State transition for cell 39
+proc.cell_39_transition.551
+   push.0
+   loc_store.295 drop
+
+   loc_load.22
+   loc_load.23
+   loc_load.24
+   loc_load.38
+   loc_load.40
+   loc_load.54
+   loc_load.55
+   loc_load.56
+
+   loc_load.39
+
+   if.true
+      repeat.7
+         add
+      end
+
+      dup
+
+      push.2
+      eq
+
+      if.true
+         push.1
+         loc_store.295 drop
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.295 drop
+      end
+
+   else
+
+      repeat.7
+         add
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.295 drop
+      end
+   end
+end
+
+
+# State transition for cell 40
+proc.cell_40_transition.552
+   push.0
+   loc_store.296 drop
+
+   loc_load.23
+   loc_load.24
+   loc_load.25
+   loc_load.39
+   loc_load.41
+   loc_load.55
+   loc_load.56
+   loc_load.57
+
+   loc_load.40
+
+   if.true
+      repeat.7
+         add
+      end
+
+      dup
+
+      push.2
+      eq
+
+      if.true
+         push.1
+         loc_store.296 drop
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.296 drop
+      end
+
+   else
+
+      repeat.7
+         add
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.296 drop
+      end
+   end
+end
+
+
+# State transition for cell 41
+proc.cell_41_transition.553
+   push.0
+   loc_store.297 drop
+
+   loc_load.24
+   loc_load.25
+   loc_load.26
+   loc_load.40
+   loc_load.42
+   loc_load.56
+   loc_load.57
+   loc_load.58
+
+   loc_load.41
+
+   if.true
+      repeat.7
+         add
+      end
+
+      dup
+
+      push.2
+      eq
+
+      if.true
+         push.1
+         loc_store.297 drop
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.297 drop
+      end
+
+   else
+
+      repeat.7
+         add
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.297 drop
+      end
+   end
+end
+
+
+# State transition for cell 42
+proc.cell_42_transition.554
+   push.0
+   loc_store.298 drop
+
+   loc_load.25
+   loc_load.26
+   loc_load.27
+   loc_load.41
+   loc_load.43
+   loc_load.57
+   loc_load.58
+   loc_load.59
+
+   loc_load.42
+
+   if.true
+      repeat.7
+         add
+      end
+
+      dup
+
+      push.2
+      eq
+
+      if.true
+         push.1
+         loc_store.298 drop
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.298 drop
+      end
+
+   else
+
+      repeat.7
+         add
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.298 drop
+      end
+   end
+end
+
+
+# State transition for cell 43
+proc.cell_43_transition.555
+   push.0
+   loc_store.299 drop
+
+   loc_load.26
+   loc_load.27
+   loc_load.28
+   loc_load.42
+   loc_load.44
+   loc_load.58
+   loc_load.59
+   loc_load.60
+
+   loc_load.43
+
+   if.true
+      repeat.7
+         add
+      end
+
+      dup
+
+      push.2
+      eq
+
+      if.true
+         push.1
+         loc_store.299 drop
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.299 drop
+      end
+
+   else
+
+      repeat.7
+         add
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.299 drop
+      end
+   end
+end
+
+
+# State transition for cell 44
+proc.cell_44_transition.556
+   push.0
+   loc_store.300 drop
+
+   loc_load.27
+   loc_load.28
+   loc_load.29
+   loc_load.43
+   loc_load.45
+   loc_load.59
+   loc_load.60
+   loc_load.61
+
+   loc_load.44
+
+   if.true
+      repeat.7
+         add
+      end
+
+      dup
+
+      push.2
+      eq
+
+      if.true
+         push.1
+         loc_store.300 drop
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.300 drop
+      end
+
+   else
+
+      repeat.7
+         add
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.300 drop
+      end
+   end
+end
+
+
+# State transition for cell 45
+proc.cell_45_transition.557
+   push.0
+   loc_store.301 drop
+
+   loc_load.28
+   loc_load.29
+   loc_load.30
+   loc_load.44
+   loc_load.46
+   loc_load.60
+   loc_load.61
+   loc_load.62
+
+   loc_load.45
+
+   if.true
+      repeat.7
+         add
+      end
+
+      dup
+
+      push.2
+      eq
+
+      if.true
+         push.1
+         loc_store.301 drop
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.301 drop
+      end
+
+   else
+
+      repeat.7
+         add
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.301 drop
+      end
+   end
+end
+
+
+# State transition for cell 46
+proc.cell_46_transition.558
+   push.0
+   loc_store.302 drop
+
+   loc_load.29
+   loc_load.30
+   loc_load.31
+   loc_load.45
+   loc_load.47
+   loc_load.61
+   loc_load.62
+   loc_load.63
+
+   loc_load.46
+
+   if.true
+      repeat.7
+         add
+      end
+
+      dup
+
+      push.2
+      eq
+
+      if.true
+         push.1
+         loc_store.302 drop
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.302 drop
+      end
+
+   else
+
+      repeat.7
+         add
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.302 drop
+      end
+   end
+end
+
+
+# State transition for cell 47
+proc.cell_47_transition.559
+   push.0
+   loc_store.303 drop
+
+   loc_load.30
+   loc_load.31
+   loc_load.46
+   loc_load.62
+   loc_load.63
+
+   loc_load.47
+
+   if.true
+      repeat.7
+         add
+      end
+
+      dup
+
+      push.2
+      eq
+
+      if.true
+         push.1
+         loc_store.303 drop
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.303 drop
+      end
+
+   else
+
+      repeat.7
+         add
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.303 drop
+      end
+   end
+end
+
+
+# State transition for cell 48
+proc.cell_48_transition.560
+   push.0
+   loc_store.304 drop
+
+   loc_load.32
+   loc_load.33
+   loc_load.49
+   loc_load.64
+   loc_load.65
+
+   loc_load.48
+
+   if.true
+      repeat.7
+         add
+      end
+
+      dup
+
+      push.2
+      eq
+
+      if.true
+         push.1
+         loc_store.304 drop
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.304 drop
+      end
+
+   else
+
+      repeat.7
+         add
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.304 drop
+      end
+   end
+end
+
+
+# State transition for cell 49
+proc.cell_49_transition.561
+   push.0
+   loc_store.305 drop
+
+   loc_load.32
+   loc_load.33
+   loc_load.34
+   loc_load.48
+   loc_load.50
+   loc_load.64
+   loc_load.65
+   loc_load.66
+
+   loc_load.49
+
+   if.true
+      repeat.7
+         add
+      end
+
+      dup
+
+      push.2
+      eq
+
+      if.true
+         push.1
+         loc_store.305 drop
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.305 drop
+      end
+
+   else
+
+      repeat.7
+         add
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.305 drop
+      end
+   end
+end
+
+
+# State transition for cell 50
+proc.cell_50_transition.562
+   push.0
+   loc_store.306 drop
+
+   loc_load.33
+   loc_load.34
+   loc_load.35
+   loc_load.49
+   loc_load.51
+   loc_load.65
+   loc_load.66
+   loc_load.67
+
+   loc_load.50
+
+   if.true
+      repeat.7
+         add
+      end
+
+      dup
+
+      push.2
+      eq
+
+      if.true
+         push.1
+         loc_store.306 drop
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.306 drop
+      end
+
+   else
+
+      repeat.7
+         add
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.306 drop
+      end
+   end
+end
+
+
+# State transition for cell 51
+proc.cell_51_transition.563
+   push.0
+   loc_store.307 drop
+
+   loc_load.34
+   loc_load.35
+   loc_load.36
+   loc_load.50
+   loc_load.52
+   loc_load.66
+   loc_load.67
+   loc_load.68
+
+   loc_load.51
+
+   if.true
+      repeat.7
+         add
+      end
+
+      dup
+
+      push.2
+      eq
+
+      if.true
+         push.1
+         loc_store.307 drop
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.307 drop
+      end
+
+   else
+
+      repeat.7
+         add
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.307 drop
+      end
+   end
+end
+
+
+# State transition for cell 52
+proc.cell_52_transition.564
+   push.0
+   loc_store.308 drop
+
+   loc_load.35
+   loc_load.36
+   loc_load.37
+   loc_load.51
+   loc_load.53
+   loc_load.67
+   loc_load.68
+   loc_load.69
+
+   loc_load.52
+
+   if.true
+      repeat.7
+         add
+      end
+
+      dup
+
+      push.2
+      eq
+
+      if.true
+         push.1
+         loc_store.308 drop
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.308 drop
+      end
+
+   else
+
+      repeat.7
+         add
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.308 drop
+      end
+   end
+end
+
+
+# State transition for cell 53
+proc.cell_53_transition.565
+   push.0
+   loc_store.309 drop
+
+   loc_load.36
+   loc_load.37
+   loc_load.38
+   loc_load.52
+   loc_load.54
+   loc_load.68
+   loc_load.69
+   loc_load.70
+
+   loc_load.53
+
+   if.true
+      repeat.7
+         add
+      end
+
+      dup
+
+      push.2
+      eq
+
+      if.true
+         push.1
+         loc_store.309 drop
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.309 drop
+      end
+
+   else
+
+      repeat.7
+         add
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.309 drop
+      end
+   end
+end
+
+
+# State transition for cell 54
+proc.cell_54_transition.566
+   push.0
+   loc_store.310 drop
+
+   loc_load.37
+   loc_load.38
+   loc_load.39
+   loc_load.53
+   loc_load.55
+   loc_load.69
+   loc_load.70
+   loc_load.71
+
+   loc_load.54
+
+   if.true
+      repeat.7
+         add
+      end
+
+      dup
+
+      push.2
+      eq
+
+      if.true
+         push.1
+         loc_store.310 drop
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.310 drop
+      end
+
+   else
+
+      repeat.7
+         add
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.310 drop
+      end
+   end
+end
+
+
+# State transition for cell 55
+proc.cell_55_transition.567
+   push.0
+   loc_store.311 drop
+
+   loc_load.38
+   loc_load.39
+   loc_load.40
+   loc_load.54
+   loc_load.56
+   loc_load.70
+   loc_load.71
+   loc_load.72
+
+   loc_load.55
+
+   if.true
+      repeat.7
+         add
+      end
+
+      dup
+
+      push.2
+      eq
+
+      if.true
+         push.1
+         loc_store.311 drop
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.311 drop
+      end
+
+   else
+
+      repeat.7
+         add
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.311 drop
+      end
+   end
+end
+
+
+# State transition for cell 56
+proc.cell_56_transition.568
+   push.0
+   loc_store.312 drop
+
+   loc_load.39
+   loc_load.40
+   loc_load.41
+   loc_load.55
+   loc_load.57
+   loc_load.71
+   loc_load.72
+   loc_load.73
+
+   loc_load.56
+
+   if.true
+      repeat.7
+         add
+      end
+
+      dup
+
+      push.2
+      eq
+
+      if.true
+         push.1
+         loc_store.312 drop
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.312 drop
+      end
+
+   else
+
+      repeat.7
+         add
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.312 drop
+      end
+   end
+end
+
+
+# State transition for cell 57
+proc.cell_57_transition.569
+   push.0
+   loc_store.313 drop
+
+   loc_load.40
+   loc_load.41
+   loc_load.42
+   loc_load.56
+   loc_load.58
+   loc_load.72
+   loc_load.73
+   loc_load.74
+
+   loc_load.57
+
+   if.true
+      repeat.7
+         add
+      end
+
+      dup
+
+      push.2
+      eq
+
+      if.true
+         push.1
+         loc_store.313 drop
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.313 drop
+      end
+
+   else
+
+      repeat.7
+         add
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.313 drop
+      end
+   end
+end
+
+
+# State transition for cell 58
+proc.cell_58_transition.570
+   push.0
+   loc_store.314 drop
+
+   loc_load.41
+   loc_load.42
+   loc_load.43
+   loc_load.57
+   loc_load.59
+   loc_load.73
+   loc_load.74
+   loc_load.75
+
+   loc_load.58
+
+   if.true
+      repeat.7
+         add
+      end
+
+      dup
+
+      push.2
+      eq
+
+      if.true
+         push.1
+         loc_store.314 drop
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.314 drop
+      end
+
+   else
+
+      repeat.7
+         add
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.314 drop
+      end
+   end
+end
+
+
+# State transition for cell 59
+proc.cell_59_transition.571
+   push.0
+   loc_store.315 drop
+
+   loc_load.42
+   loc_load.43
+   loc_load.44
+   loc_load.58
+   loc_load.60
+   loc_load.74
+   loc_load.75
+   loc_load.76
+
+   loc_load.59
+
+   if.true
+      repeat.7
+         add
+      end
+
+      dup
+
+      push.2
+      eq
+
+      if.true
+         push.1
+         loc_store.315 drop
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.315 drop
+      end
+
+   else
+
+      repeat.7
+         add
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.315 drop
+      end
+   end
+end
+
+
+# State transition for cell 60
+proc.cell_60_transition.572
+   push.0
+   loc_store.316 drop
+
+   loc_load.43
+   loc_load.44
+   loc_load.45
+   loc_load.59
+   loc_load.61
+   loc_load.75
+   loc_load.76
+   loc_load.77
+
+   loc_load.60
+
+   if.true
+      repeat.7
+         add
+      end
+
+      dup
+
+      push.2
+      eq
+
+      if.true
+         push.1
+         loc_store.316 drop
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.316 drop
+      end
+
+   else
+
+      repeat.7
+         add
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.316 drop
+      end
+   end
+end
+
+
+# State transition for cell 61
+proc.cell_61_transition.573
+   push.0
+   loc_store.317 drop
+
+   loc_load.44
+   loc_load.45
+   loc_load.46
+   loc_load.60
+   loc_load.62
+   loc_load.76
+   loc_load.77
+   loc_load.78
+
+   loc_load.61
+
+   if.true
+      repeat.7
+         add
+      end
+
+      dup
+
+      push.2
+      eq
+
+      if.true
+         push.1
+         loc_store.317 drop
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.317 drop
+      end
+
+   else
+
+      repeat.7
+         add
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.317 drop
+      end
+   end
+end
+
+
+# State transition for cell 62
+proc.cell_62_transition.574
+   push.0
+   loc_store.318 drop
+
+   loc_load.45
+   loc_load.46
+   loc_load.47
+   loc_load.61
+   loc_load.63
+   loc_load.77
+   loc_load.78
+   loc_load.79
+
+   loc_load.62
+
+   if.true
+      repeat.7
+         add
+      end
+
+      dup
+
+      push.2
+      eq
+
+      if.true
+         push.1
+         loc_store.318 drop
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.318 drop
+      end
+
+   else
+
+      repeat.7
+         add
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.318 drop
+      end
+   end
+end
+
+
+# State transition for cell 63
+proc.cell_63_transition.575
+   push.0
+   loc_store.319 drop
+
+   loc_load.46
+   loc_load.47
+   loc_load.62
+   loc_load.78
+   loc_load.79
+
+   loc_load.63
+
+   if.true
+      repeat.7
+         add
+      end
+
+      dup
+
+      push.2
+      eq
+
+      if.true
+         push.1
+         loc_store.319 drop
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.319 drop
+      end
+
+   else
+
+      repeat.7
+         add
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.319 drop
+      end
+   end
+end
+
+
+# State transition for cell 64
+proc.cell_64_transition.576
+   push.0
+   loc_store.320 drop
+
+   loc_load.48
+   loc_load.49
+   loc_load.65
+   loc_load.80
+   loc_load.81
+
+   loc_load.64
+
+   if.true
+      repeat.7
+         add
+      end
+
+      dup
+
+      push.2
+      eq
+
+      if.true
+         push.1
+         loc_store.320 drop
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.320 drop
+      end
+
+   else
+
+      repeat.7
+         add
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.320 drop
+      end
+   end
+end
+
+
+# State transition for cell 65
+proc.cell_65_transition.577
+   push.0
+   loc_store.321 drop
+
+   loc_load.48
+   loc_load.49
+   loc_load.50
+   loc_load.64
+   loc_load.66
+   loc_load.80
+   loc_load.81
+   loc_load.82
+
+   loc_load.65
+
+   if.true
+      repeat.7
+         add
+      end
+
+      dup
+
+      push.2
+      eq
+
+      if.true
+         push.1
+         loc_store.321 drop
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.321 drop
+      end
+
+   else
+
+      repeat.7
+         add
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.321 drop
+      end
+   end
+end
+
+
+# State transition for cell 66
+proc.cell_66_transition.578
+   push.0
+   loc_store.322 drop
+
+   loc_load.49
+   loc_load.50
+   loc_load.51
+   loc_load.65
+   loc_load.67
+   loc_load.81
+   loc_load.82
+   loc_load.83
+
+   loc_load.66
+
+   if.true
+      repeat.7
+         add
+      end
+
+      dup
+
+      push.2
+      eq
+
+      if.true
+         push.1
+         loc_store.322 drop
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.322 drop
+      end
+
+   else
+
+      repeat.7
+         add
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.322 drop
+      end
+   end
+end
+
+
+# State transition for cell 67
+proc.cell_67_transition.579
+   push.0
+   loc_store.323 drop
+
+   loc_load.50
+   loc_load.51
+   loc_load.52
+   loc_load.66
+   loc_load.68
+   loc_load.82
+   loc_load.83
+   loc_load.84
+
+   loc_load.67
+
+   if.true
+      repeat.7
+         add
+      end
+
+      dup
+
+      push.2
+      eq
+
+      if.true
+         push.1
+         loc_store.323 drop
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.323 drop
+      end
+
+   else
+
+      repeat.7
+         add
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.323 drop
+      end
+   end
+end
+
+
+# State transition for cell 68
+proc.cell_68_transition.580
+   push.0
+   loc_store.324 drop
+
+   loc_load.51
+   loc_load.52
+   loc_load.53
+   loc_load.67
+   loc_load.69
+   loc_load.83
+   loc_load.84
+   loc_load.85
+
+   loc_load.68
+
+   if.true
+      repeat.7
+         add
+      end
+
+      dup
+
+      push.2
+      eq
+
+      if.true
+         push.1
+         loc_store.324 drop
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.324 drop
+      end
+
+   else
+
+      repeat.7
+         add
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.324 drop
+      end
+   end
+end
+
+
+# State transition for cell 69
+proc.cell_69_transition.581
+   push.0
+   loc_store.325 drop
+
+   loc_load.52
+   loc_load.53
+   loc_load.54
+   loc_load.68
+   loc_load.70
+   loc_load.84
+   loc_load.85
+   loc_load.86
+
+   loc_load.69
+
+   if.true
+      repeat.7
+         add
+      end
+
+      dup
+
+      push.2
+      eq
+
+      if.true
+         push.1
+         loc_store.325 drop
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.325 drop
+      end
+
+   else
+
+      repeat.7
+         add
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.325 drop
+      end
+   end
+end
+
+
+# State transition for cell 70
+proc.cell_70_transition.582
+   push.0
+   loc_store.326 drop
+
+   loc_load.53
+   loc_load.54
+   loc_load.55
+   loc_load.69
+   loc_load.71
+   loc_load.85
+   loc_load.86
+   loc_load.87
+
+   loc_load.70
+
+   if.true
+      repeat.7
+         add
+      end
+
+      dup
+
+      push.2
+      eq
+
+      if.true
+         push.1
+         loc_store.326 drop
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.326 drop
+      end
+
+   else
+
+      repeat.7
+         add
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.326 drop
+      end
+   end
+end
+
+
+# State transition for cell 71
+proc.cell_71_transition.583
+   push.0
+   loc_store.327 drop
+
+   loc_load.54
+   loc_load.55
+   loc_load.56
+   loc_load.70
+   loc_load.72
+   loc_load.86
+   loc_load.87
+   loc_load.88
+
+   loc_load.71
+
+   if.true
+      repeat.7
+         add
+      end
+
+      dup
+
+      push.2
+      eq
+
+      if.true
+         push.1
+         loc_store.327 drop
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.327 drop
+      end
+
+   else
+
+      repeat.7
+         add
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.327 drop
+      end
+   end
+end
+
+
+# State transition for cell 72
+proc.cell_72_transition.584
+   push.0
+   loc_store.328 drop
+
+   loc_load.55
+   loc_load.56
+   loc_load.57
+   loc_load.71
+   loc_load.73
+   loc_load.87
+   loc_load.88
+   loc_load.89
+
+   loc_load.72
+
+   if.true
+      repeat.7
+         add
+      end
+
+      dup
+
+      push.2
+      eq
+
+      if.true
+         push.1
+         loc_store.328 drop
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.328 drop
+      end
+
+   else
+
+      repeat.7
+         add
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.328 drop
+      end
+   end
+end
+
+
+# State transition for cell 73
+proc.cell_73_transition.585
+   push.0
+   loc_store.329 drop
+
+   loc_load.56
+   loc_load.57
+   loc_load.58
+   loc_load.72
+   loc_load.74
+   loc_load.88
+   loc_load.89
+   loc_load.90
+
+   loc_load.73
+
+   if.true
+      repeat.7
+         add
+      end
+
+      dup
+
+      push.2
+      eq
+
+      if.true
+         push.1
+         loc_store.329 drop
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.329 drop
+      end
+
+   else
+
+      repeat.7
+         add
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.329 drop
+      end
+   end
+end
+
+
+# State transition for cell 74
+proc.cell_74_transition.586
+   push.0
+   loc_store.330 drop
+
+   loc_load.57
+   loc_load.58
+   loc_load.59
+   loc_load.73
+   loc_load.75
+   loc_load.89
+   loc_load.90
+   loc_load.91
+
+   loc_load.74
+
+   if.true
+      repeat.7
+         add
+      end
+
+      dup
+
+      push.2
+      eq
+
+      if.true
+         push.1
+         loc_store.330 drop
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.330 drop
+      end
+
+   else
+
+      repeat.7
+         add
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.330 drop
+      end
+   end
+end
+
+
+# State transition for cell 75
+proc.cell_75_transition.587
+   push.0
+   loc_store.331 drop
+
+   loc_load.58
+   loc_load.59
+   loc_load.60
+   loc_load.74
+   loc_load.76
+   loc_load.90
+   loc_load.91
+   loc_load.92
+
+   loc_load.75
+
+   if.true
+      repeat.7
+         add
+      end
+
+      dup
+
+      push.2
+      eq
+
+      if.true
+         push.1
+         loc_store.331 drop
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.331 drop
+      end
+
+   else
+
+      repeat.7
+         add
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.331 drop
+      end
+   end
+end
+
+
+# State transition for cell 76
+proc.cell_76_transition.588
+   push.0
+   loc_store.332 drop
+
+   loc_load.59
+   loc_load.60
+   loc_load.61
+   loc_load.75
+   loc_load.77
+   loc_load.91
+   loc_load.92
+   loc_load.93
+
+   loc_load.76
+
+   if.true
+      repeat.7
+         add
+      end
+
+      dup
+
+      push.2
+      eq
+
+      if.true
+         push.1
+         loc_store.332 drop
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.332 drop
+      end
+
+   else
+
+      repeat.7
+         add
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.332 drop
+      end
+   end
+end
+
+
+# State transition for cell 77
+proc.cell_77_transition.589
+   push.0
+   loc_store.333 drop
+
+   loc_load.60
+   loc_load.61
+   loc_load.62
+   loc_load.76
+   loc_load.78
+   loc_load.92
+   loc_load.93
+   loc_load.94
+
+   loc_load.77
+
+   if.true
+      repeat.7
+         add
+      end
+
+      dup
+
+      push.2
+      eq
+
+      if.true
+         push.1
+         loc_store.333 drop
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.333 drop
+      end
+
+   else
+
+      repeat.7
+         add
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.333 drop
+      end
+   end
+end
+
+
+# State transition for cell 78
+proc.cell_78_transition.590
+   push.0
+   loc_store.334 drop
+
+   loc_load.61
+   loc_load.62
+   loc_load.63
+   loc_load.77
+   loc_load.79
+   loc_load.93
+   loc_load.94
+   loc_load.95
+
+   loc_load.78
+
+   if.true
+      repeat.7
+         add
+      end
+
+      dup
+
+      push.2
+      eq
+
+      if.true
+         push.1
+         loc_store.334 drop
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.334 drop
+      end
+
+   else
+
+      repeat.7
+         add
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.334 drop
+      end
+   end
+end
+
+
+# State transition for cell 79
+proc.cell_79_transition.591
+   push.0
+   loc_store.335 drop
+
+   loc_load.62
+   loc_load.63
+   loc_load.78
+   loc_load.94
+   loc_load.95
+
+   loc_load.79
+
+   if.true
+      repeat.7
+         add
+      end
+
+      dup
+
+      push.2
+      eq
+
+      if.true
+         push.1
+         loc_store.335 drop
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.335 drop
+      end
+
+   else
+
+      repeat.7
+         add
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.335 drop
+      end
+   end
+end
+
+
+# State transition for cell 80
+proc.cell_80_transition.592
+   push.0
+   loc_store.336 drop
+
+   loc_load.64
+   loc_load.65
+   loc_load.81
+   loc_load.96
+   loc_load.97
+
+   loc_load.80
+
+   if.true
+      repeat.7
+         add
+      end
+
+      dup
+
+      push.2
+      eq
+
+      if.true
+         push.1
+         loc_store.336 drop
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.336 drop
+      end
+
+   else
+
+      repeat.7
+         add
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.336 drop
+      end
+   end
+end
+
+
+# State transition for cell 81
+proc.cell_81_transition.593
+   push.0
+   loc_store.337 drop
+
+   loc_load.64
+   loc_load.65
+   loc_load.66
+   loc_load.80
+   loc_load.82
+   loc_load.96
+   loc_load.97
+   loc_load.98
+
+   loc_load.81
+
+   if.true
+      repeat.7
+         add
+      end
+
+      dup
+
+      push.2
+      eq
+
+      if.true
+         push.1
+         loc_store.337 drop
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.337 drop
+      end
+
+   else
+
+      repeat.7
+         add
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.337 drop
+      end
+   end
+end
+
+
+# State transition for cell 82
+proc.cell_82_transition.594
+   push.0
+   loc_store.338 drop
+
+   loc_load.65
+   loc_load.66
+   loc_load.67
+   loc_load.81
+   loc_load.83
+   loc_load.97
+   loc_load.98
+   loc_load.99
+
+   loc_load.82
+
+   if.true
+      repeat.7
+         add
+      end
+
+      dup
+
+      push.2
+      eq
+
+      if.true
+         push.1
+         loc_store.338 drop
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.338 drop
+      end
+
+   else
+
+      repeat.7
+         add
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.338 drop
+      end
+   end
+end
+
+
+# State transition for cell 83
+proc.cell_83_transition.595
+   push.0
+   loc_store.339 drop
+
+   loc_load.66
+   loc_load.67
+   loc_load.68
+   loc_load.82
+   loc_load.84
+   loc_load.98
+   loc_load.99
+   loc_load.100
+
+   loc_load.83
+
+   if.true
+      repeat.7
+         add
+      end
+
+      dup
+
+      push.2
+      eq
+
+      if.true
+         push.1
+         loc_store.339 drop
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.339 drop
+      end
+
+   else
+
+      repeat.7
+         add
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.339 drop
+      end
+   end
+end
+
+
+# State transition for cell 84
+proc.cell_84_transition.596
+   push.0
+   loc_store.340 drop
+
+   loc_load.67
+   loc_load.68
+   loc_load.69
+   loc_load.83
+   loc_load.85
+   loc_load.99
+   loc_load.100
+   loc_load.101
+
+   loc_load.84
+
+   if.true
+      repeat.7
+         add
+      end
+
+      dup
+
+      push.2
+      eq
+
+      if.true
+         push.1
+         loc_store.340 drop
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.340 drop
+      end
+
+   else
+
+      repeat.7
+         add
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.340 drop
+      end
+   end
+end
+
+
+# State transition for cell 85
+proc.cell_85_transition.597
+   push.0
+   loc_store.341 drop
+
+   loc_load.68
+   loc_load.69
+   loc_load.70
+   loc_load.84
+   loc_load.86
+   loc_load.100
+   loc_load.101
+   loc_load.102
+
+   loc_load.85
+
+   if.true
+      repeat.7
+         add
+      end
+
+      dup
+
+      push.2
+      eq
+
+      if.true
+         push.1
+         loc_store.341 drop
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.341 drop
+      end
+
+   else
+
+      repeat.7
+         add
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.341 drop
+      end
+   end
+end
+
+
+# State transition for cell 86
+proc.cell_86_transition.598
+   push.0
+   loc_store.342 drop
+
+   loc_load.69
+   loc_load.70
+   loc_load.71
+   loc_load.85
+   loc_load.87
+   loc_load.101
+   loc_load.102
+   loc_load.103
+
+   loc_load.86
+
+   if.true
+      repeat.7
+         add
+      end
+
+      dup
+
+      push.2
+      eq
+
+      if.true
+         push.1
+         loc_store.342 drop
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.342 drop
+      end
+
+   else
+
+      repeat.7
+         add
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.342 drop
+      end
+   end
+end
+
+
+# State transition for cell 87
+proc.cell_87_transition.599
+   push.0
+   loc_store.343 drop
+
+   loc_load.70
+   loc_load.71
+   loc_load.72
+   loc_load.86
+   loc_load.88
+   loc_load.102
+   loc_load.103
+   loc_load.104
+
+   loc_load.87
+
+   if.true
+      repeat.7
+         add
+      end
+
+      dup
+
+      push.2
+      eq
+
+      if.true
+         push.1
+         loc_store.343 drop
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.343 drop
+      end
+
+   else
+
+      repeat.7
+         add
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.343 drop
+      end
+   end
+end
+
+
+# State transition for cell 88
+proc.cell_88_transition.600
+   push.0
+   loc_store.344 drop
+
+   loc_load.71
+   loc_load.72
+   loc_load.73
+   loc_load.87
+   loc_load.89
+   loc_load.103
+   loc_load.104
+   loc_load.105
+
+   loc_load.88
+
+   if.true
+      repeat.7
+         add
+      end
+
+      dup
+
+      push.2
+      eq
+
+      if.true
+         push.1
+         loc_store.344 drop
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.344 drop
+      end
+
+   else
+
+      repeat.7
+         add
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.344 drop
+      end
+   end
+end
+
+
+# State transition for cell 89
+proc.cell_89_transition.601
+   push.0
+   loc_store.345 drop
+
+   loc_load.72
+   loc_load.73
+   loc_load.74
+   loc_load.88
+   loc_load.90
+   loc_load.104
+   loc_load.105
+   loc_load.106
+
+   loc_load.89
+
+   if.true
+      repeat.7
+         add
+      end
+
+      dup
+
+      push.2
+      eq
+
+      if.true
+         push.1
+         loc_store.345 drop
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.345 drop
+      end
+
+   else
+
+      repeat.7
+         add
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.345 drop
+      end
+   end
+end
+
+
+# State transition for cell 90
+proc.cell_90_transition.602
+   push.0
+   loc_store.346 drop
+
+   loc_load.73
+   loc_load.74
+   loc_load.75
+   loc_load.89
+   loc_load.91
+   loc_load.105
+   loc_load.106
+   loc_load.107
+
+   loc_load.90
+
+   if.true
+      repeat.7
+         add
+      end
+
+      dup
+
+      push.2
+      eq
+
+      if.true
+         push.1
+         loc_store.346 drop
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.346 drop
+      end
+
+   else
+
+      repeat.7
+         add
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.346 drop
+      end
+   end
+end
+
+
+# State transition for cell 91
+proc.cell_91_transition.603
+   push.0
+   loc_store.347 drop
+
+   loc_load.74
+   loc_load.75
+   loc_load.76
+   loc_load.90
+   loc_load.92
+   loc_load.106
+   loc_load.107
+   loc_load.108
+
+   loc_load.91
+
+   if.true
+      repeat.7
+         add
+      end
+
+      dup
+
+      push.2
+      eq
+
+      if.true
+         push.1
+         loc_store.347 drop
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.347 drop
+      end
+
+   else
+
+      repeat.7
+         add
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.347 drop
+      end
+   end
+end
+
+
+# State transition for cell 92
+proc.cell_92_transition.604
+   push.0
+   loc_store.348 drop
+
+   loc_load.75
+   loc_load.76
+   loc_load.77
+   loc_load.91
+   loc_load.93
+   loc_load.107
+   loc_load.108
+   loc_load.109
+
+   loc_load.92
+
+   if.true
+      repeat.7
+         add
+      end
+
+      dup
+
+      push.2
+      eq
+
+      if.true
+         push.1
+         loc_store.348 drop
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.348 drop
+      end
+
+   else
+
+      repeat.7
+         add
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.348 drop
+      end
+   end
+end
+
+
+# State transition for cell 93
+proc.cell_93_transition.605
+   push.0
+   loc_store.349 drop
+
+   loc_load.76
+   loc_load.77
+   loc_load.78
+   loc_load.92
+   loc_load.94
+   loc_load.108
+   loc_load.109
+   loc_load.110
+
+   loc_load.93
+
+   if.true
+      repeat.7
+         add
+      end
+
+      dup
+
+      push.2
+      eq
+
+      if.true
+         push.1
+         loc_store.349 drop
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.349 drop
+      end
+
+   else
+
+      repeat.7
+         add
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.349 drop
+      end
+   end
+end
+
+
+# State transition for cell 94
+proc.cell_94_transition.606
+   push.0
+   loc_store.350 drop
+
+   loc_load.77
+   loc_load.78
+   loc_load.79
+   loc_load.93
+   loc_load.95
+   loc_load.109
+   loc_load.110
+   loc_load.111
+
+   loc_load.94
+
+   if.true
+      repeat.7
+         add
+      end
+
+      dup
+
+      push.2
+      eq
+
+      if.true
+         push.1
+         loc_store.350 drop
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.350 drop
+      end
+
+   else
+
+      repeat.7
+         add
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.350 drop
+      end
+   end
+end
+
+
+# State transition for cell 95
+proc.cell_95_transition.607
+   push.0
+   loc_store.351 drop
+
+   loc_load.78
+   loc_load.79
+   loc_load.94
+   loc_load.110
+   loc_load.111
+
+   loc_load.95
+
+   if.true
+      repeat.7
+         add
+      end
+
+      dup
+
+      push.2
+      eq
+
+      if.true
+         push.1
+         loc_store.351 drop
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.351 drop
+      end
+
+   else
+
+      repeat.7
+         add
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.351 drop
+      end
+   end
+end
+
+
+# State transition for cell 96
+proc.cell_96_transition.608
+   push.0
+   loc_store.352 drop
+
+   loc_load.80
+   loc_load.81
+   loc_load.97
+   loc_load.112
+   loc_load.113
+
+   loc_load.96
+
+   if.true
+      repeat.7
+         add
+      end
+
+      dup
+
+      push.2
+      eq
+
+      if.true
+         push.1
+         loc_store.352 drop
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.352 drop
+      end
+
+   else
+
+      repeat.7
+         add
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.352 drop
+      end
+   end
+end
+
+
+# State transition for cell 97
+proc.cell_97_transition.609
+   push.0
+   loc_store.353 drop
+
+   loc_load.80
+   loc_load.81
+   loc_load.82
+   loc_load.96
+   loc_load.98
+   loc_load.112
+   loc_load.113
+   loc_load.114
+
+   loc_load.97
+
+   if.true
+      repeat.7
+         add
+      end
+
+      dup
+
+      push.2
+      eq
+
+      if.true
+         push.1
+         loc_store.353 drop
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.353 drop
+      end
+
+   else
+
+      repeat.7
+         add
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.353 drop
+      end
+   end
+end
+
+
+# State transition for cell 98
+proc.cell_98_transition.610
+   push.0
+   loc_store.354 drop
+
+   loc_load.81
+   loc_load.82
+   loc_load.83
+   loc_load.97
+   loc_load.99
+   loc_load.113
+   loc_load.114
+   loc_load.115
+
+   loc_load.98
+
+   if.true
+      repeat.7
+         add
+      end
+
+      dup
+
+      push.2
+      eq
+
+      if.true
+         push.1
+         loc_store.354 drop
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.354 drop
+      end
+
+   else
+
+      repeat.7
+         add
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.354 drop
+      end
+   end
+end
+
+
+# State transition for cell 99
+proc.cell_99_transition.611
+   push.0
+   loc_store.355 drop
+
+   loc_load.82
+   loc_load.83
+   loc_load.84
+   loc_load.98
+   loc_load.100
+   loc_load.114
+   loc_load.115
+   loc_load.116
+
+   loc_load.99
+
+   if.true
+      repeat.7
+         add
+      end
+
+      dup
+
+      push.2
+      eq
+
+      if.true
+         push.1
+         loc_store.355 drop
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.355 drop
+      end
+
+   else
+
+      repeat.7
+         add
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.355 drop
+      end
+   end
+end
+
+
+# State transition for cell 100
+proc.cell_100_transition.612
+   push.0
+   loc_store.356 drop
+
+   loc_load.83
+   loc_load.84
+   loc_load.85
+   loc_load.99
+   loc_load.101
+   loc_load.115
+   loc_load.116
+   loc_load.117
+
+   loc_load.100
+
+   if.true
+      repeat.7
+         add
+      end
+
+      dup
+
+      push.2
+      eq
+
+      if.true
+         push.1
+         loc_store.356 drop
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.356 drop
+      end
+
+   else
+
+      repeat.7
+         add
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.356 drop
+      end
+   end
+end
+
+
+# State transition for cell 101
+proc.cell_101_transition.613
+   push.0
+   loc_store.357 drop
+
+   loc_load.84
+   loc_load.85
+   loc_load.86
+   loc_load.100
+   loc_load.102
+   loc_load.116
+   loc_load.117
+   loc_load.118
+
+   loc_load.101
+
+   if.true
+      repeat.7
+         add
+      end
+
+      dup
+
+      push.2
+      eq
+
+      if.true
+         push.1
+         loc_store.357 drop
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.357 drop
+      end
+
+   else
+
+      repeat.7
+         add
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.357 drop
+      end
+   end
+end
+
+
+# State transition for cell 102
+proc.cell_102_transition.614
+   push.0
+   loc_store.358 drop
+
+   loc_load.85
+   loc_load.86
+   loc_load.87
+   loc_load.101
+   loc_load.103
+   loc_load.117
+   loc_load.118
+   loc_load.119
+
+   loc_load.102
+
+   if.true
+      repeat.7
+         add
+      end
+
+      dup
+
+      push.2
+      eq
+
+      if.true
+         push.1
+         loc_store.358 drop
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.358 drop
+      end
+
+   else
+
+      repeat.7
+         add
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.358 drop
+      end
+   end
+end
+
+
+# State transition for cell 103
+proc.cell_103_transition.615
+   push.0
+   loc_store.359 drop
+
+   loc_load.86
+   loc_load.87
+   loc_load.88
+   loc_load.102
+   loc_load.104
+   loc_load.118
+   loc_load.119
+   loc_load.120
+
+   loc_load.103
+
+   if.true
+      repeat.7
+         add
+      end
+
+      dup
+
+      push.2
+      eq
+
+      if.true
+         push.1
+         loc_store.359 drop
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.359 drop
+      end
+
+   else
+
+      repeat.7
+         add
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.359 drop
+      end
+   end
+end
+
+
+# State transition for cell 104
+proc.cell_104_transition.616
+   push.0
+   loc_store.360 drop
+
+   loc_load.87
+   loc_load.88
+   loc_load.89
+   loc_load.103
+   loc_load.105
+   loc_load.119
+   loc_load.120
+   loc_load.121
+
+   loc_load.104
+
+   if.true
+      repeat.7
+         add
+      end
+
+      dup
+
+      push.2
+      eq
+
+      if.true
+         push.1
+         loc_store.360 drop
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.360 drop
+      end
+
+   else
+
+      repeat.7
+         add
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.360 drop
+      end
+   end
+end
+
+
+# State transition for cell 105
+proc.cell_105_transition.617
+   push.0
+   loc_store.361 drop
+
+   loc_load.88
+   loc_load.89
+   loc_load.90
+   loc_load.104
+   loc_load.106
+   loc_load.120
+   loc_load.121
+   loc_load.122
+
+   loc_load.105
+
+   if.true
+      repeat.7
+         add
+      end
+
+      dup
+
+      push.2
+      eq
+
+      if.true
+         push.1
+         loc_store.361 drop
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.361 drop
+      end
+
+   else
+
+      repeat.7
+         add
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.361 drop
+      end
+   end
+end
+
+
+# State transition for cell 106
+proc.cell_106_transition.618
+   push.0
+   loc_store.362 drop
+
+   loc_load.89
+   loc_load.90
+   loc_load.91
+   loc_load.105
+   loc_load.107
+   loc_load.121
+   loc_load.122
+   loc_load.123
+
+   loc_load.106
+
+   if.true
+      repeat.7
+         add
+      end
+
+      dup
+
+      push.2
+      eq
+
+      if.true
+         push.1
+         loc_store.362 drop
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.362 drop
+      end
+
+   else
+
+      repeat.7
+         add
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.362 drop
+      end
+   end
+end
+
+
+# State transition for cell 107
+proc.cell_107_transition.619
+   push.0
+   loc_store.363 drop
+
+   loc_load.90
+   loc_load.91
+   loc_load.92
+   loc_load.106
+   loc_load.108
+   loc_load.122
+   loc_load.123
+   loc_load.124
+
+   loc_load.107
+
+   if.true
+      repeat.7
+         add
+      end
+
+      dup
+
+      push.2
+      eq
+
+      if.true
+         push.1
+         loc_store.363 drop
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.363 drop
+      end
+
+   else
+
+      repeat.7
+         add
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.363 drop
+      end
+   end
+end
+
+
+# State transition for cell 108
+proc.cell_108_transition.620
+   push.0
+   loc_store.364 drop
+
+   loc_load.91
+   loc_load.92
+   loc_load.93
+   loc_load.107
+   loc_load.109
+   loc_load.123
+   loc_load.124
+   loc_load.125
+
+   loc_load.108
+
+   if.true
+      repeat.7
+         add
+      end
+
+      dup
+
+      push.2
+      eq
+
+      if.true
+         push.1
+         loc_store.364 drop
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.364 drop
+      end
+
+   else
+
+      repeat.7
+         add
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.364 drop
+      end
+   end
+end
+
+
+# State transition for cell 109
+proc.cell_109_transition.621
+   push.0
+   loc_store.365 drop
+
+   loc_load.92
+   loc_load.93
+   loc_load.94
+   loc_load.108
+   loc_load.110
+   loc_load.124
+   loc_load.125
+   loc_load.126
+
+   loc_load.109
+
+   if.true
+      repeat.7
+         add
+      end
+
+      dup
+
+      push.2
+      eq
+
+      if.true
+         push.1
+         loc_store.365 drop
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.365 drop
+      end
+
+   else
+
+      repeat.7
+         add
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.365 drop
+      end
+   end
+end
+
+
+# State transition for cell 110
+proc.cell_110_transition.622
+   push.0
+   loc_store.366 drop
+
+   loc_load.93
+   loc_load.94
+   loc_load.95
+   loc_load.109
+   loc_load.111
+   loc_load.125
+   loc_load.126
+   loc_load.127
+
+   loc_load.110
+
+   if.true
+      repeat.7
+         add
+      end
+
+      dup
+
+      push.2
+      eq
+
+      if.true
+         push.1
+         loc_store.366 drop
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.366 drop
+      end
+
+   else
+
+      repeat.7
+         add
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.366 drop
+      end
+   end
+end
+
+
+# State transition for cell 111
+proc.cell_111_transition.623
+   push.0
+   loc_store.367 drop
+
+   loc_load.94
+   loc_load.95
+   loc_load.110
+   loc_load.126
+   loc_load.127
+
+   loc_load.111
+
+   if.true
+      repeat.7
+         add
+      end
+
+      dup
+
+      push.2
+      eq
+
+      if.true
+         push.1
+         loc_store.367 drop
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.367 drop
+      end
+
+   else
+
+      repeat.7
+         add
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.367 drop
+      end
+   end
+end
+
+
+# State transition for cell 112
+proc.cell_112_transition.624
+   push.0
+   loc_store.368 drop
+
+   loc_load.96
+   loc_load.97
+   loc_load.113
+   loc_load.128
+   loc_load.129
+
+   loc_load.112
+
+   if.true
+      repeat.7
+         add
+      end
+
+      dup
+
+      push.2
+      eq
+
+      if.true
+         push.1
+         loc_store.368 drop
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.368 drop
+      end
+
+   else
+
+      repeat.7
+         add
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.368 drop
+      end
+   end
+end
+
+
+# State transition for cell 113
+proc.cell_113_transition.625
+   push.0
+   loc_store.369 drop
+
+   loc_load.96
+   loc_load.97
+   loc_load.98
+   loc_load.112
+   loc_load.114
+   loc_load.128
+   loc_load.129
+   loc_load.130
+
+   loc_load.113
+
+   if.true
+      repeat.7
+         add
+      end
+
+      dup
+
+      push.2
+      eq
+
+      if.true
+         push.1
+         loc_store.369 drop
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.369 drop
+      end
+
+   else
+
+      repeat.7
+         add
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.369 drop
+      end
+   end
+end
+
+
+# State transition for cell 114
+proc.cell_114_transition.626
+   push.0
+   loc_store.370 drop
+
+   loc_load.97
+   loc_load.98
+   loc_load.99
+   loc_load.113
+   loc_load.115
+   loc_load.129
+   loc_load.130
+   loc_load.131
+
+   loc_load.114
+
+   if.true
+      repeat.7
+         add
+      end
+
+      dup
+
+      push.2
+      eq
+
+      if.true
+         push.1
+         loc_store.370 drop
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.370 drop
+      end
+
+   else
+
+      repeat.7
+         add
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.370 drop
+      end
+   end
+end
+
+
+# State transition for cell 115
+proc.cell_115_transition.627
+   push.0
+   loc_store.371 drop
+
+   loc_load.98
+   loc_load.99
+   loc_load.100
+   loc_load.114
+   loc_load.116
+   loc_load.130
+   loc_load.131
+   loc_load.132
+
+   loc_load.115
+
+   if.true
+      repeat.7
+         add
+      end
+
+      dup
+
+      push.2
+      eq
+
+      if.true
+         push.1
+         loc_store.371 drop
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.371 drop
+      end
+
+   else
+
+      repeat.7
+         add
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.371 drop
+      end
+   end
+end
+
+
+# State transition for cell 116
+proc.cell_116_transition.628
+   push.0
+   loc_store.372 drop
+
+   loc_load.99
+   loc_load.100
+   loc_load.101
+   loc_load.115
+   loc_load.117
+   loc_load.131
+   loc_load.132
+   loc_load.133
+
+   loc_load.116
+
+   if.true
+      repeat.7
+         add
+      end
+
+      dup
+
+      push.2
+      eq
+
+      if.true
+         push.1
+         loc_store.372 drop
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.372 drop
+      end
+
+   else
+
+      repeat.7
+         add
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.372 drop
+      end
+   end
+end
+
+
+# State transition for cell 117
+proc.cell_117_transition.629
+   push.0
+   loc_store.373 drop
+
+   loc_load.100
+   loc_load.101
+   loc_load.102
+   loc_load.116
+   loc_load.118
+   loc_load.132
+   loc_load.133
+   loc_load.134
+
+   loc_load.117
+
+   if.true
+      repeat.7
+         add
+      end
+
+      dup
+
+      push.2
+      eq
+
+      if.true
+         push.1
+         loc_store.373 drop
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.373 drop
+      end
+
+   else
+
+      repeat.7
+         add
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.373 drop
+      end
+   end
+end
+
+
+# State transition for cell 118
+proc.cell_118_transition.630
+   push.0
+   loc_store.374 drop
+
+   loc_load.101
+   loc_load.102
+   loc_load.103
+   loc_load.117
+   loc_load.119
+   loc_load.133
+   loc_load.134
+   loc_load.135
+
+   loc_load.118
+
+   if.true
+      repeat.7
+         add
+      end
+
+      dup
+
+      push.2
+      eq
+
+      if.true
+         push.1
+         loc_store.374 drop
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.374 drop
+      end
+
+   else
+
+      repeat.7
+         add
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.374 drop
+      end
+   end
+end
+
+
+# State transition for cell 119
+proc.cell_119_transition.631
+   push.0
+   loc_store.375 drop
+
+   loc_load.102
+   loc_load.103
+   loc_load.104
+   loc_load.118
+   loc_load.120
+   loc_load.134
+   loc_load.135
+   loc_load.136
+
+   loc_load.119
+
+   if.true
+      repeat.7
+         add
+      end
+
+      dup
+
+      push.2
+      eq
+
+      if.true
+         push.1
+         loc_store.375 drop
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.375 drop
+      end
+
+   else
+
+      repeat.7
+         add
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.375 drop
+      end
+   end
+end
+
+
+# State transition for cell 120
+proc.cell_120_transition.632
+   push.0
+   loc_store.376 drop
+
+   loc_load.103
+   loc_load.104
+   loc_load.105
+   loc_load.119
+   loc_load.121
+   loc_load.135
+   loc_load.136
+   loc_load.137
+
+   loc_load.120
+
+   if.true
+      repeat.7
+         add
+      end
+
+      dup
+
+      push.2
+      eq
+
+      if.true
+         push.1
+         loc_store.376 drop
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.376 drop
+      end
+
+   else
+
+      repeat.7
+         add
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.376 drop
+      end
+   end
+end
+
+
+# State transition for cell 121
+proc.cell_121_transition.633
+   push.0
+   loc_store.377 drop
+
+   loc_load.104
+   loc_load.105
+   loc_load.106
+   loc_load.120
+   loc_load.122
+   loc_load.136
+   loc_load.137
+   loc_load.138
+
+   loc_load.121
+
+   if.true
+      repeat.7
+         add
+      end
+
+      dup
+
+      push.2
+      eq
+
+      if.true
+         push.1
+         loc_store.377 drop
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.377 drop
+      end
+
+   else
+
+      repeat.7
+         add
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.377 drop
+      end
+   end
+end
+
+
+# State transition for cell 122
+proc.cell_122_transition.634
+   push.0
+   loc_store.378 drop
+
+   loc_load.105
+   loc_load.106
+   loc_load.107
+   loc_load.121
+   loc_load.123
+   loc_load.137
+   loc_load.138
+   loc_load.139
+
+   loc_load.122
+
+   if.true
+      repeat.7
+         add
+      end
+
+      dup
+
+      push.2
+      eq
+
+      if.true
+         push.1
+         loc_store.378 drop
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.378 drop
+      end
+
+   else
+
+      repeat.7
+         add
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.378 drop
+      end
+   end
+end
+
+
+# State transition for cell 123
+proc.cell_123_transition.635
+   push.0
+   loc_store.379 drop
+
+   loc_load.106
+   loc_load.107
+   loc_load.108
+   loc_load.122
+   loc_load.124
+   loc_load.138
+   loc_load.139
+   loc_load.140
+
+   loc_load.123
+
+   if.true
+      repeat.7
+         add
+      end
+
+      dup
+
+      push.2
+      eq
+
+      if.true
+         push.1
+         loc_store.379 drop
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.379 drop
+      end
+
+   else
+
+      repeat.7
+         add
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.379 drop
+      end
+   end
+end
+
+
+# State transition for cell 124
+proc.cell_124_transition.636
+   push.0
+   loc_store.380 drop
+
+   loc_load.107
+   loc_load.108
+   loc_load.109
+   loc_load.123
+   loc_load.125
+   loc_load.139
+   loc_load.140
+   loc_load.141
+
+   loc_load.124
+
+   if.true
+      repeat.7
+         add
+      end
+
+      dup
+
+      push.2
+      eq
+
+      if.true
+         push.1
+         loc_store.380 drop
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.380 drop
+      end
+
+   else
+
+      repeat.7
+         add
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.380 drop
+      end
+   end
+end
+
+
+# State transition for cell 125
+proc.cell_125_transition.637
+   push.0
+   loc_store.381 drop
+
+   loc_load.108
+   loc_load.109
+   loc_load.110
+   loc_load.124
+   loc_load.126
+   loc_load.140
+   loc_load.141
+   loc_load.142
+
+   loc_load.125
+
+   if.true
+      repeat.7
+         add
+      end
+
+      dup
+
+      push.2
+      eq
+
+      if.true
+         push.1
+         loc_store.381 drop
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.381 drop
+      end
+
+   else
+
+      repeat.7
+         add
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.381 drop
+      end
+   end
+end
+
+
+# State transition for cell 126
+proc.cell_126_transition.638
+   push.0
+   loc_store.382 drop
+
+   loc_load.109
+   loc_load.110
+   loc_load.111
+   loc_load.125
+   loc_load.127
+   loc_load.141
+   loc_load.142
+   loc_load.143
+
+   loc_load.126
+
+   if.true
+      repeat.7
+         add
+      end
+
+      dup
+
+      push.2
+      eq
+
+      if.true
+         push.1
+         loc_store.382 drop
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.382 drop
+      end
+
+   else
+
+      repeat.7
+         add
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.382 drop
+      end
+   end
+end
+
+
+# State transition for cell 127
+proc.cell_127_transition.639
+   push.0
+   loc_store.383 drop
+
+   loc_load.110
+   loc_load.111
+   loc_load.126
+   loc_load.142
+   loc_load.143
+
+   loc_load.127
+
+   if.true
+      repeat.7
+         add
+      end
+
+      dup
+
+      push.2
+      eq
+
+      if.true
+         push.1
+         loc_store.383 drop
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.383 drop
+      end
+
+   else
+
+      repeat.7
+         add
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.383 drop
+      end
+   end
+end
+
+
+# State transition for cell 128
+proc.cell_128_transition.640
+   push.0
+   loc_store.384 drop
+
+   loc_load.112
+   loc_load.113
+   loc_load.129
+   loc_load.144
+   loc_load.145
+
+   loc_load.128
+
+   if.true
+      repeat.7
+         add
+      end
+
+      dup
+
+      push.2
+      eq
+
+      if.true
+         push.1
+         loc_store.384 drop
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.384 drop
+      end
+
+   else
+
+      repeat.7
+         add
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.384 drop
+      end
+   end
+end
+
+
+# State transition for cell 129
+proc.cell_129_transition.641
+   push.0
+   loc_store.385 drop
+
+   loc_load.112
+   loc_load.113
+   loc_load.114
+   loc_load.128
+   loc_load.130
+   loc_load.144
+   loc_load.145
+   loc_load.146
+
+   loc_load.129
+
+   if.true
+      repeat.7
+         add
+      end
+
+      dup
+
+      push.2
+      eq
+
+      if.true
+         push.1
+         loc_store.385 drop
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.385 drop
+      end
+
+   else
+
+      repeat.7
+         add
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.385 drop
+      end
+   end
+end
+
+
+# State transition for cell 130
+proc.cell_130_transition.642
+   push.0
+   loc_store.386 drop
+
+   loc_load.113
+   loc_load.114
+   loc_load.115
+   loc_load.129
+   loc_load.131
+   loc_load.145
+   loc_load.146
+   loc_load.147
+
+   loc_load.130
+
+   if.true
+      repeat.7
+         add
+      end
+
+      dup
+
+      push.2
+      eq
+
+      if.true
+         push.1
+         loc_store.386 drop
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.386 drop
+      end
+
+   else
+
+      repeat.7
+         add
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.386 drop
+      end
+   end
+end
+
+
+# State transition for cell 131
+proc.cell_131_transition.643
+   push.0
+   loc_store.387 drop
+
+   loc_load.114
+   loc_load.115
+   loc_load.116
+   loc_load.130
+   loc_load.132
+   loc_load.146
+   loc_load.147
+   loc_load.148
+
+   loc_load.131
+
+   if.true
+      repeat.7
+         add
+      end
+
+      dup
+
+      push.2
+      eq
+
+      if.true
+         push.1
+         loc_store.387 drop
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.387 drop
+      end
+
+   else
+
+      repeat.7
+         add
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.387 drop
+      end
+   end
+end
+
+
+# State transition for cell 132
+proc.cell_132_transition.644
+   push.0
+   loc_store.388 drop
+
+   loc_load.115
+   loc_load.116
+   loc_load.117
+   loc_load.131
+   loc_load.133
+   loc_load.147
+   loc_load.148
+   loc_load.149
+
+   loc_load.132
+
+   if.true
+      repeat.7
+         add
+      end
+
+      dup
+
+      push.2
+      eq
+
+      if.true
+         push.1
+         loc_store.388 drop
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.388 drop
+      end
+
+   else
+
+      repeat.7
+         add
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.388 drop
+      end
+   end
+end
+
+
+# State transition for cell 133
+proc.cell_133_transition.645
+   push.0
+   loc_store.389 drop
+
+   loc_load.116
+   loc_load.117
+   loc_load.118
+   loc_load.132
+   loc_load.134
+   loc_load.148
+   loc_load.149
+   loc_load.150
+
+   loc_load.133
+
+   if.true
+      repeat.7
+         add
+      end
+
+      dup
+
+      push.2
+      eq
+
+      if.true
+         push.1
+         loc_store.389 drop
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.389 drop
+      end
+
+   else
+
+      repeat.7
+         add
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.389 drop
+      end
+   end
+end
+
+
+# State transition for cell 134
+proc.cell_134_transition.646
+   push.0
+   loc_store.390 drop
+
+   loc_load.117
+   loc_load.118
+   loc_load.119
+   loc_load.133
+   loc_load.135
+   loc_load.149
+   loc_load.150
+   loc_load.151
+
+   loc_load.134
+
+   if.true
+      repeat.7
+         add
+      end
+
+      dup
+
+      push.2
+      eq
+
+      if.true
+         push.1
+         loc_store.390 drop
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.390 drop
+      end
+
+   else
+
+      repeat.7
+         add
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.390 drop
+      end
+   end
+end
+
+
+# State transition for cell 135
+proc.cell_135_transition.647
+   push.0
+   loc_store.391 drop
+
+   loc_load.118
+   loc_load.119
+   loc_load.120
+   loc_load.134
+   loc_load.136
+   loc_load.150
+   loc_load.151
+   loc_load.152
+
+   loc_load.135
+
+   if.true
+      repeat.7
+         add
+      end
+
+      dup
+
+      push.2
+      eq
+
+      if.true
+         push.1
+         loc_store.391 drop
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.391 drop
+      end
+
+   else
+
+      repeat.7
+         add
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.391 drop
+      end
+   end
+end
+
+
+# State transition for cell 136
+proc.cell_136_transition.648
+   push.0
+   loc_store.392 drop
+
+   loc_load.119
+   loc_load.120
+   loc_load.121
+   loc_load.135
+   loc_load.137
+   loc_load.151
+   loc_load.152
+   loc_load.153
+
+   loc_load.136
+
+   if.true
+      repeat.7
+         add
+      end
+
+      dup
+
+      push.2
+      eq
+
+      if.true
+         push.1
+         loc_store.392 drop
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.392 drop
+      end
+
+   else
+
+      repeat.7
+         add
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.392 drop
+      end
+   end
+end
+
+
+# State transition for cell 137
+proc.cell_137_transition.649
+   push.0
+   loc_store.393 drop
+
+   loc_load.120
+   loc_load.121
+   loc_load.122
+   loc_load.136
+   loc_load.138
+   loc_load.152
+   loc_load.153
+   loc_load.154
+
+   loc_load.137
+
+   if.true
+      repeat.7
+         add
+      end
+
+      dup
+
+      push.2
+      eq
+
+      if.true
+         push.1
+         loc_store.393 drop
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.393 drop
+      end
+
+   else
+
+      repeat.7
+         add
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.393 drop
+      end
+   end
+end
+
+
+# State transition for cell 138
+proc.cell_138_transition.650
+   push.0
+   loc_store.394 drop
+
+   loc_load.121
+   loc_load.122
+   loc_load.123
+   loc_load.137
+   loc_load.139
+   loc_load.153
+   loc_load.154
+   loc_load.155
+
+   loc_load.138
+
+   if.true
+      repeat.7
+         add
+      end
+
+      dup
+
+      push.2
+      eq
+
+      if.true
+         push.1
+         loc_store.394 drop
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.394 drop
+      end
+
+   else
+
+      repeat.7
+         add
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.394 drop
+      end
+   end
+end
+
+
+# State transition for cell 139
+proc.cell_139_transition.651
+   push.0
+   loc_store.395 drop
+
+   loc_load.122
+   loc_load.123
+   loc_load.124
+   loc_load.138
+   loc_load.140
+   loc_load.154
+   loc_load.155
+   loc_load.156
+
+   loc_load.139
+
+   if.true
+      repeat.7
+         add
+      end
+
+      dup
+
+      push.2
+      eq
+
+      if.true
+         push.1
+         loc_store.395 drop
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.395 drop
+      end
+
+   else
+
+      repeat.7
+         add
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.395 drop
+      end
+   end
+end
+
+
+# State transition for cell 140
+proc.cell_140_transition.652
+   push.0
+   loc_store.396 drop
+
+   loc_load.123
+   loc_load.124
+   loc_load.125
+   loc_load.139
+   loc_load.141
+   loc_load.155
+   loc_load.156
+   loc_load.157
+
+   loc_load.140
+
+   if.true
+      repeat.7
+         add
+      end
+
+      dup
+
+      push.2
+      eq
+
+      if.true
+         push.1
+         loc_store.396 drop
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.396 drop
+      end
+
+   else
+
+      repeat.7
+         add
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.396 drop
+      end
+   end
+end
+
+
+# State transition for cell 141
+proc.cell_141_transition.653
+   push.0
+   loc_store.397 drop
+
+   loc_load.124
+   loc_load.125
+   loc_load.126
+   loc_load.140
+   loc_load.142
+   loc_load.156
+   loc_load.157
+   loc_load.158
+
+   loc_load.141
+
+   if.true
+      repeat.7
+         add
+      end
+
+      dup
+
+      push.2
+      eq
+
+      if.true
+         push.1
+         loc_store.397 drop
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.397 drop
+      end
+
+   else
+
+      repeat.7
+         add
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.397 drop
+      end
+   end
+end
+
+
+# State transition for cell 142
+proc.cell_142_transition.654
+   push.0
+   loc_store.398 drop
+
+   loc_load.125
+   loc_load.126
+   loc_load.127
+   loc_load.141
+   loc_load.143
+   loc_load.157
+   loc_load.158
+   loc_load.159
+
+   loc_load.142
+
+   if.true
+      repeat.7
+         add
+      end
+
+      dup
+
+      push.2
+      eq
+
+      if.true
+         push.1
+         loc_store.398 drop
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.398 drop
+      end
+
+   else
+
+      repeat.7
+         add
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.398 drop
+      end
+   end
+end
+
+
+# State transition for cell 143
+proc.cell_143_transition.655
+   push.0
+   loc_store.399 drop
+
+   loc_load.126
+   loc_load.127
+   loc_load.142
+   loc_load.158
+   loc_load.159
+
+   loc_load.143
+
+   if.true
+      repeat.7
+         add
+      end
+
+      dup
+
+      push.2
+      eq
+
+      if.true
+         push.1
+         loc_store.399 drop
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.399 drop
+      end
+
+   else
+
+      repeat.7
+         add
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.399 drop
+      end
+   end
+end
+
+
+# State transition for cell 144
+proc.cell_144_transition.656
+   push.0
+   loc_store.400 drop
+
+   loc_load.128
+   loc_load.129
+   loc_load.145
+   loc_load.160
+   loc_load.161
+
+   loc_load.144
+
+   if.true
+      repeat.7
+         add
+      end
+
+      dup
+
+      push.2
+      eq
+
+      if.true
+         push.1
+         loc_store.400 drop
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.400 drop
+      end
+
+   else
+
+      repeat.7
+         add
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.400 drop
+      end
+   end
+end
+
+
+# State transition for cell 145
+proc.cell_145_transition.657
+   push.0
+   loc_store.401 drop
+
+   loc_load.128
+   loc_load.129
+   loc_load.130
+   loc_load.144
+   loc_load.146
+   loc_load.160
+   loc_load.161
+   loc_load.162
+
+   loc_load.145
+
+   if.true
+      repeat.7
+         add
+      end
+
+      dup
+
+      push.2
+      eq
+
+      if.true
+         push.1
+         loc_store.401 drop
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.401 drop
+      end
+
+   else
+
+      repeat.7
+         add
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.401 drop
+      end
+   end
+end
+
+
+# State transition for cell 146
+proc.cell_146_transition.658
+   push.0
+   loc_store.402 drop
+
+   loc_load.129
+   loc_load.130
+   loc_load.131
+   loc_load.145
+   loc_load.147
+   loc_load.161
+   loc_load.162
+   loc_load.163
+
+   loc_load.146
+
+   if.true
+      repeat.7
+         add
+      end
+
+      dup
+
+      push.2
+      eq
+
+      if.true
+         push.1
+         loc_store.402 drop
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.402 drop
+      end
+
+   else
+
+      repeat.7
+         add
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.402 drop
+      end
+   end
+end
+
+
+# State transition for cell 147
+proc.cell_147_transition.659
+   push.0
+   loc_store.403 drop
+
+   loc_load.130
+   loc_load.131
+   loc_load.132
+   loc_load.146
+   loc_load.148
+   loc_load.162
+   loc_load.163
+   loc_load.164
+
+   loc_load.147
+
+   if.true
+      repeat.7
+         add
+      end
+
+      dup
+
+      push.2
+      eq
+
+      if.true
+         push.1
+         loc_store.403 drop
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.403 drop
+      end
+
+   else
+
+      repeat.7
+         add
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.403 drop
+      end
+   end
+end
+
+
+# State transition for cell 148
+proc.cell_148_transition.660
+   push.0
+   loc_store.404 drop
+
+   loc_load.131
+   loc_load.132
+   loc_load.133
+   loc_load.147
+   loc_load.149
+   loc_load.163
+   loc_load.164
+   loc_load.165
+
+   loc_load.148
+
+   if.true
+      repeat.7
+         add
+      end
+
+      dup
+
+      push.2
+      eq
+
+      if.true
+         push.1
+         loc_store.404 drop
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.404 drop
+      end
+
+   else
+
+      repeat.7
+         add
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.404 drop
+      end
+   end
+end
+
+
+# State transition for cell 149
+proc.cell_149_transition.661
+   push.0
+   loc_store.405 drop
+
+   loc_load.132
+   loc_load.133
+   loc_load.134
+   loc_load.148
+   loc_load.150
+   loc_load.164
+   loc_load.165
+   loc_load.166
+
+   loc_load.149
+
+   if.true
+      repeat.7
+         add
+      end
+
+      dup
+
+      push.2
+      eq
+
+      if.true
+         push.1
+         loc_store.405 drop
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.405 drop
+      end
+
+   else
+
+      repeat.7
+         add
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.405 drop
+      end
+   end
+end
+
+
+# State transition for cell 150
+proc.cell_150_transition.662
+   push.0
+   loc_store.406 drop
+
+   loc_load.133
+   loc_load.134
+   loc_load.135
+   loc_load.149
+   loc_load.151
+   loc_load.165
+   loc_load.166
+   loc_load.167
+
+   loc_load.150
+
+   if.true
+      repeat.7
+         add
+      end
+
+      dup
+
+      push.2
+      eq
+
+      if.true
+         push.1
+         loc_store.406 drop
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.406 drop
+      end
+
+   else
+
+      repeat.7
+         add
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.406 drop
+      end
+   end
+end
+
+
+# State transition for cell 151
+proc.cell_151_transition.663
+   push.0
+   loc_store.407 drop
+
+   loc_load.134
+   loc_load.135
+   loc_load.136
+   loc_load.150
+   loc_load.152
+   loc_load.166
+   loc_load.167
+   loc_load.168
+
+   loc_load.151
+
+   if.true
+      repeat.7
+         add
+      end
+
+      dup
+
+      push.2
+      eq
+
+      if.true
+         push.1
+         loc_store.407 drop
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.407 drop
+      end
+
+   else
+
+      repeat.7
+         add
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.407 drop
+      end
+   end
+end
+
+
+# State transition for cell 152
+proc.cell_152_transition.664
+   push.0
+   loc_store.408 drop
+
+   loc_load.135
+   loc_load.136
+   loc_load.137
+   loc_load.151
+   loc_load.153
+   loc_load.167
+   loc_load.168
+   loc_load.169
+
+   loc_load.152
+
+   if.true
+      repeat.7
+         add
+      end
+
+      dup
+
+      push.2
+      eq
+
+      if.true
+         push.1
+         loc_store.408 drop
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.408 drop
+      end
+
+   else
+
+      repeat.7
+         add
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.408 drop
+      end
+   end
+end
+
+
+# State transition for cell 153
+proc.cell_153_transition.665
+   push.0
+   loc_store.409 drop
+
+   loc_load.136
+   loc_load.137
+   loc_load.138
+   loc_load.152
+   loc_load.154
+   loc_load.168
+   loc_load.169
+   loc_load.170
+
+   loc_load.153
+
+   if.true
+      repeat.7
+         add
+      end
+
+      dup
+
+      push.2
+      eq
+
+      if.true
+         push.1
+         loc_store.409 drop
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.409 drop
+      end
+
+   else
+
+      repeat.7
+         add
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.409 drop
+      end
+   end
+end
+
+
+# State transition for cell 154
+proc.cell_154_transition.666
+   push.0
+   loc_store.410 drop
+
+   loc_load.137
+   loc_load.138
+   loc_load.139
+   loc_load.153
+   loc_load.155
+   loc_load.169
+   loc_load.170
+   loc_load.171
+
+   loc_load.154
+
+   if.true
+      repeat.7
+         add
+      end
+
+      dup
+
+      push.2
+      eq
+
+      if.true
+         push.1
+         loc_store.410 drop
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.410 drop
+      end
+
+   else
+
+      repeat.7
+         add
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.410 drop
+      end
+   end
+end
+
+
+# State transition for cell 155
+proc.cell_155_transition.667
+   push.0
+   loc_store.411 drop
+
+   loc_load.138
+   loc_load.139
+   loc_load.140
+   loc_load.154
+   loc_load.156
+   loc_load.170
+   loc_load.171
+   loc_load.172
+
+   loc_load.155
+
+   if.true
+      repeat.7
+         add
+      end
+
+      dup
+
+      push.2
+      eq
+
+      if.true
+         push.1
+         loc_store.411 drop
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.411 drop
+      end
+
+   else
+
+      repeat.7
+         add
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.411 drop
+      end
+   end
+end
+
+
+# State transition for cell 156
+proc.cell_156_transition.668
+   push.0
+   loc_store.412 drop
+
+   loc_load.139
+   loc_load.140
+   loc_load.141
+   loc_load.155
+   loc_load.157
+   loc_load.171
+   loc_load.172
+   loc_load.173
+
+   loc_load.156
+
+   if.true
+      repeat.7
+         add
+      end
+
+      dup
+
+      push.2
+      eq
+
+      if.true
+         push.1
+         loc_store.412 drop
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.412 drop
+      end
+
+   else
+
+      repeat.7
+         add
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.412 drop
+      end
+   end
+end
+
+
+# State transition for cell 157
+proc.cell_157_transition.669
+   push.0
+   loc_store.413 drop
+
+   loc_load.140
+   loc_load.141
+   loc_load.142
+   loc_load.156
+   loc_load.158
+   loc_load.172
+   loc_load.173
+   loc_load.174
+
+   loc_load.157
+
+   if.true
+      repeat.7
+         add
+      end
+
+      dup
+
+      push.2
+      eq
+
+      if.true
+         push.1
+         loc_store.413 drop
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.413 drop
+      end
+
+   else
+
+      repeat.7
+         add
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.413 drop
+      end
+   end
+end
+
+
+# State transition for cell 158
+proc.cell_158_transition.670
+   push.0
+   loc_store.414 drop
+
+   loc_load.141
+   loc_load.142
+   loc_load.143
+   loc_load.157
+   loc_load.159
+   loc_load.173
+   loc_load.174
+   loc_load.175
+
+   loc_load.158
+
+   if.true
+      repeat.7
+         add
+      end
+
+      dup
+
+      push.2
+      eq
+
+      if.true
+         push.1
+         loc_store.414 drop
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.414 drop
+      end
+
+   else
+
+      repeat.7
+         add
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.414 drop
+      end
+   end
+end
+
+
+# State transition for cell 159
+proc.cell_159_transition.671
+   push.0
+   loc_store.415 drop
+
+   loc_load.142
+   loc_load.143
+   loc_load.158
+   loc_load.174
+   loc_load.175
+
+   loc_load.159
+
+   if.true
+      repeat.7
+         add
+      end
+
+      dup
+
+      push.2
+      eq
+
+      if.true
+         push.1
+         loc_store.415 drop
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.415 drop
+      end
+
+   else
+
+      repeat.7
+         add
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.415 drop
+      end
+   end
+end
+
+
+# State transition for cell 160
+proc.cell_160_transition.672
+   push.0
+   loc_store.416 drop
+
+   loc_load.144
+   loc_load.145
+   loc_load.161
+   loc_load.176
+   loc_load.177
+
+   loc_load.160
+
+   if.true
+      repeat.7
+         add
+      end
+
+      dup
+
+      push.2
+      eq
+
+      if.true
+         push.1
+         loc_store.416 drop
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.416 drop
+      end
+
+   else
+
+      repeat.7
+         add
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.416 drop
+      end
+   end
+end
+
+
+# State transition for cell 161
+proc.cell_161_transition.673
+   push.0
+   loc_store.417 drop
+
+   loc_load.144
+   loc_load.145
+   loc_load.146
+   loc_load.160
+   loc_load.162
+   loc_load.176
+   loc_load.177
+   loc_load.178
+
+   loc_load.161
+
+   if.true
+      repeat.7
+         add
+      end
+
+      dup
+
+      push.2
+      eq
+
+      if.true
+         push.1
+         loc_store.417 drop
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.417 drop
+      end
+
+   else
+
+      repeat.7
+         add
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.417 drop
+      end
+   end
+end
+
+
+# State transition for cell 162
+proc.cell_162_transition.674
+   push.0
+   loc_store.418 drop
+
+   loc_load.145
+   loc_load.146
+   loc_load.147
+   loc_load.161
+   loc_load.163
+   loc_load.177
+   loc_load.178
+   loc_load.179
+
+   loc_load.162
+
+   if.true
+      repeat.7
+         add
+      end
+
+      dup
+
+      push.2
+      eq
+
+      if.true
+         push.1
+         loc_store.418 drop
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.418 drop
+      end
+
+   else
+
+      repeat.7
+         add
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.418 drop
+      end
+   end
+end
+
+
+# State transition for cell 163
+proc.cell_163_transition.675
+   push.0
+   loc_store.419 drop
+
+   loc_load.146
+   loc_load.147
+   loc_load.148
+   loc_load.162
+   loc_load.164
+   loc_load.178
+   loc_load.179
+   loc_load.180
+
+   loc_load.163
+
+   if.true
+      repeat.7
+         add
+      end
+
+      dup
+
+      push.2
+      eq
+
+      if.true
+         push.1
+         loc_store.419 drop
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.419 drop
+      end
+
+   else
+
+      repeat.7
+         add
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.419 drop
+      end
+   end
+end
+
+
+# State transition for cell 164
+proc.cell_164_transition.676
+   push.0
+   loc_store.420 drop
+
+   loc_load.147
+   loc_load.148
+   loc_load.149
+   loc_load.163
+   loc_load.165
+   loc_load.179
+   loc_load.180
+   loc_load.181
+
+   loc_load.164
+
+   if.true
+      repeat.7
+         add
+      end
+
+      dup
+
+      push.2
+      eq
+
+      if.true
+         push.1
+         loc_store.420 drop
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.420 drop
+      end
+
+   else
+
+      repeat.7
+         add
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.420 drop
+      end
+   end
+end
+
+
+# State transition for cell 165
+proc.cell_165_transition.677
+   push.0
+   loc_store.421 drop
+
+   loc_load.148
+   loc_load.149
+   loc_load.150
+   loc_load.164
+   loc_load.166
+   loc_load.180
+   loc_load.181
+   loc_load.182
+
+   loc_load.165
+
+   if.true
+      repeat.7
+         add
+      end
+
+      dup
+
+      push.2
+      eq
+
+      if.true
+         push.1
+         loc_store.421 drop
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.421 drop
+      end
+
+   else
+
+      repeat.7
+         add
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.421 drop
+      end
+   end
+end
+
+
+# State transition for cell 166
+proc.cell_166_transition.678
+   push.0
+   loc_store.422 drop
+
+   loc_load.149
+   loc_load.150
+   loc_load.151
+   loc_load.165
+   loc_load.167
+   loc_load.181
+   loc_load.182
+   loc_load.183
+
+   loc_load.166
+
+   if.true
+      repeat.7
+         add
+      end
+
+      dup
+
+      push.2
+      eq
+
+      if.true
+         push.1
+         loc_store.422 drop
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.422 drop
+      end
+
+   else
+
+      repeat.7
+         add
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.422 drop
+      end
+   end
+end
+
+
+# State transition for cell 167
+proc.cell_167_transition.679
+   push.0
+   loc_store.423 drop
+
+   loc_load.150
+   loc_load.151
+   loc_load.152
+   loc_load.166
+   loc_load.168
+   loc_load.182
+   loc_load.183
+   loc_load.184
+
+   loc_load.167
+
+   if.true
+      repeat.7
+         add
+      end
+
+      dup
+
+      push.2
+      eq
+
+      if.true
+         push.1
+         loc_store.423 drop
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.423 drop
+      end
+
+   else
+
+      repeat.7
+         add
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.423 drop
+      end
+   end
+end
+
+
+# State transition for cell 168
+proc.cell_168_transition.680
+   push.0
+   loc_store.424 drop
+
+   loc_load.151
+   loc_load.152
+   loc_load.153
+   loc_load.167
+   loc_load.169
+   loc_load.183
+   loc_load.184
+   loc_load.185
+
+   loc_load.168
+
+   if.true
+      repeat.7
+         add
+      end
+
+      dup
+
+      push.2
+      eq
+
+      if.true
+         push.1
+         loc_store.424 drop
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.424 drop
+      end
+
+   else
+
+      repeat.7
+         add
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.424 drop
+      end
+   end
+end
+
+
+# State transition for cell 169
+proc.cell_169_transition.681
+   push.0
+   loc_store.425 drop
+
+   loc_load.152
+   loc_load.153
+   loc_load.154
+   loc_load.168
+   loc_load.170
+   loc_load.184
+   loc_load.185
+   loc_load.186
+
+   loc_load.169
+
+   if.true
+      repeat.7
+         add
+      end
+
+      dup
+
+      push.2
+      eq
+
+      if.true
+         push.1
+         loc_store.425 drop
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.425 drop
+      end
+
+   else
+
+      repeat.7
+         add
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.425 drop
+      end
+   end
+end
+
+
+# State transition for cell 170
+proc.cell_170_transition.682
+   push.0
+   loc_store.426 drop
+
+   loc_load.153
+   loc_load.154
+   loc_load.155
+   loc_load.169
+   loc_load.171
+   loc_load.185
+   loc_load.186
+   loc_load.187
+
+   loc_load.170
+
+   if.true
+      repeat.7
+         add
+      end
+
+      dup
+
+      push.2
+      eq
+
+      if.true
+         push.1
+         loc_store.426 drop
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.426 drop
+      end
+
+   else
+
+      repeat.7
+         add
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.426 drop
+      end
+   end
+end
+
+
+# State transition for cell 171
+proc.cell_171_transition.683
+   push.0
+   loc_store.427 drop
+
+   loc_load.154
+   loc_load.155
+   loc_load.156
+   loc_load.170
+   loc_load.172
+   loc_load.186
+   loc_load.187
+   loc_load.188
+
+   loc_load.171
+
+   if.true
+      repeat.7
+         add
+      end
+
+      dup
+
+      push.2
+      eq
+
+      if.true
+         push.1
+         loc_store.427 drop
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.427 drop
+      end
+
+   else
+
+      repeat.7
+         add
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.427 drop
+      end
+   end
+end
+
+
+# State transition for cell 172
+proc.cell_172_transition.684
+   push.0
+   loc_store.428 drop
+
+   loc_load.155
+   loc_load.156
+   loc_load.157
+   loc_load.171
+   loc_load.173
+   loc_load.187
+   loc_load.188
+   loc_load.189
+
+   loc_load.172
+
+   if.true
+      repeat.7
+         add
+      end
+
+      dup
+
+      push.2
+      eq
+
+      if.true
+         push.1
+         loc_store.428 drop
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.428 drop
+      end
+
+   else
+
+      repeat.7
+         add
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.428 drop
+      end
+   end
+end
+
+
+# State transition for cell 173
+proc.cell_173_transition.685
+   push.0
+   loc_store.429 drop
+
+   loc_load.156
+   loc_load.157
+   loc_load.158
+   loc_load.172
+   loc_load.174
+   loc_load.188
+   loc_load.189
+   loc_load.190
+
+   loc_load.173
+
+   if.true
+      repeat.7
+         add
+      end
+
+      dup
+
+      push.2
+      eq
+
+      if.true
+         push.1
+         loc_store.429 drop
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.429 drop
+      end
+
+   else
+
+      repeat.7
+         add
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.429 drop
+      end
+   end
+end
+
+
+# State transition for cell 174
+proc.cell_174_transition.686
+   push.0
+   loc_store.430 drop
+
+   loc_load.157
+   loc_load.158
+   loc_load.159
+   loc_load.173
+   loc_load.175
+   loc_load.189
+   loc_load.190
+   loc_load.191
+
+   loc_load.174
+
+   if.true
+      repeat.7
+         add
+      end
+
+      dup
+
+      push.2
+      eq
+
+      if.true
+         push.1
+         loc_store.430 drop
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.430 drop
+      end
+
+   else
+
+      repeat.7
+         add
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.430 drop
+      end
+   end
+end
+
+
+# State transition for cell 175
+proc.cell_175_transition.687
+   push.0
+   loc_store.431 drop
+
+   loc_load.158
+   loc_load.159
+   loc_load.174
+   loc_load.190
+   loc_load.191
+
+   loc_load.175
+
+   if.true
+      repeat.7
+         add
+      end
+
+      dup
+
+      push.2
+      eq
+
+      if.true
+         push.1
+         loc_store.431 drop
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.431 drop
+      end
+
+   else
+
+      repeat.7
+         add
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.431 drop
+      end
+   end
+end
+
+
+# State transition for cell 176
+proc.cell_176_transition.688
+   push.0
+   loc_store.432 drop
+
+   loc_load.160
+   loc_load.161
+   loc_load.177
+   loc_load.192
+   loc_load.193
+
+   loc_load.176
+
+   if.true
+      repeat.7
+         add
+      end
+
+      dup
+
+      push.2
+      eq
+
+      if.true
+         push.1
+         loc_store.432 drop
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.432 drop
+      end
+
+   else
+
+      repeat.7
+         add
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.432 drop
+      end
+   end
+end
+
+
+# State transition for cell 177
+proc.cell_177_transition.689
+   push.0
+   loc_store.433 drop
+
+   loc_load.160
+   loc_load.161
+   loc_load.162
+   loc_load.176
+   loc_load.178
+   loc_load.192
+   loc_load.193
+   loc_load.194
+
+   loc_load.177
+
+   if.true
+      repeat.7
+         add
+      end
+
+      dup
+
+      push.2
+      eq
+
+      if.true
+         push.1
+         loc_store.433 drop
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.433 drop
+      end
+
+   else
+
+      repeat.7
+         add
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.433 drop
+      end
+   end
+end
+
+
+# State transition for cell 178
+proc.cell_178_transition.690
+   push.0
+   loc_store.434 drop
+
+   loc_load.161
+   loc_load.162
+   loc_load.163
+   loc_load.177
+   loc_load.179
+   loc_load.193
+   loc_load.194
+   loc_load.195
+
+   loc_load.178
+
+   if.true
+      repeat.7
+         add
+      end
+
+      dup
+
+      push.2
+      eq
+
+      if.true
+         push.1
+         loc_store.434 drop
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.434 drop
+      end
+
+   else
+
+      repeat.7
+         add
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.434 drop
+      end
+   end
+end
+
+
+# State transition for cell 179
+proc.cell_179_transition.691
+   push.0
+   loc_store.435 drop
+
+   loc_load.162
+   loc_load.163
+   loc_load.164
+   loc_load.178
+   loc_load.180
+   loc_load.194
+   loc_load.195
+   loc_load.196
+
+   loc_load.179
+
+   if.true
+      repeat.7
+         add
+      end
+
+      dup
+
+      push.2
+      eq
+
+      if.true
+         push.1
+         loc_store.435 drop
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.435 drop
+      end
+
+   else
+
+      repeat.7
+         add
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.435 drop
+      end
+   end
+end
+
+
+# State transition for cell 180
+proc.cell_180_transition.692
+   push.0
+   loc_store.436 drop
+
+   loc_load.163
+   loc_load.164
+   loc_load.165
+   loc_load.179
+   loc_load.181
+   loc_load.195
+   loc_load.196
+   loc_load.197
+
+   loc_load.180
+
+   if.true
+      repeat.7
+         add
+      end
+
+      dup
+
+      push.2
+      eq
+
+      if.true
+         push.1
+         loc_store.436 drop
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.436 drop
+      end
+
+   else
+
+      repeat.7
+         add
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.436 drop
+      end
+   end
+end
+
+
+# State transition for cell 181
+proc.cell_181_transition.693
+   push.0
+   loc_store.437 drop
+
+   loc_load.164
+   loc_load.165
+   loc_load.166
+   loc_load.180
+   loc_load.182
+   loc_load.196
+   loc_load.197
+   loc_load.198
+
+   loc_load.181
+
+   if.true
+      repeat.7
+         add
+      end
+
+      dup
+
+      push.2
+      eq
+
+      if.true
+         push.1
+         loc_store.437 drop
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.437 drop
+      end
+
+   else
+
+      repeat.7
+         add
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.437 drop
+      end
+   end
+end
+
+
+# State transition for cell 182
+proc.cell_182_transition.694
+   push.0
+   loc_store.438 drop
+
+   loc_load.165
+   loc_load.166
+   loc_load.167
+   loc_load.181
+   loc_load.183
+   loc_load.197
+   loc_load.198
+   loc_load.199
+
+   loc_load.182
+
+   if.true
+      repeat.7
+         add
+      end
+
+      dup
+
+      push.2
+      eq
+
+      if.true
+         push.1
+         loc_store.438 drop
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.438 drop
+      end
+
+   else
+
+      repeat.7
+         add
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.438 drop
+      end
+   end
+end
+
+
+# State transition for cell 183
+proc.cell_183_transition.695
+   push.0
+   loc_store.439 drop
+
+   loc_load.166
+   loc_load.167
+   loc_load.168
+   loc_load.182
+   loc_load.184
+   loc_load.198
+   loc_load.199
+   loc_load.200
+
+   loc_load.183
+
+   if.true
+      repeat.7
+         add
+      end
+
+      dup
+
+      push.2
+      eq
+
+      if.true
+         push.1
+         loc_store.439 drop
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.439 drop
+      end
+
+   else
+
+      repeat.7
+         add
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.439 drop
+      end
+   end
+end
+
+
+# State transition for cell 184
+proc.cell_184_transition.696
+   push.0
+   loc_store.440 drop
+
+   loc_load.167
+   loc_load.168
+   loc_load.169
+   loc_load.183
+   loc_load.185
+   loc_load.199
+   loc_load.200
+   loc_load.201
+
+   loc_load.184
+
+   if.true
+      repeat.7
+         add
+      end
+
+      dup
+
+      push.2
+      eq
+
+      if.true
+         push.1
+         loc_store.440 drop
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.440 drop
+      end
+
+   else
+
+      repeat.7
+         add
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.440 drop
+      end
+   end
+end
+
+
+# State transition for cell 185
+proc.cell_185_transition.697
+   push.0
+   loc_store.441 drop
+
+   loc_load.168
+   loc_load.169
+   loc_load.170
+   loc_load.184
+   loc_load.186
+   loc_load.200
+   loc_load.201
+   loc_load.202
+
+   loc_load.185
+
+   if.true
+      repeat.7
+         add
+      end
+
+      dup
+
+      push.2
+      eq
+
+      if.true
+         push.1
+         loc_store.441 drop
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.441 drop
+      end
+
+   else
+
+      repeat.7
+         add
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.441 drop
+      end
+   end
+end
+
+
+# State transition for cell 186
+proc.cell_186_transition.698
+   push.0
+   loc_store.442 drop
+
+   loc_load.169
+   loc_load.170
+   loc_load.171
+   loc_load.185
+   loc_load.187
+   loc_load.201
+   loc_load.202
+   loc_load.203
+
+   loc_load.186
+
+   if.true
+      repeat.7
+         add
+      end
+
+      dup
+
+      push.2
+      eq
+
+      if.true
+         push.1
+         loc_store.442 drop
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.442 drop
+      end
+
+   else
+
+      repeat.7
+         add
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.442 drop
+      end
+   end
+end
+
+
+# State transition for cell 187
+proc.cell_187_transition.699
+   push.0
+   loc_store.443 drop
+
+   loc_load.170
+   loc_load.171
+   loc_load.172
+   loc_load.186
+   loc_load.188
+   loc_load.202
+   loc_load.203
+   loc_load.204
+
+   loc_load.187
+
+   if.true
+      repeat.7
+         add
+      end
+
+      dup
+
+      push.2
+      eq
+
+      if.true
+         push.1
+         loc_store.443 drop
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.443 drop
+      end
+
+   else
+
+      repeat.7
+         add
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.443 drop
+      end
+   end
+end
+
+
+# State transition for cell 188
+proc.cell_188_transition.700
+   push.0
+   loc_store.444 drop
+
+   loc_load.171
+   loc_load.172
+   loc_load.173
+   loc_load.187
+   loc_load.189
+   loc_load.203
+   loc_load.204
+   loc_load.205
+
+   loc_load.188
+
+   if.true
+      repeat.7
+         add
+      end
+
+      dup
+
+      push.2
+      eq
+
+      if.true
+         push.1
+         loc_store.444 drop
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.444 drop
+      end
+
+   else
+
+      repeat.7
+         add
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.444 drop
+      end
+   end
+end
+
+
+# State transition for cell 189
+proc.cell_189_transition.701
+   push.0
+   loc_store.445 drop
+
+   loc_load.172
+   loc_load.173
+   loc_load.174
+   loc_load.188
+   loc_load.190
+   loc_load.204
+   loc_load.205
+   loc_load.206
+
+   loc_load.189
+
+   if.true
+      repeat.7
+         add
+      end
+
+      dup
+
+      push.2
+      eq
+
+      if.true
+         push.1
+         loc_store.445 drop
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.445 drop
+      end
+
+   else
+
+      repeat.7
+         add
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.445 drop
+      end
+   end
+end
+
+
+# State transition for cell 190
+proc.cell_190_transition.702
+   push.0
+   loc_store.446 drop
+
+   loc_load.173
+   loc_load.174
+   loc_load.175
+   loc_load.189
+   loc_load.191
+   loc_load.205
+   loc_load.206
+   loc_load.207
+
+   loc_load.190
+
+   if.true
+      repeat.7
+         add
+      end
+
+      dup
+
+      push.2
+      eq
+
+      if.true
+         push.1
+         loc_store.446 drop
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.446 drop
+      end
+
+   else
+
+      repeat.7
+         add
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.446 drop
+      end
+   end
+end
+
+
+# State transition for cell 191
+proc.cell_191_transition.703
+   push.0
+   loc_store.447 drop
+
+   loc_load.174
+   loc_load.175
+   loc_load.190
+   loc_load.206
+   loc_load.207
+
+   loc_load.191
+
+   if.true
+      repeat.7
+         add
+      end
+
+      dup
+
+      push.2
+      eq
+
+      if.true
+         push.1
+         loc_store.447 drop
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.447 drop
+      end
+
+   else
+
+      repeat.7
+         add
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.447 drop
+      end
+   end
+end
+
+
+# State transition for cell 192
+proc.cell_192_transition.704
+   push.0
+   loc_store.448 drop
+
+   loc_load.176
+   loc_load.177
+   loc_load.193
+   loc_load.208
+   loc_load.209
+
+   loc_load.192
+
+   if.true
+      repeat.7
+         add
+      end
+
+      dup
+
+      push.2
+      eq
+
+      if.true
+         push.1
+         loc_store.448 drop
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.448 drop
+      end
+
+   else
+
+      repeat.7
+         add
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.448 drop
+      end
+   end
+end
+
+
+# State transition for cell 193
+proc.cell_193_transition.705
+   push.0
+   loc_store.449 drop
+
+   loc_load.176
+   loc_load.177
+   loc_load.178
+   loc_load.192
+   loc_load.194
+   loc_load.208
+   loc_load.209
+   loc_load.210
+
+   loc_load.193
+
+   if.true
+      repeat.7
+         add
+      end
+
+      dup
+
+      push.2
+      eq
+
+      if.true
+         push.1
+         loc_store.449 drop
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.449 drop
+      end
+
+   else
+
+      repeat.7
+         add
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.449 drop
+      end
+   end
+end
+
+
+# State transition for cell 194
+proc.cell_194_transition.706
+   push.0
+   loc_store.450 drop
+
+   loc_load.177
+   loc_load.178
+   loc_load.179
+   loc_load.193
+   loc_load.195
+   loc_load.209
+   loc_load.210
+   loc_load.211
+
+   loc_load.194
+
+   if.true
+      repeat.7
+         add
+      end
+
+      dup
+
+      push.2
+      eq
+
+      if.true
+         push.1
+         loc_store.450 drop
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.450 drop
+      end
+
+   else
+
+      repeat.7
+         add
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.450 drop
+      end
+   end
+end
+
+
+# State transition for cell 195
+proc.cell_195_transition.707
+   push.0
+   loc_store.451 drop
+
+   loc_load.178
+   loc_load.179
+   loc_load.180
+   loc_load.194
+   loc_load.196
+   loc_load.210
+   loc_load.211
+   loc_load.212
+
+   loc_load.195
+
+   if.true
+      repeat.7
+         add
+      end
+
+      dup
+
+      push.2
+      eq
+
+      if.true
+         push.1
+         loc_store.451 drop
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.451 drop
+      end
+
+   else
+
+      repeat.7
+         add
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.451 drop
+      end
+   end
+end
+
+
+# State transition for cell 196
+proc.cell_196_transition.708
+   push.0
+   loc_store.452 drop
+
+   loc_load.179
+   loc_load.180
+   loc_load.181
+   loc_load.195
+   loc_load.197
+   loc_load.211
+   loc_load.212
+   loc_load.213
+
+   loc_load.196
+
+   if.true
+      repeat.7
+         add
+      end
+
+      dup
+
+      push.2
+      eq
+
+      if.true
+         push.1
+         loc_store.452 drop
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.452 drop
+      end
+
+   else
+
+      repeat.7
+         add
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.452 drop
+      end
+   end
+end
+
+
+# State transition for cell 197
+proc.cell_197_transition.709
+   push.0
+   loc_store.453 drop
+
+   loc_load.180
+   loc_load.181
+   loc_load.182
+   loc_load.196
+   loc_load.198
+   loc_load.212
+   loc_load.213
+   loc_load.214
+
+   loc_load.197
+
+   if.true
+      repeat.7
+         add
+      end
+
+      dup
+
+      push.2
+      eq
+
+      if.true
+         push.1
+         loc_store.453 drop
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.453 drop
+      end
+
+   else
+
+      repeat.7
+         add
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.453 drop
+      end
+   end
+end
+
+
+# State transition for cell 198
+proc.cell_198_transition.710
+   push.0
+   loc_store.454 drop
+
+   loc_load.181
+   loc_load.182
+   loc_load.183
+   loc_load.197
+   loc_load.199
+   loc_load.213
+   loc_load.214
+   loc_load.215
+
+   loc_load.198
+
+   if.true
+      repeat.7
+         add
+      end
+
+      dup
+
+      push.2
+      eq
+
+      if.true
+         push.1
+         loc_store.454 drop
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.454 drop
+      end
+
+   else
+
+      repeat.7
+         add
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.454 drop
+      end
+   end
+end
+
+
+# State transition for cell 199
+proc.cell_199_transition.711
+   push.0
+   loc_store.455 drop
+
+   loc_load.182
+   loc_load.183
+   loc_load.184
+   loc_load.198
+   loc_load.200
+   loc_load.214
+   loc_load.215
+   loc_load.216
+
+   loc_load.199
+
+   if.true
+      repeat.7
+         add
+      end
+
+      dup
+
+      push.2
+      eq
+
+      if.true
+         push.1
+         loc_store.455 drop
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.455 drop
+      end
+
+   else
+
+      repeat.7
+         add
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.455 drop
+      end
+   end
+end
+
+
+# State transition for cell 200
+proc.cell_200_transition.712
+   push.0
+   loc_store.456 drop
+
+   loc_load.183
+   loc_load.184
+   loc_load.185
+   loc_load.199
+   loc_load.201
+   loc_load.215
+   loc_load.216
+   loc_load.217
+
+   loc_load.200
+
+   if.true
+      repeat.7
+         add
+      end
+
+      dup
+
+      push.2
+      eq
+
+      if.true
+         push.1
+         loc_store.456 drop
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.456 drop
+      end
+
+   else
+
+      repeat.7
+         add
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.456 drop
+      end
+   end
+end
+
+
+# State transition for cell 201
+proc.cell_201_transition.713
+   push.0
+   loc_store.457 drop
+
+   loc_load.184
+   loc_load.185
+   loc_load.186
+   loc_load.200
+   loc_load.202
+   loc_load.216
+   loc_load.217
+   loc_load.218
+
+   loc_load.201
+
+   if.true
+      repeat.7
+         add
+      end
+
+      dup
+
+      push.2
+      eq
+
+      if.true
+         push.1
+         loc_store.457 drop
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.457 drop
+      end
+
+   else
+
+      repeat.7
+         add
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.457 drop
+      end
+   end
+end
+
+
+# State transition for cell 202
+proc.cell_202_transition.714
+   push.0
+   loc_store.458 drop
+
+   loc_load.185
+   loc_load.186
+   loc_load.187
+   loc_load.201
+   loc_load.203
+   loc_load.217
+   loc_load.218
+   loc_load.219
+
+   loc_load.202
+
+   if.true
+      repeat.7
+         add
+      end
+
+      dup
+
+      push.2
+      eq
+
+      if.true
+         push.1
+         loc_store.458 drop
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.458 drop
+      end
+
+   else
+
+      repeat.7
+         add
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.458 drop
+      end
+   end
+end
+
+
+# State transition for cell 203
+proc.cell_203_transition.715
+   push.0
+   loc_store.459 drop
+
+   loc_load.186
+   loc_load.187
+   loc_load.188
+   loc_load.202
+   loc_load.204
+   loc_load.218
+   loc_load.219
+   loc_load.220
+
+   loc_load.203
+
+   if.true
+      repeat.7
+         add
+      end
+
+      dup
+
+      push.2
+      eq
+
+      if.true
+         push.1
+         loc_store.459 drop
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.459 drop
+      end
+
+   else
+
+      repeat.7
+         add
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.459 drop
+      end
+   end
+end
+
+
+# State transition for cell 204
+proc.cell_204_transition.716
+   push.0
+   loc_store.460 drop
+
+   loc_load.187
+   loc_load.188
+   loc_load.189
+   loc_load.203
+   loc_load.205
+   loc_load.219
+   loc_load.220
+   loc_load.221
+
+   loc_load.204
+
+   if.true
+      repeat.7
+         add
+      end
+
+      dup
+
+      push.2
+      eq
+
+      if.true
+         push.1
+         loc_store.460 drop
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.460 drop
+      end
+
+   else
+
+      repeat.7
+         add
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.460 drop
+      end
+   end
+end
+
+
+# State transition for cell 205
+proc.cell_205_transition.717
+   push.0
+   loc_store.461 drop
+
+   loc_load.188
+   loc_load.189
+   loc_load.190
+   loc_load.204
+   loc_load.206
+   loc_load.220
+   loc_load.221
+   loc_load.222
+
+   loc_load.205
+
+   if.true
+      repeat.7
+         add
+      end
+
+      dup
+
+      push.2
+      eq
+
+      if.true
+         push.1
+         loc_store.461 drop
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.461 drop
+      end
+
+   else
+
+      repeat.7
+         add
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.461 drop
+      end
+   end
+end
+
+
+# State transition for cell 206
+proc.cell_206_transition.718
+   push.0
+   loc_store.462 drop
+
+   loc_load.189
+   loc_load.190
+   loc_load.191
+   loc_load.205
+   loc_load.207
+   loc_load.221
+   loc_load.222
+   loc_load.223
+
+   loc_load.206
+
+   if.true
+      repeat.7
+         add
+      end
+
+      dup
+
+      push.2
+      eq
+
+      if.true
+         push.1
+         loc_store.462 drop
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.462 drop
+      end
+
+   else
+
+      repeat.7
+         add
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.462 drop
+      end
+   end
+end
+
+
+# State transition for cell 207
+proc.cell_207_transition.719
+   push.0
+   loc_store.463 drop
+
+   loc_load.190
+   loc_load.191
+   loc_load.206
+   loc_load.222
+   loc_load.223
+
+   loc_load.207
+
+   if.true
+      repeat.7
+         add
+      end
+
+      dup
+
+      push.2
+      eq
+
+      if.true
+         push.1
+         loc_store.463 drop
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.463 drop
+      end
+
+   else
+
+      repeat.7
+         add
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.463 drop
+      end
+   end
+end
+
+
+# State transition for cell 208
+proc.cell_208_transition.720
+   push.0
+   loc_store.464 drop
+
+   loc_load.192
+   loc_load.193
+   loc_load.209
+   loc_load.224
+   loc_load.225
+
+   loc_load.208
+
+   if.true
+      repeat.7
+         add
+      end
+
+      dup
+
+      push.2
+      eq
+
+      if.true
+         push.1
+         loc_store.464 drop
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.464 drop
+      end
+
+   else
+
+      repeat.7
+         add
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.464 drop
+      end
+   end
+end
+
+
+# State transition for cell 209
+proc.cell_209_transition.721
+   push.0
+   loc_store.465 drop
+
+   loc_load.192
+   loc_load.193
+   loc_load.194
+   loc_load.208
+   loc_load.210
+   loc_load.224
+   loc_load.225
+   loc_load.226
+
+   loc_load.209
+
+   if.true
+      repeat.7
+         add
+      end
+
+      dup
+
+      push.2
+      eq
+
+      if.true
+         push.1
+         loc_store.465 drop
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.465 drop
+      end
+
+   else
+
+      repeat.7
+         add
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.465 drop
+      end
+   end
+end
+
+
+# State transition for cell 210
+proc.cell_210_transition.722
+   push.0
+   loc_store.466 drop
+
+   loc_load.193
+   loc_load.194
+   loc_load.195
+   loc_load.209
+   loc_load.211
+   loc_load.225
+   loc_load.226
+   loc_load.227
+
+   loc_load.210
+
+   if.true
+      repeat.7
+         add
+      end
+
+      dup
+
+      push.2
+      eq
+
+      if.true
+         push.1
+         loc_store.466 drop
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.466 drop
+      end
+
+   else
+
+      repeat.7
+         add
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.466 drop
+      end
+   end
+end
+
+
+# State transition for cell 211
+proc.cell_211_transition.723
+   push.0
+   loc_store.467 drop
+
+   loc_load.194
+   loc_load.195
+   loc_load.196
+   loc_load.210
+   loc_load.212
+   loc_load.226
+   loc_load.227
+   loc_load.228
+
+   loc_load.211
+
+   if.true
+      repeat.7
+         add
+      end
+
+      dup
+
+      push.2
+      eq
+
+      if.true
+         push.1
+         loc_store.467 drop
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.467 drop
+      end
+
+   else
+
+      repeat.7
+         add
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.467 drop
+      end
+   end
+end
+
+
+# State transition for cell 212
+proc.cell_212_transition.724
+   push.0
+   loc_store.468 drop
+
+   loc_load.195
+   loc_load.196
+   loc_load.197
+   loc_load.211
+   loc_load.213
+   loc_load.227
+   loc_load.228
+   loc_load.229
+
+   loc_load.212
+
+   if.true
+      repeat.7
+         add
+      end
+
+      dup
+
+      push.2
+      eq
+
+      if.true
+         push.1
+         loc_store.468 drop
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.468 drop
+      end
+
+   else
+
+      repeat.7
+         add
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.468 drop
+      end
+   end
+end
+
+
+# State transition for cell 213
+proc.cell_213_transition.725
+   push.0
+   loc_store.469 drop
+
+   loc_load.196
+   loc_load.197
+   loc_load.198
+   loc_load.212
+   loc_load.214
+   loc_load.228
+   loc_load.229
+   loc_load.230
+
+   loc_load.213
+
+   if.true
+      repeat.7
+         add
+      end
+
+      dup
+
+      push.2
+      eq
+
+      if.true
+         push.1
+         loc_store.469 drop
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.469 drop
+      end
+
+   else
+
+      repeat.7
+         add
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.469 drop
+      end
+   end
+end
+
+
+# State transition for cell 214
+proc.cell_214_transition.726
+   push.0
+   loc_store.470 drop
+
+   loc_load.197
+   loc_load.198
+   loc_load.199
+   loc_load.213
+   loc_load.215
+   loc_load.229
+   loc_load.230
+   loc_load.231
+
+   loc_load.214
+
+   if.true
+      repeat.7
+         add
+      end
+
+      dup
+
+      push.2
+      eq
+
+      if.true
+         push.1
+         loc_store.470 drop
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.470 drop
+      end
+
+   else
+
+      repeat.7
+         add
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.470 drop
+      end
+   end
+end
+
+
+# State transition for cell 215
+proc.cell_215_transition.727
+   push.0
+   loc_store.471 drop
+
+   loc_load.198
+   loc_load.199
+   loc_load.200
+   loc_load.214
+   loc_load.216
+   loc_load.230
+   loc_load.231
+   loc_load.232
+
+   loc_load.215
+
+   if.true
+      repeat.7
+         add
+      end
+
+      dup
+
+      push.2
+      eq
+
+      if.true
+         push.1
+         loc_store.471 drop
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.471 drop
+      end
+
+   else
+
+      repeat.7
+         add
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.471 drop
+      end
+   end
+end
+
+
+# State transition for cell 216
+proc.cell_216_transition.728
+   push.0
+   loc_store.472 drop
+
+   loc_load.199
+   loc_load.200
+   loc_load.201
+   loc_load.215
+   loc_load.217
+   loc_load.231
+   loc_load.232
+   loc_load.233
+
+   loc_load.216
+
+   if.true
+      repeat.7
+         add
+      end
+
+      dup
+
+      push.2
+      eq
+
+      if.true
+         push.1
+         loc_store.472 drop
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.472 drop
+      end
+
+   else
+
+      repeat.7
+         add
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.472 drop
+      end
+   end
+end
+
+
+# State transition for cell 217
+proc.cell_217_transition.729
+   push.0
+   loc_store.473 drop
+
+   loc_load.200
+   loc_load.201
+   loc_load.202
+   loc_load.216
+   loc_load.218
+   loc_load.232
+   loc_load.233
+   loc_load.234
+
+   loc_load.217
+
+   if.true
+      repeat.7
+         add
+      end
+
+      dup
+
+      push.2
+      eq
+
+      if.true
+         push.1
+         loc_store.473 drop
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.473 drop
+      end
+
+   else
+
+      repeat.7
+         add
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.473 drop
+      end
+   end
+end
+
+
+# State transition for cell 218
+proc.cell_218_transition.730
+   push.0
+   loc_store.474 drop
+
+   loc_load.201
+   loc_load.202
+   loc_load.203
+   loc_load.217
+   loc_load.219
+   loc_load.233
+   loc_load.234
+   loc_load.235
+
+   loc_load.218
+
+   if.true
+      repeat.7
+         add
+      end
+
+      dup
+
+      push.2
+      eq
+
+      if.true
+         push.1
+         loc_store.474 drop
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.474 drop
+      end
+
+   else
+
+      repeat.7
+         add
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.474 drop
+      end
+   end
+end
+
+
+# State transition for cell 219
+proc.cell_219_transition.731
+   push.0
+   loc_store.475 drop
+
+   loc_load.202
+   loc_load.203
+   loc_load.204
+   loc_load.218
+   loc_load.220
+   loc_load.234
+   loc_load.235
+   loc_load.236
+
+   loc_load.219
+
+   if.true
+      repeat.7
+         add
+      end
+
+      dup
+
+      push.2
+      eq
+
+      if.true
+         push.1
+         loc_store.475 drop
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.475 drop
+      end
+
+   else
+
+      repeat.7
+         add
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.475 drop
+      end
+   end
+end
+
+
+# State transition for cell 220
+proc.cell_220_transition.732
+   push.0
+   loc_store.476 drop
+
+   loc_load.203
+   loc_load.204
+   loc_load.205
+   loc_load.219
+   loc_load.221
+   loc_load.235
+   loc_load.236
+   loc_load.237
+
+   loc_load.220
+
+   if.true
+      repeat.7
+         add
+      end
+
+      dup
+
+      push.2
+      eq
+
+      if.true
+         push.1
+         loc_store.476 drop
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.476 drop
+      end
+
+   else
+
+      repeat.7
+         add
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.476 drop
+      end
+   end
+end
+
+
+# State transition for cell 221
+proc.cell_221_transition.733
+   push.0
+   loc_store.477 drop
+
+   loc_load.204
+   loc_load.205
+   loc_load.206
+   loc_load.220
+   loc_load.222
+   loc_load.236
+   loc_load.237
+   loc_load.238
+
+   loc_load.221
+
+   if.true
+      repeat.7
+         add
+      end
+
+      dup
+
+      push.2
+      eq
+
+      if.true
+         push.1
+         loc_store.477 drop
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.477 drop
+      end
+
+   else
+
+      repeat.7
+         add
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.477 drop
+      end
+   end
+end
+
+
+# State transition for cell 222
+proc.cell_222_transition.734
+   push.0
+   loc_store.478 drop
+
+   loc_load.205
+   loc_load.206
+   loc_load.207
+   loc_load.221
+   loc_load.223
+   loc_load.237
+   loc_load.238
+   loc_load.239
+
+   loc_load.222
+
+   if.true
+      repeat.7
+         add
+      end
+
+      dup
+
+      push.2
+      eq
+
+      if.true
+         push.1
+         loc_store.478 drop
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.478 drop
+      end
+
+   else
+
+      repeat.7
+         add
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.478 drop
+      end
+   end
+end
+
+
+# State transition for cell 223
+proc.cell_223_transition.735
+   push.0
+   loc_store.479 drop
+
+   loc_load.206
+   loc_load.207
+   loc_load.222
+   loc_load.238
+   loc_load.239
+
+   loc_load.223
+
+   if.true
+      repeat.7
+         add
+      end
+
+      dup
+
+      push.2
+      eq
+
+      if.true
+         push.1
+         loc_store.479 drop
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.479 drop
+      end
+
+   else
+
+      repeat.7
+         add
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.479 drop
+      end
+   end
+end
+
+
+# State transition for cell 224
+proc.cell_224_transition.736
+   push.0
+   loc_store.480 drop
+
+   loc_load.208
+   loc_load.209
+   loc_load.225
+   loc_load.240
+   loc_load.241
+
+   loc_load.224
+
+   if.true
+      repeat.7
+         add
+      end
+
+      dup
+
+      push.2
+      eq
+
+      if.true
+         push.1
+         loc_store.480 drop
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.480 drop
+      end
+
+   else
+
+      repeat.7
+         add
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.480 drop
+      end
+   end
+end
+
+
+# State transition for cell 225
+proc.cell_225_transition.737
+   push.0
+   loc_store.481 drop
+
+   loc_load.208
+   loc_load.209
+   loc_load.210
+   loc_load.224
+   loc_load.226
+   loc_load.240
+   loc_load.241
+   loc_load.242
+
+   loc_load.225
+
+   if.true
+      repeat.7
+         add
+      end
+
+      dup
+
+      push.2
+      eq
+
+      if.true
+         push.1
+         loc_store.481 drop
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.481 drop
+      end
+
+   else
+
+      repeat.7
+         add
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.481 drop
+      end
+   end
+end
+
+
+# State transition for cell 226
+proc.cell_226_transition.738
+   push.0
+   loc_store.482 drop
+
+   loc_load.209
+   loc_load.210
+   loc_load.211
+   loc_load.225
+   loc_load.227
+   loc_load.241
+   loc_load.242
+   loc_load.243
+
+   loc_load.226
+
+   if.true
+      repeat.7
+         add
+      end
+
+      dup
+
+      push.2
+      eq
+
+      if.true
+         push.1
+         loc_store.482 drop
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.482 drop
+      end
+
+   else
+
+      repeat.7
+         add
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.482 drop
+      end
+   end
+end
+
+
+# State transition for cell 227
+proc.cell_227_transition.739
+   push.0
+   loc_store.483 drop
+
+   loc_load.210
+   loc_load.211
+   loc_load.212
+   loc_load.226
+   loc_load.228
+   loc_load.242
+   loc_load.243
+   loc_load.244
+
+   loc_load.227
+
+   if.true
+      repeat.7
+         add
+      end
+
+      dup
+
+      push.2
+      eq
+
+      if.true
+         push.1
+         loc_store.483 drop
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.483 drop
+      end
+
+   else
+
+      repeat.7
+         add
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.483 drop
+      end
+   end
+end
+
+
+# State transition for cell 228
+proc.cell_228_transition.740
+   push.0
+   loc_store.484 drop
+
+   loc_load.211
+   loc_load.212
+   loc_load.213
+   loc_load.227
+   loc_load.229
+   loc_load.243
+   loc_load.244
+   loc_load.245
+
+   loc_load.228
+
+   if.true
+      repeat.7
+         add
+      end
+
+      dup
+
+      push.2
+      eq
+
+      if.true
+         push.1
+         loc_store.484 drop
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.484 drop
+      end
+
+   else
+
+      repeat.7
+         add
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.484 drop
+      end
+   end
+end
+
+
+# State transition for cell 229
+proc.cell_229_transition.741
+   push.0
+   loc_store.485 drop
+
+   loc_load.212
+   loc_load.213
+   loc_load.214
+   loc_load.228
+   loc_load.230
+   loc_load.244
+   loc_load.245
+   loc_load.246
+
+   loc_load.229
+
+   if.true
+      repeat.7
+         add
+      end
+
+      dup
+
+      push.2
+      eq
+
+      if.true
+         push.1
+         loc_store.485 drop
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.485 drop
+      end
+
+   else
+
+      repeat.7
+         add
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.485 drop
+      end
+   end
+end
+
+
+# State transition for cell 230
+proc.cell_230_transition.742
+   push.0
+   loc_store.486 drop
+
+   loc_load.213
+   loc_load.214
+   loc_load.215
+   loc_load.229
+   loc_load.231
+   loc_load.245
+   loc_load.246
+   loc_load.247
+
+   loc_load.230
+
+   if.true
+      repeat.7
+         add
+      end
+
+      dup
+
+      push.2
+      eq
+
+      if.true
+         push.1
+         loc_store.486 drop
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.486 drop
+      end
+
+   else
+
+      repeat.7
+         add
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.486 drop
+      end
+   end
+end
+
+
+# State transition for cell 231
+proc.cell_231_transition.743
+   push.0
+   loc_store.487 drop
+
+   loc_load.214
+   loc_load.215
+   loc_load.216
+   loc_load.230
+   loc_load.232
+   loc_load.246
+   loc_load.247
+   loc_load.248
+
+   loc_load.231
+
+   if.true
+      repeat.7
+         add
+      end
+
+      dup
+
+      push.2
+      eq
+
+      if.true
+         push.1
+         loc_store.487 drop
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.487 drop
+      end
+
+   else
+
+      repeat.7
+         add
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.487 drop
+      end
+   end
+end
+
+
+# State transition for cell 232
+proc.cell_232_transition.744
+   push.0
+   loc_store.488 drop
+
+   loc_load.215
+   loc_load.216
+   loc_load.217
+   loc_load.231
+   loc_load.233
+   loc_load.247
+   loc_load.248
+   loc_load.249
+
+   loc_load.232
+
+   if.true
+      repeat.7
+         add
+      end
+
+      dup
+
+      push.2
+      eq
+
+      if.true
+         push.1
+         loc_store.488 drop
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.488 drop
+      end
+
+   else
+
+      repeat.7
+         add
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.488 drop
+      end
+   end
+end
+
+
+# State transition for cell 233
+proc.cell_233_transition.745
+   push.0
+   loc_store.489 drop
+
+   loc_load.216
+   loc_load.217
+   loc_load.218
+   loc_load.232
+   loc_load.234
+   loc_load.248
+   loc_load.249
+   loc_load.250
+
+   loc_load.233
+
+   if.true
+      repeat.7
+         add
+      end
+
+      dup
+
+      push.2
+      eq
+
+      if.true
+         push.1
+         loc_store.489 drop
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.489 drop
+      end
+
+   else
+
+      repeat.7
+         add
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.489 drop
+      end
+   end
+end
+
+
+# State transition for cell 234
+proc.cell_234_transition.746
+   push.0
+   loc_store.490 drop
+
+   loc_load.217
+   loc_load.218
+   loc_load.219
+   loc_load.233
+   loc_load.235
+   loc_load.249
+   loc_load.250
+   loc_load.251
+
+   loc_load.234
+
+   if.true
+      repeat.7
+         add
+      end
+
+      dup
+
+      push.2
+      eq
+
+      if.true
+         push.1
+         loc_store.490 drop
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.490 drop
+      end
+
+   else
+
+      repeat.7
+         add
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.490 drop
+      end
+   end
+end
+
+
+# State transition for cell 235
+proc.cell_235_transition.747
+   push.0
+   loc_store.491 drop
+
+   loc_load.218
+   loc_load.219
+   loc_load.220
+   loc_load.234
+   loc_load.236
+   loc_load.250
+   loc_load.251
+   loc_load.252
+
+   loc_load.235
+
+   if.true
+      repeat.7
+         add
+      end
+
+      dup
+
+      push.2
+      eq
+
+      if.true
+         push.1
+         loc_store.491 drop
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.491 drop
+      end
+
+   else
+
+      repeat.7
+         add
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.491 drop
+      end
+   end
+end
+
+
+# State transition for cell 236
+proc.cell_236_transition.748
+   push.0
+   loc_store.492 drop
+
+   loc_load.219
+   loc_load.220
+   loc_load.221
+   loc_load.235
+   loc_load.237
+   loc_load.251
+   loc_load.252
+   loc_load.253
+
+   loc_load.236
+
+   if.true
+      repeat.7
+         add
+      end
+
+      dup
+
+      push.2
+      eq
+
+      if.true
+         push.1
+         loc_store.492 drop
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.492 drop
+      end
+
+   else
+
+      repeat.7
+         add
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.492 drop
+      end
+   end
+end
+
+
+# State transition for cell 237
+proc.cell_237_transition.749
+   push.0
+   loc_store.493 drop
+
+   loc_load.220
+   loc_load.221
+   loc_load.222
+   loc_load.236
+   loc_load.238
+   loc_load.252
+   loc_load.253
+   loc_load.254
+
+   loc_load.237
+
+   if.true
+      repeat.7
+         add
+      end
+
+      dup
+
+      push.2
+      eq
+
+      if.true
+         push.1
+         loc_store.493 drop
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.493 drop
+      end
+
+   else
+
+      repeat.7
+         add
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.493 drop
+      end
+   end
+end
+
+
+# State transition for cell 238
+proc.cell_238_transition.750
+   push.0
+   loc_store.494 drop
+
+   loc_load.221
+   loc_load.222
+   loc_load.223
+   loc_load.237
+   loc_load.239
+   loc_load.253
+   loc_load.254
+   loc_load.255
+
+   loc_load.238
+
+   if.true
+      repeat.7
+         add
+      end
+
+      dup
+
+      push.2
+      eq
+
+      if.true
+         push.1
+         loc_store.494 drop
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.494 drop
+      end
+
+   else
+
+      repeat.7
+         add
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.494 drop
+      end
+   end
+end
+
+
+# State transition for cell 239
+proc.cell_239_transition.751
+   push.0
+   loc_store.495 drop
+
+   loc_load.222
+   loc_load.223
+   loc_load.238
+   loc_load.254
+   loc_load.255
+
+   loc_load.239
+
+   if.true
+      repeat.7
+         add
+      end
+
+      dup
+
+      push.2
+      eq
+
+      if.true
+         push.1
+         loc_store.495 drop
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.495 drop
+      end
+
+   else
+
+      repeat.7
+         add
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.495 drop
+      end
+   end
+end
+
+
+# State transition for cell 240
+proc.cell_240_transition.752
+   push.0
+   loc_store.496 drop
+
+   loc_load.224
+   loc_load.225
+   loc_load.241
+
+   loc_load.240
+
+   if.true
+      repeat.7
+         add
+      end
+
+      dup
+
+      push.2
+      eq
+
+      if.true
+         push.1
+         loc_store.496 drop
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.496 drop
+      end
+
+   else
+
+      repeat.7
+         add
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.496 drop
+      end
+   end
+end
+
+
+# State transition for cell 241
+proc.cell_241_transition.753
+   push.0
+   loc_store.497 drop
+
+   loc_load.224
+   loc_load.225
+   loc_load.226
+   loc_load.240
+   loc_load.242
+
+   loc_load.241
+
+   if.true
+      repeat.7
+         add
+      end
+
+      dup
+
+      push.2
+      eq
+
+      if.true
+         push.1
+         loc_store.497 drop
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.497 drop
+      end
+
+   else
+
+      repeat.7
+         add
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.497 drop
+      end
+   end
+end
+
+
+# State transition for cell 242
+proc.cell_242_transition.754
+   push.0
+   loc_store.498 drop
+
+   loc_load.225
+   loc_load.226
+   loc_load.227
+   loc_load.241
+   loc_load.243
+
+   loc_load.242
+
+   if.true
+      repeat.7
+         add
+      end
+
+      dup
+
+      push.2
+      eq
+
+      if.true
+         push.1
+         loc_store.498 drop
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.498 drop
+      end
+
+   else
+
+      repeat.7
+         add
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.498 drop
+      end
+   end
+end
+
+
+# State transition for cell 243
+proc.cell_243_transition.755
+   push.0
+   loc_store.499 drop
+
+   loc_load.226
+   loc_load.227
+   loc_load.228
+   loc_load.242
+   loc_load.244
+
+   loc_load.243
+
+   if.true
+      repeat.7
+         add
+      end
+
+      dup
+
+      push.2
+      eq
+
+      if.true
+         push.1
+         loc_store.499 drop
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.499 drop
+      end
+
+   else
+
+      repeat.7
+         add
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.499 drop
+      end
+   end
+end
+
+
+# State transition for cell 244
+proc.cell_244_transition.756
+   push.0
+   loc_store.500 drop
+
+   loc_load.227
+   loc_load.228
+   loc_load.229
+   loc_load.243
+   loc_load.245
+
+   loc_load.244
+
+   if.true
+      repeat.7
+         add
+      end
+
+      dup
+
+      push.2
+      eq
+
+      if.true
+         push.1
+         loc_store.500 drop
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.500 drop
+      end
+
+   else
+
+      repeat.7
+         add
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.500 drop
+      end
+   end
+end
+
+
+# State transition for cell 245
+proc.cell_245_transition.757
+   push.0
+   loc_store.501 drop
+
+   loc_load.228
+   loc_load.229
+   loc_load.230
+   loc_load.244
+   loc_load.246
+
+   loc_load.245
+
+   if.true
+      repeat.7
+         add
+      end
+
+      dup
+
+      push.2
+      eq
+
+      if.true
+         push.1
+         loc_store.501 drop
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.501 drop
+      end
+
+   else
+
+      repeat.7
+         add
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.501 drop
+      end
+   end
+end
+
+
+# State transition for cell 246
+proc.cell_246_transition.758
+   push.0
+   loc_store.502 drop
+
+   loc_load.229
+   loc_load.230
+   loc_load.231
+   loc_load.245
+   loc_load.247
+
+   loc_load.246
+
+   if.true
+      repeat.7
+         add
+      end
+
+      dup
+
+      push.2
+      eq
+
+      if.true
+         push.1
+         loc_store.502 drop
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.502 drop
+      end
+
+   else
+
+      repeat.7
+         add
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.502 drop
+      end
+   end
+end
+
+
+# State transition for cell 247
+proc.cell_247_transition.759
+   push.0
+   loc_store.503 drop
+
+   loc_load.230
+   loc_load.231
+   loc_load.232
+   loc_load.246
+   loc_load.248
+
+   loc_load.247
+
+   if.true
+      repeat.7
+         add
+      end
+
+      dup
+
+      push.2
+      eq
+
+      if.true
+         push.1
+         loc_store.503 drop
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.503 drop
+      end
+
+   else
+
+      repeat.7
+         add
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.503 drop
+      end
+   end
+end
+
+
+# State transition for cell 248
+proc.cell_248_transition.760
+   push.0
+   loc_store.504 drop
+
+   loc_load.231
+   loc_load.232
+   loc_load.233
+   loc_load.247
+   loc_load.249
+
+   loc_load.248
+
+   if.true
+      repeat.7
+         add
+      end
+
+      dup
+
+      push.2
+      eq
+
+      if.true
+         push.1
+         loc_store.504 drop
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.504 drop
+      end
+
+   else
+
+      repeat.7
+         add
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.504 drop
+      end
+   end
+end
+
+
+# State transition for cell 249
+proc.cell_249_transition.761
+   push.0
+   loc_store.505 drop
+
+   loc_load.232
+   loc_load.233
+   loc_load.234
+   loc_load.248
+   loc_load.250
+
+   loc_load.249
+
+   if.true
+      repeat.7
+         add
+      end
+
+      dup
+
+      push.2
+      eq
+
+      if.true
+         push.1
+         loc_store.505 drop
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.505 drop
+      end
+
+   else
+
+      repeat.7
+         add
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.505 drop
+      end
+   end
+end
+
+
+# State transition for cell 250
+proc.cell_250_transition.762
+   push.0
+   loc_store.506 drop
+
+   loc_load.233
+   loc_load.234
+   loc_load.235
+   loc_load.249
+   loc_load.251
+
+   loc_load.250
+
+   if.true
+      repeat.7
+         add
+      end
+
+      dup
+
+      push.2
+      eq
+
+      if.true
+         push.1
+         loc_store.506 drop
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.506 drop
+      end
+
+   else
+
+      repeat.7
+         add
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.506 drop
+      end
+   end
+end
+
+
+# State transition for cell 251
+proc.cell_251_transition.763
+   push.0
+   loc_store.507 drop
+
+   loc_load.234
+   loc_load.235
+   loc_load.236
+   loc_load.250
+   loc_load.252
+
+   loc_load.251
+
+   if.true
+      repeat.7
+         add
+      end
+
+      dup
+
+      push.2
+      eq
+
+      if.true
+         push.1
+         loc_store.507 drop
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.507 drop
+      end
+
+   else
+
+      repeat.7
+         add
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.507 drop
+      end
+   end
+end
+
+
+# State transition for cell 252
+proc.cell_252_transition.764
+   push.0
+   loc_store.508 drop
+
+   loc_load.235
+   loc_load.236
+   loc_load.237
+   loc_load.251
+   loc_load.253
+
+   loc_load.252
+
+   if.true
+      repeat.7
+         add
+      end
+
+      dup
+
+      push.2
+      eq
+
+      if.true
+         push.1
+         loc_store.508 drop
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.508 drop
+      end
+
+   else
+
+      repeat.7
+         add
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.508 drop
+      end
+   end
+end
+
+
+# State transition for cell 253
+proc.cell_253_transition.765
+   push.0
+   loc_store.509 drop
+
+   loc_load.236
+   loc_load.237
+   loc_load.238
+   loc_load.252
+   loc_load.254
+
+   loc_load.253
+
+   if.true
+      repeat.7
+         add
+      end
+
+      dup
+
+      push.2
+      eq
+
+      if.true
+         push.1
+         loc_store.509 drop
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.509 drop
+      end
+
+   else
+
+      repeat.7
+         add
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.509 drop
+      end
+   end
+end
+
+
+# State transition for cell 254
+proc.cell_254_transition.766
+   push.0
+   loc_store.510 drop
+
+   loc_load.237
+   loc_load.238
+   loc_load.239
+   loc_load.253
+   loc_load.255
+
+   loc_load.254
+
+   if.true
+      repeat.7
+         add
+      end
+
+      dup
+
+      push.2
+      eq
+
+      if.true
+         push.1
+         loc_store.510 drop
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.510 drop
+      end
+
+   else
+
+      repeat.7
+         add
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.510 drop
+      end
+   end
+end
+
+
+# State transition for cell 255
+proc.cell_255_transition.767
+   push.0
+   loc_store.511 drop
+
+   loc_load.238
+   loc_load.239
+   loc_load.254
+
+   loc_load.255
+
+   if.true
+      repeat.7
+         add
+      end
+
+      dup
+
+      push.2
+      eq
+
+      if.true
+         push.1
+         loc_store.511 drop
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.511 drop
+      end
+
+   else
+
+      repeat.7
+         add
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.511 drop
+      end
+   end
+end
+
+
+# State transition for cell 256
+proc.cell_256_transition.768
+   push.0
+   loc_store.512 drop
+
+   loc_load.240
+   loc_load.241
+
+   loc_load.256
+
+   if.true
+      repeat.7
+         add
+      end
+
+      dup
+
+      push.2
+      eq
+
+      if.true
+         push.1
+         loc_store.512 drop
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.512 drop
+      end
+
+   else
+
+      repeat.7
+         add
+      end
+
+      push.3
+      eq
+
+      if.true
+         push.1
+         loc_store.512 drop
+      end
+   end
+end
+
+# Let's play
+
+begin
+  repeat.100
+       exec.storecellsn
+       exec.cell_0_transition exec.clearstack
+       exec.cell_1_transition exec.clearstack
+       exec.cell_2_transition exec.clearstack
+       exec.cell_3_transition exec.clearstack
+       exec.cell_4_transition exec.clearstack
+       exec.cell_5_transition exec.clearstack
+       exec.cell_6_transition exec.clearstack
+       exec.cell_7_transition exec.clearstack
+       exec.cell_8_transition exec.clearstack
+       exec.cell_9_transition exec.clearstack
+       exec.cell_10_transition exec.clearstack
+       exec.cell_11_transition exec.clearstack
+       exec.cell_12_transition exec.clearstack
+       exec.cell_13_transition exec.clearstack
+       exec.cell_14_transition exec.clearstack
+       exec.cell_15_transition exec.clearstack
+       exec.cell_16_transition exec.clearstack
+       exec.cell_17_transition exec.clearstack
+       exec.cell_18_transition exec.clearstack
+       exec.cell_19_transition exec.clearstack
+       exec.cell_20_transition exec.clearstack
+       exec.cell_21_transition exec.clearstack
+       exec.cell_22_transition exec.clearstack
+       exec.cell_23_transition exec.clearstack
+       exec.cell_24_transition exec.clearstack
+       exec.cell_25_transition exec.clearstack
+       exec.cell_26_transition exec.clearstack
+       exec.cell_27_transition exec.clearstack
+       exec.cell_28_transition exec.clearstack
+       exec.cell_29_transition exec.clearstack
+       exec.cell_30_transition exec.clearstack
+       exec.cell_31_transition exec.clearstack
+       exec.cell_32_transition exec.clearstack
+       exec.cell_33_transition exec.clearstack
+       exec.cell_34_transition exec.clearstack
+       exec.cell_35_transition exec.clearstack
+       exec.cell_36_transition exec.clearstack
+       exec.cell_37_transition exec.clearstack
+       exec.cell_38_transition exec.clearstack
+       exec.cell_39_transition exec.clearstack
+       exec.cell_40_transition exec.clearstack
+       exec.cell_41_transition exec.clearstack
+       exec.cell_42_transition exec.clearstack
+       exec.cell_43_transition exec.clearstack
+       exec.cell_44_transition exec.clearstack
+       exec.cell_45_transition exec.clearstack
+       exec.cell_46_transition exec.clearstack
+       exec.cell_47_transition exec.clearstack
+       exec.cell_48_transition exec.clearstack
+       exec.cell_49_transition exec.clearstack
+       exec.cell_50_transition exec.clearstack
+       exec.cell_51_transition exec.clearstack
+       exec.cell_52_transition exec.clearstack
+       exec.cell_53_transition exec.clearstack
+       exec.cell_54_transition exec.clearstack
+       exec.cell_55_transition exec.clearstack
+       exec.cell_56_transition exec.clearstack
+       exec.cell_57_transition exec.clearstack
+       exec.cell_58_transition exec.clearstack
+       exec.cell_59_transition exec.clearstack
+       exec.cell_60_transition exec.clearstack
+       exec.cell_61_transition exec.clearstack
+       exec.cell_62_transition exec.clearstack
+       exec.cell_63_transition exec.clearstack
+       exec.cell_64_transition exec.clearstack
+       exec.cell_65_transition exec.clearstack
+       exec.cell_66_transition exec.clearstack
+       exec.cell_67_transition exec.clearstack
+       exec.cell_68_transition exec.clearstack
+       exec.cell_69_transition exec.clearstack
+       exec.cell_70_transition exec.clearstack
+       exec.cell_71_transition exec.clearstack
+       exec.cell_72_transition exec.clearstack
+       exec.cell_73_transition exec.clearstack
+       exec.cell_74_transition exec.clearstack
+       exec.cell_75_transition exec.clearstack
+       exec.cell_76_transition exec.clearstack
+       exec.cell_77_transition exec.clearstack
+       exec.cell_78_transition exec.clearstack
+       exec.cell_79_transition exec.clearstack
+       exec.cell_80_transition exec.clearstack
+       exec.cell_81_transition exec.clearstack
+       exec.cell_82_transition exec.clearstack
+       exec.cell_83_transition exec.clearstack
+       exec.cell_84_transition exec.clearstack
+       exec.cell_85_transition exec.clearstack
+       exec.cell_86_transition exec.clearstack
+       exec.cell_87_transition exec.clearstack
+       exec.cell_88_transition exec.clearstack
+       exec.cell_89_transition exec.clearstack
+       exec.cell_90_transition exec.clearstack
+       exec.cell_91_transition exec.clearstack
+       exec.cell_92_transition exec.clearstack
+       exec.cell_93_transition exec.clearstack
+       exec.cell_94_transition exec.clearstack
+       exec.cell_95_transition exec.clearstack
+       exec.cell_96_transition exec.clearstack
+       exec.cell_97_transition exec.clearstack
+       exec.cell_98_transition exec.clearstack
+       exec.cell_99_transition exec.clearstack
+       exec.cell_100_transition exec.clearstack
+       exec.cell_101_transition exec.clearstack
+       exec.cell_102_transition exec.clearstack
+       exec.cell_103_transition exec.clearstack
+       exec.cell_104_transition exec.clearstack
+       exec.cell_105_transition exec.clearstack
+       exec.cell_106_transition exec.clearstack
+       exec.cell_107_transition exec.clearstack
+       exec.cell_108_transition exec.clearstack
+       exec.cell_109_transition exec.clearstack
+       exec.cell_110_transition exec.clearstack
+       exec.cell_111_transition exec.clearstack
+       exec.cell_112_transition exec.clearstack
+       exec.cell_113_transition exec.clearstack
+       exec.cell_114_transition exec.clearstack
+       exec.cell_115_transition exec.clearstack
+       exec.cell_116_transition exec.clearstack
+       exec.cell_117_transition exec.clearstack
+       exec.cell_118_transition exec.clearstack
+       exec.cell_119_transition exec.clearstack
+       exec.cell_120_transition exec.clearstack
+       exec.cell_121_transition exec.clearstack
+       exec.cell_122_transition exec.clearstack
+       exec.cell_123_transition exec.clearstack
+       exec.cell_124_transition exec.clearstack
+       exec.cell_125_transition exec.clearstack
+       exec.cell_126_transition exec.clearstack
+       exec.cell_127_transition exec.clearstack
+       exec.cell_128_transition exec.clearstack
+       exec.cell_129_transition exec.clearstack
+       exec.cell_130_transition exec.clearstack
+       exec.cell_131_transition exec.clearstack
+       exec.cell_132_transition exec.clearstack
+       exec.cell_133_transition exec.clearstack
+       exec.cell_134_transition exec.clearstack
+       exec.cell_135_transition exec.clearstack
+       exec.cell_136_transition exec.clearstack
+       exec.cell_137_transition exec.clearstack
+       exec.cell_138_transition exec.clearstack
+       exec.cell_139_transition exec.clearstack
+       exec.cell_140_transition exec.clearstack
+       exec.cell_141_transition exec.clearstack
+       exec.cell_142_transition exec.clearstack
+       exec.cell_143_transition exec.clearstack
+       exec.cell_144_transition exec.clearstack
+       exec.cell_145_transition exec.clearstack
+       exec.cell_146_transition exec.clearstack
+       exec.cell_147_transition exec.clearstack
+       exec.cell_148_transition exec.clearstack
+       exec.cell_149_transition exec.clearstack
+       exec.cell_150_transition exec.clearstack
+       exec.cell_151_transition exec.clearstack
+       exec.cell_152_transition exec.clearstack
+       exec.cell_153_transition exec.clearstack
+       exec.cell_154_transition exec.clearstack
+       exec.cell_155_transition exec.clearstack
+       exec.cell_156_transition exec.clearstack
+       exec.cell_157_transition exec.clearstack
+       exec.cell_158_transition exec.clearstack
+       exec.cell_159_transition exec.clearstack
+       exec.cell_160_transition exec.clearstack
+       exec.cell_161_transition exec.clearstack
+       exec.cell_162_transition exec.clearstack
+       exec.cell_163_transition exec.clearstack
+       exec.cell_164_transition exec.clearstack
+       exec.cell_165_transition exec.clearstack
+       exec.cell_166_transition exec.clearstack
+       exec.cell_167_transition exec.clearstack
+       exec.cell_168_transition exec.clearstack
+       exec.cell_169_transition exec.clearstack
+       exec.cell_170_transition exec.clearstack
+       exec.cell_171_transition exec.clearstack
+       exec.cell_172_transition exec.clearstack
+       exec.cell_173_transition exec.clearstack
+       exec.cell_174_transition exec.clearstack
+       exec.cell_175_transition exec.clearstack
+       exec.cell_176_transition exec.clearstack
+       exec.cell_177_transition exec.clearstack
+       exec.cell_178_transition exec.clearstack
+       exec.cell_179_transition exec.clearstack
+       exec.cell_180_transition exec.clearstack
+       exec.cell_181_transition exec.clearstack
+       exec.cell_182_transition exec.clearstack
+       exec.cell_183_transition exec.clearstack
+       exec.cell_184_transition exec.clearstack
+       exec.cell_185_transition exec.clearstack
+       exec.cell_186_transition exec.clearstack
+       exec.cell_187_transition exec.clearstack
+       exec.cell_188_transition exec.clearstack
+       exec.cell_189_transition exec.clearstack
+       exec.cell_190_transition exec.clearstack
+       exec.cell_191_transition exec.clearstack
+       exec.cell_192_transition exec.clearstack
+       exec.cell_193_transition exec.clearstack
+       exec.cell_194_transition exec.clearstack
+       exec.cell_195_transition exec.clearstack
+       exec.cell_196_transition exec.clearstack
+       exec.cell_197_transition exec.clearstack
+       exec.cell_198_transition exec.clearstack
+       exec.cell_199_transition exec.clearstack
+       exec.cell_200_transition exec.clearstack
+       exec.cell_201_transition exec.clearstack
+       exec.cell_202_transition exec.clearstack
+       exec.cell_203_transition exec.clearstack
+       exec.cell_204_transition exec.clearstack
+       exec.cell_205_transition exec.clearstack
+       exec.cell_206_transition exec.clearstack
+       exec.cell_207_transition exec.clearstack
+       exec.cell_208_transition exec.clearstack
+       exec.cell_209_transition exec.clearstack
+       exec.cell_210_transition exec.clearstack
+       exec.cell_211_transition exec.clearstack
+       exec.cell_212_transition exec.clearstack
+       exec.cell_213_transition exec.clearstack
+       exec.cell_214_transition exec.clearstack
+       exec.cell_215_transition exec.clearstack
+       exec.cell_216_transition exec.clearstack
+       exec.cell_217_transition exec.clearstack
+       exec.cell_218_transition exec.clearstack
+       exec.cell_219_transition exec.clearstack
+       exec.cell_220_transition exec.clearstack
+       exec.cell_221_transition exec.clearstack
+       exec.cell_222_transition exec.clearstack
+       exec.cell_223_transition exec.clearstack
+       exec.cell_224_transition exec.clearstack
+       exec.cell_225_transition exec.clearstack
+       exec.cell_226_transition exec.clearstack
+       exec.cell_227_transition exec.clearstack
+       exec.cell_228_transition exec.clearstack
+       exec.cell_229_transition exec.clearstack
+       exec.cell_230_transition exec.clearstack
+       exec.cell_231_transition exec.clearstack
+       exec.cell_232_transition exec.clearstack
+       exec.cell_233_transition exec.clearstack
+       exec.cell_234_transition exec.clearstack
+       exec.cell_235_transition exec.clearstack
+       exec.cell_236_transition exec.clearstack
+       exec.cell_237_transition exec.clearstack
+       exec.cell_238_transition exec.clearstack
+       exec.cell_239_transition exec.clearstack
+       exec.cell_240_transition exec.clearstack
+       exec.cell_241_transition exec.clearstack
+       exec.cell_242_transition exec.clearstack
+       exec.cell_243_transition exec.clearstack
+       exec.cell_244_transition exec.clearstack
+       exec.cell_245_transition exec.clearstack
+       exec.cell_246_transition exec.clearstack
+       exec.cell_247_transition exec.clearstack
+       exec.cell_248_transition exec.clearstack
+       exec.cell_249_transition exec.clearstack
+       exec.cell_250_transition exec.clearstack
+       exec.cell_251_transition exec.clearstack
+       exec.cell_252_transition exec.clearstack
+       exec.cell_253_transition exec.clearstack
+       exec.cell_254_transition exec.clearstack
+       exec.cell_255_transition exec.clearstack
+       exec.loadcellsnplus1
+  end
+end
