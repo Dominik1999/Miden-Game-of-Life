@@ -70,7 +70,7 @@ fn create_header(mut file: File) -> File {
     return file;
 }
 
-fn create_store_stack(mut file: File, number_of_cells: usize) -> File {
+fn create_store_stack_procedure(mut file: File, number_of_cells: usize) -> File {
     // First we need to store the stack
     file.write_all(b"\n# We store the initial configuration\n")
     .expect("Error encountered while creating file!");
@@ -94,7 +94,7 @@ fn create_store_stack(mut file: File, number_of_cells: usize) -> File {
 
 }
 
-fn create_load_stack(mut file: File, number_of_cells: usize) -> File {
+fn create_load_stack_procedure(mut file: File, number_of_cells: usize) -> File {
     
     // Then we need to load the final stack
     file.write_all(b"\n# We load the final configuration after each step\n")
@@ -120,7 +120,7 @@ fn create_load_stack(mut file: File, number_of_cells: usize) -> File {
     return file;
 }
 
-fn create_clear_stack(mut file: File, number_of_cells: usize) -> File {
+fn create_clear_stack_procedure(mut file: File, number_of_cells: usize) -> File {
     // We need a clear stack procedure
     file.write_all(b"# We clean the stack\n")
     .expect("Error encountered while creating file!");
@@ -145,7 +145,7 @@ fn create_clear_stack(mut file: File, number_of_cells: usize) -> File {
     return file;
 }
 
-fn create_cell_state_transition(mut file: File, number_of_cells: usize, grid: &Vec<Vec<i8>>) -> File {
+fn create_cell_state_transition_procedure(mut file: File, number_of_cells: usize, grid: &Vec<Vec<i8>>) -> File {
     // we create a cell state transition for every cell
     let mut local_address_counter = 2 * number_of_cells; 
 
@@ -428,10 +428,10 @@ fn main() {
     // we want a main frame that calls the defined procedures
 
     masm_file = create_header(masm_file);
-    masm_file = create_store_stack(masm_file, number_of_cells);
-    masm_file = create_load_stack(masm_file, number_of_cells);
-    masm_file = create_clear_stack(masm_file, number_of_cells);
-    masm_file = create_cell_state_transition(masm_file, number_of_cells, &grid);
+    masm_file = create_store_stack_procedure(masm_file, number_of_cells);
+    masm_file = create_load_stack_procedure(masm_file, number_of_cells);
+    masm_file = create_clear_stack_procedure(masm_file, number_of_cells);
+    masm_file = create_cell_state_transition_procedure(masm_file, number_of_cells, &grid);
     create_main_frame(masm_file, number_of_cells, GENERATIONS);
 
     // we want a inputs file with the initial configuration
