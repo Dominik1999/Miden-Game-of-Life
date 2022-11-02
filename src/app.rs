@@ -134,6 +134,8 @@ impl eframe::App for TemplateApp {
                 if trigger_assembly.clicked() {
     
                     let assmebly = create_assembly(&sqrt_number_of_cells, &generations, &front_end_grid);
+                    masm_program_frontend.clear();
+                    inputs_string_frontend.clear();
                     masm_program_frontend.push_str(&assmebly.0);
                     inputs_string_frontend.push_str(&assmebly.1);
     
