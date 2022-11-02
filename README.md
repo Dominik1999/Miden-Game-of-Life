@@ -1,10 +1,13 @@
 # Miden-Game-of-Life
-Here you can create a Miden Assembly file to play the Game of Life. 
+Here you can play a Miden Assembly file to play the Game of Life. 
+`cargo run` is the command you need.
+Don't click `prove` ... it crashes ...
 
 # To-Dos:
 
-- [ ] Make this repo stand-alone and import all necessary dependencies - import to `Cargo.toml`  
-`miden = { git = "https://github.com/maticnetwork/miden", branch = "next", package = "miden", default-features = false}`
-- [ ] Create tests and compare results against different Rust-based Game of Life, see https://github.com/tohrnii/miden/blob/f0d31971e6ccb6ea7f2346053dc0ba7d15917ba1/miden/tests/integration/gol/mod.rs#L62
-- [ ] Create frontend for users to choose universe size https://github.com/Dominik1999/Miden-Game-of-Life/blob/966b8460ca4f114f9e7e1f7757eb30f2a7a1401e/src/main.rs#L380 and initial distribution https://github.com/Dominik1999/Miden-Game-of-Life/blob/966b8460ca4f114f9e7e1f7757eb30f2a7a1401e/src/main.rs#L387
-- [ ] Create WASM implementation to be able to run Miden-Game-of-Life in browser, see https://github.com/tohrnii/miden-gol-wasm/
+- [ ] Prove crashes for some reason?!
+- [ ] `trunk build --release.` which is necessary to deploy to GitHub Pages
+        -> follow https://github.com/emilk/eframe_template/
+- [ ] Add functionality to `Verify` Button
+- [ ] Change checkboxes to coloured, clickable boxes
+- [ ] Add functionality to see univere evolving -> maybe change in Miden needed

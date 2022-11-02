@@ -10,7 +10,7 @@
 
 
 # We store the initial stack - state of the universe
-proc.storecellsn.16
+proc.storecellsn.64
    loc_store.0 drop
    loc_store.1 drop
    loc_store.2 drop
@@ -27,50 +27,146 @@ proc.storecellsn.16
    loc_store.13 drop
    loc_store.14 drop
    loc_store.15 drop
+   loc_store.16 drop
+   loc_store.17 drop
+   loc_store.18 drop
+   loc_store.19 drop
+   loc_store.20 drop
+   loc_store.21 drop
+   loc_store.22 drop
+   loc_store.23 drop
+   loc_store.24 drop
+   loc_store.25 drop
+   loc_store.26 drop
+   loc_store.27 drop
+   loc_store.28 drop
+   loc_store.29 drop
+   loc_store.30 drop
+   loc_store.31 drop
+   loc_store.32 drop
+   loc_store.33 drop
+   loc_store.34 drop
+   loc_store.35 drop
+   loc_store.36 drop
+   loc_store.37 drop
+   loc_store.38 drop
+   loc_store.39 drop
+   loc_store.40 drop
+   loc_store.41 drop
+   loc_store.42 drop
+   loc_store.43 drop
+   loc_store.44 drop
+   loc_store.45 drop
+   loc_store.46 drop
+   loc_store.47 drop
+   loc_store.48 drop
+   loc_store.49 drop
+   loc_store.50 drop
+   loc_store.51 drop
+   loc_store.52 drop
+   loc_store.53 drop
+   loc_store.54 drop
+   loc_store.55 drop
+   loc_store.56 drop
+   loc_store.57 drop
+   loc_store.58 drop
+   loc_store.59 drop
+   loc_store.60 drop
+   loc_store.61 drop
+   loc_store.62 drop
+   loc_store.63 drop
 end
 
 
 # We load the final stack - state of the universe
-proc.loadcellsnplus1.32
-   loc_load.16
-   loc_load.17
-   loc_load.18
-   loc_load.19
-   loc_load.20
-   loc_load.21
-   loc_load.22
-   loc_load.23
-   loc_load.24
-   loc_load.25
-   loc_load.26
-   loc_load.27
-   loc_load.28
-   loc_load.29
-   loc_load.30
-   loc_load.31
+proc.loadcellsnplus1.128
+   loc_load.64
+   loc_load.65
+   loc_load.66
+   loc_load.67
+   loc_load.68
+   loc_load.69
+   loc_load.70
+   loc_load.71
+   loc_load.72
+   loc_load.73
+   loc_load.74
+   loc_load.75
+   loc_load.76
+   loc_load.77
+   loc_load.78
+   loc_load.79
+   loc_load.80
+   loc_load.81
+   loc_load.82
+   loc_load.83
+   loc_load.84
+   loc_load.85
+   loc_load.86
+   loc_load.87
+   loc_load.88
+   loc_load.89
+   loc_load.90
+   loc_load.91
+   loc_load.92
+   loc_load.93
+   loc_load.94
+   loc_load.95
+   loc_load.96
+   loc_load.97
+   loc_load.98
+   loc_load.99
+   loc_load.100
+   loc_load.101
+   loc_load.102
+   loc_load.103
+   loc_load.104
+   loc_load.105
+   loc_load.106
+   loc_load.107
+   loc_load.108
+   loc_load.109
+   loc_load.110
+   loc_load.111
+   loc_load.112
+   loc_load.113
+   loc_load.114
+   loc_load.115
+   loc_load.116
+   loc_load.117
+   loc_load.118
+   loc_load.119
+   loc_load.120
+   loc_load.121
+   loc_load.122
+   loc_load.123
+   loc_load.124
+   loc_load.125
+   loc_load.126
+   loc_load.127
 end
 
 
 # We clear the stack by setting all to 0
 
 proc.clearstack
-    repeat.16
+    repeat.64
         drop
     end
 end
 
 # State transition for cell 0
 
-proc.cell_0_transition.32
+proc.cell_0_transition.128
    
    # We assume a cell is dead (0) in the next round until proven otherwise
    push.0
-   loc_store.16 drop
+   loc_store.64 drop
     
    # We load all the cell's neighbours to check their status
    loc_load.1
-   loc_load.4
-   loc_load.5
+   loc_load.8
+   loc_load.9
 
    # We load the cell itself to check its status
    loc_load.0
@@ -91,7 +187,7 @@ proc.cell_0_transition.32
 
         if.true
             push.1
-            loc_store.16 drop
+            loc_store.64 drop
         end
 
         # We want to compare the sum with 3
@@ -100,7 +196,7 @@ proc.cell_0_transition.32
 
         if.true
             push.1
-            loc_store.16 drop
+            loc_store.64 drop
         end
     
     # Cell is dead (0) and might come alive   
@@ -115,24 +211,24 @@ proc.cell_0_transition.32
 
         if.true
             push.1
-            loc_store.16 drop
+            loc_store.64 drop
         end
     end
 end
 # State transition for cell 1
 
-proc.cell_1_transition.33
+proc.cell_1_transition.129
    
    # We assume a cell is dead (0) in the next round until proven otherwise
    push.0
-   loc_store.17 drop
+   loc_store.65 drop
     
    # We load all the cell's neighbours to check their status
    loc_load.0
    loc_load.2
-   loc_load.4
-   loc_load.5
-   loc_load.6
+   loc_load.8
+   loc_load.9
+   loc_load.10
 
    # We load the cell itself to check its status
    loc_load.1
@@ -153,7 +249,7 @@ proc.cell_1_transition.33
 
         if.true
             push.1
-            loc_store.17 drop
+            loc_store.65 drop
         end
 
         # We want to compare the sum with 3
@@ -162,7 +258,7 @@ proc.cell_1_transition.33
 
         if.true
             push.1
-            loc_store.17 drop
+            loc_store.65 drop
         end
     
     # Cell is dead (0) and might come alive   
@@ -177,24 +273,24 @@ proc.cell_1_transition.33
 
         if.true
             push.1
-            loc_store.17 drop
+            loc_store.65 drop
         end
     end
 end
 # State transition for cell 2
 
-proc.cell_2_transition.34
+proc.cell_2_transition.130
    
    # We assume a cell is dead (0) in the next round until proven otherwise
    push.0
-   loc_store.18 drop
+   loc_store.66 drop
     
    # We load all the cell's neighbours to check their status
    loc_load.1
    loc_load.3
-   loc_load.5
-   loc_load.6
-   loc_load.7
+   loc_load.9
+   loc_load.10
+   loc_load.11
 
    # We load the cell itself to check its status
    loc_load.2
@@ -215,7 +311,7 @@ proc.cell_2_transition.34
 
         if.true
             push.1
-            loc_store.18 drop
+            loc_store.66 drop
         end
 
         # We want to compare the sum with 3
@@ -224,7 +320,7 @@ proc.cell_2_transition.34
 
         if.true
             push.1
-            loc_store.18 drop
+            loc_store.66 drop
         end
     
     # Cell is dead (0) and might come alive   
@@ -239,22 +335,24 @@ proc.cell_2_transition.34
 
         if.true
             push.1
-            loc_store.18 drop
+            loc_store.66 drop
         end
     end
 end
 # State transition for cell 3
 
-proc.cell_3_transition.35
+proc.cell_3_transition.131
    
    # We assume a cell is dead (0) in the next round until proven otherwise
    push.0
-   loc_store.19 drop
+   loc_store.67 drop
     
    # We load all the cell's neighbours to check their status
    loc_load.2
-   loc_load.6
-   loc_load.7
+   loc_load.4
+   loc_load.10
+   loc_load.11
+   loc_load.12
 
    # We load the cell itself to check its status
    loc_load.3
@@ -275,7 +373,7 @@ proc.cell_3_transition.35
 
         if.true
             push.1
-            loc_store.19 drop
+            loc_store.67 drop
         end
 
         # We want to compare the sum with 3
@@ -284,7 +382,7 @@ proc.cell_3_transition.35
 
         if.true
             push.1
-            loc_store.19 drop
+            loc_store.67 drop
         end
     
     # Cell is dead (0) and might come alive   
@@ -299,24 +397,24 @@ proc.cell_3_transition.35
 
         if.true
             push.1
-            loc_store.19 drop
+            loc_store.67 drop
         end
     end
 end
 # State transition for cell 4
 
-proc.cell_4_transition.36
+proc.cell_4_transition.132
    
    # We assume a cell is dead (0) in the next round until proven otherwise
    push.0
-   loc_store.20 drop
+   loc_store.68 drop
     
    # We load all the cell's neighbours to check their status
-   loc_load.0
-   loc_load.1
+   loc_load.3
    loc_load.5
-   loc_load.8
-   loc_load.9
+   loc_load.11
+   loc_load.12
+   loc_load.13
 
    # We load the cell itself to check its status
    loc_load.4
@@ -337,7 +435,7 @@ proc.cell_4_transition.36
 
         if.true
             push.1
-            loc_store.20 drop
+            loc_store.68 drop
         end
 
         # We want to compare the sum with 3
@@ -346,7 +444,7 @@ proc.cell_4_transition.36
 
         if.true
             push.1
-            loc_store.20 drop
+            loc_store.68 drop
         end
     
     # Cell is dead (0) and might come alive   
@@ -361,27 +459,24 @@ proc.cell_4_transition.36
 
         if.true
             push.1
-            loc_store.20 drop
+            loc_store.68 drop
         end
     end
 end
 # State transition for cell 5
 
-proc.cell_5_transition.37
+proc.cell_5_transition.133
    
    # We assume a cell is dead (0) in the next round until proven otherwise
    push.0
-   loc_store.21 drop
+   loc_store.69 drop
     
    # We load all the cell's neighbours to check their status
-   loc_load.0
-   loc_load.1
-   loc_load.2
    loc_load.4
    loc_load.6
-   loc_load.8
-   loc_load.9
-   loc_load.10
+   loc_load.12
+   loc_load.13
+   loc_load.14
 
    # We load the cell itself to check its status
    loc_load.5
@@ -402,7 +497,7 @@ proc.cell_5_transition.37
 
         if.true
             push.1
-            loc_store.21 drop
+            loc_store.69 drop
         end
 
         # We want to compare the sum with 3
@@ -411,7 +506,7 @@ proc.cell_5_transition.37
 
         if.true
             push.1
-            loc_store.21 drop
+            loc_store.69 drop
         end
     
     # Cell is dead (0) and might come alive   
@@ -426,27 +521,24 @@ proc.cell_5_transition.37
 
         if.true
             push.1
-            loc_store.21 drop
+            loc_store.69 drop
         end
     end
 end
 # State transition for cell 6
 
-proc.cell_6_transition.38
+proc.cell_6_transition.134
    
    # We assume a cell is dead (0) in the next round until proven otherwise
    push.0
-   loc_store.22 drop
+   loc_store.70 drop
     
    # We load all the cell's neighbours to check their status
-   loc_load.1
-   loc_load.2
-   loc_load.3
    loc_load.5
    loc_load.7
-   loc_load.9
-   loc_load.10
-   loc_load.11
+   loc_load.13
+   loc_load.14
+   loc_load.15
 
    # We load the cell itself to check its status
    loc_load.6
@@ -467,7 +559,7 @@ proc.cell_6_transition.38
 
         if.true
             push.1
-            loc_store.22 drop
+            loc_store.70 drop
         end
 
         # We want to compare the sum with 3
@@ -476,7 +568,7 @@ proc.cell_6_transition.38
 
         if.true
             push.1
-            loc_store.22 drop
+            loc_store.70 drop
         end
     
     # Cell is dead (0) and might come alive   
@@ -491,24 +583,22 @@ proc.cell_6_transition.38
 
         if.true
             push.1
-            loc_store.22 drop
+            loc_store.70 drop
         end
     end
 end
 # State transition for cell 7
 
-proc.cell_7_transition.39
+proc.cell_7_transition.135
    
    # We assume a cell is dead (0) in the next round until proven otherwise
    push.0
-   loc_store.23 drop
+   loc_store.71 drop
     
    # We load all the cell's neighbours to check their status
-   loc_load.2
-   loc_load.3
    loc_load.6
-   loc_load.10
-   loc_load.11
+   loc_load.14
+   loc_load.15
 
    # We load the cell itself to check its status
    loc_load.7
@@ -529,7 +619,7 @@ proc.cell_7_transition.39
 
         if.true
             push.1
-            loc_store.23 drop
+            loc_store.71 drop
         end
 
         # We want to compare the sum with 3
@@ -538,7 +628,7 @@ proc.cell_7_transition.39
 
         if.true
             push.1
-            loc_store.23 drop
+            loc_store.71 drop
         end
     
     # Cell is dead (0) and might come alive   
@@ -553,24 +643,24 @@ proc.cell_7_transition.39
 
         if.true
             push.1
-            loc_store.23 drop
+            loc_store.71 drop
         end
     end
 end
 # State transition for cell 8
 
-proc.cell_8_transition.40
+proc.cell_8_transition.136
    
    # We assume a cell is dead (0) in the next round until proven otherwise
    push.0
-   loc_store.24 drop
+   loc_store.72 drop
     
    # We load all the cell's neighbours to check their status
-   loc_load.4
-   loc_load.5
+   loc_load.0
+   loc_load.1
    loc_load.9
-   loc_load.12
-   loc_load.13
+   loc_load.16
+   loc_load.17
 
    # We load the cell itself to check its status
    loc_load.8
@@ -591,7 +681,7 @@ proc.cell_8_transition.40
 
         if.true
             push.1
-            loc_store.24 drop
+            loc_store.72 drop
         end
 
         # We want to compare the sum with 3
@@ -600,7 +690,7 @@ proc.cell_8_transition.40
 
         if.true
             push.1
-            loc_store.24 drop
+            loc_store.72 drop
         end
     
     # Cell is dead (0) and might come alive   
@@ -615,27 +705,27 @@ proc.cell_8_transition.40
 
         if.true
             push.1
-            loc_store.24 drop
+            loc_store.72 drop
         end
     end
 end
 # State transition for cell 9
 
-proc.cell_9_transition.41
+proc.cell_9_transition.137
    
    # We assume a cell is dead (0) in the next round until proven otherwise
    push.0
-   loc_store.25 drop
+   loc_store.73 drop
     
    # We load all the cell's neighbours to check their status
-   loc_load.4
-   loc_load.5
-   loc_load.6
+   loc_load.0
+   loc_load.1
+   loc_load.2
    loc_load.8
    loc_load.10
-   loc_load.12
-   loc_load.13
-   loc_load.14
+   loc_load.16
+   loc_load.17
+   loc_load.18
 
    # We load the cell itself to check its status
    loc_load.9
@@ -656,7 +746,7 @@ proc.cell_9_transition.41
 
         if.true
             push.1
-            loc_store.25 drop
+            loc_store.73 drop
         end
 
         # We want to compare the sum with 3
@@ -665,7 +755,7 @@ proc.cell_9_transition.41
 
         if.true
             push.1
-            loc_store.25 drop
+            loc_store.73 drop
         end
     
     # Cell is dead (0) and might come alive   
@@ -680,27 +770,27 @@ proc.cell_9_transition.41
 
         if.true
             push.1
-            loc_store.25 drop
+            loc_store.73 drop
         end
     end
 end
 # State transition for cell 10
 
-proc.cell_10_transition.42
+proc.cell_10_transition.138
    
    # We assume a cell is dead (0) in the next round until proven otherwise
    push.0
-   loc_store.26 drop
+   loc_store.74 drop
     
    # We load all the cell's neighbours to check their status
-   loc_load.5
-   loc_load.6
-   loc_load.7
+   loc_load.1
+   loc_load.2
+   loc_load.3
    loc_load.9
    loc_load.11
-   loc_load.13
-   loc_load.14
-   loc_load.15
+   loc_load.17
+   loc_load.18
+   loc_load.19
 
    # We load the cell itself to check its status
    loc_load.10
@@ -721,7 +811,7 @@ proc.cell_10_transition.42
 
         if.true
             push.1
-            loc_store.26 drop
+            loc_store.74 drop
         end
 
         # We want to compare the sum with 3
@@ -730,7 +820,7 @@ proc.cell_10_transition.42
 
         if.true
             push.1
-            loc_store.26 drop
+            loc_store.74 drop
         end
     
     # Cell is dead (0) and might come alive   
@@ -745,24 +835,27 @@ proc.cell_10_transition.42
 
         if.true
             push.1
-            loc_store.26 drop
+            loc_store.74 drop
         end
     end
 end
 # State transition for cell 11
 
-proc.cell_11_transition.43
+proc.cell_11_transition.139
    
    # We assume a cell is dead (0) in the next round until proven otherwise
    push.0
-   loc_store.27 drop
+   loc_store.75 drop
     
    # We load all the cell's neighbours to check their status
-   loc_load.6
-   loc_load.7
+   loc_load.2
+   loc_load.3
+   loc_load.4
    loc_load.10
-   loc_load.14
-   loc_load.15
+   loc_load.12
+   loc_load.18
+   loc_load.19
+   loc_load.20
 
    # We load the cell itself to check its status
    loc_load.11
@@ -783,7 +876,7 @@ proc.cell_11_transition.43
 
         if.true
             push.1
-            loc_store.27 drop
+            loc_store.75 drop
         end
 
         # We want to compare the sum with 3
@@ -792,7 +885,7 @@ proc.cell_11_transition.43
 
         if.true
             push.1
-            loc_store.27 drop
+            loc_store.75 drop
         end
     
     # Cell is dead (0) and might come alive   
@@ -807,22 +900,27 @@ proc.cell_11_transition.43
 
         if.true
             push.1
-            loc_store.27 drop
+            loc_store.75 drop
         end
     end
 end
 # State transition for cell 12
 
-proc.cell_12_transition.44
+proc.cell_12_transition.140
    
    # We assume a cell is dead (0) in the next round until proven otherwise
    push.0
-   loc_store.28 drop
+   loc_store.76 drop
     
    # We load all the cell's neighbours to check their status
-   loc_load.8
-   loc_load.9
+   loc_load.3
+   loc_load.4
+   loc_load.5
+   loc_load.11
    loc_load.13
+   loc_load.19
+   loc_load.20
+   loc_load.21
 
    # We load the cell itself to check its status
    loc_load.12
@@ -843,7 +941,7 @@ proc.cell_12_transition.44
 
         if.true
             push.1
-            loc_store.28 drop
+            loc_store.76 drop
         end
 
         # We want to compare the sum with 3
@@ -852,7 +950,7 @@ proc.cell_12_transition.44
 
         if.true
             push.1
-            loc_store.28 drop
+            loc_store.76 drop
         end
     
     # Cell is dead (0) and might come alive   
@@ -867,24 +965,27 @@ proc.cell_12_transition.44
 
         if.true
             push.1
-            loc_store.28 drop
+            loc_store.76 drop
         end
     end
 end
 # State transition for cell 13
 
-proc.cell_13_transition.45
+proc.cell_13_transition.141
    
    # We assume a cell is dead (0) in the next round until proven otherwise
    push.0
-   loc_store.29 drop
+   loc_store.77 drop
     
    # We load all the cell's neighbours to check their status
-   loc_load.8
-   loc_load.9
-   loc_load.10
+   loc_load.4
+   loc_load.5
+   loc_load.6
    loc_load.12
    loc_load.14
+   loc_load.20
+   loc_load.21
+   loc_load.22
 
    # We load the cell itself to check its status
    loc_load.13
@@ -905,7 +1006,7 @@ proc.cell_13_transition.45
 
         if.true
             push.1
-            loc_store.29 drop
+            loc_store.77 drop
         end
 
         # We want to compare the sum with 3
@@ -914,7 +1015,7 @@ proc.cell_13_transition.45
 
         if.true
             push.1
-            loc_store.29 drop
+            loc_store.77 drop
         end
     
     # Cell is dead (0) and might come alive   
@@ -929,24 +1030,27 @@ proc.cell_13_transition.45
 
         if.true
             push.1
-            loc_store.29 drop
+            loc_store.77 drop
         end
     end
 end
 # State transition for cell 14
 
-proc.cell_14_transition.46
+proc.cell_14_transition.142
    
    # We assume a cell is dead (0) in the next round until proven otherwise
    push.0
-   loc_store.30 drop
+   loc_store.78 drop
     
    # We load all the cell's neighbours to check their status
-   loc_load.9
-   loc_load.10
-   loc_load.11
+   loc_load.5
+   loc_load.6
+   loc_load.7
    loc_load.13
    loc_load.15
+   loc_load.21
+   loc_load.22
+   loc_load.23
 
    # We load the cell itself to check its status
    loc_load.14
@@ -967,7 +1071,7 @@ proc.cell_14_transition.46
 
         if.true
             push.1
-            loc_store.30 drop
+            loc_store.78 drop
         end
 
         # We want to compare the sum with 3
@@ -976,7 +1080,7 @@ proc.cell_14_transition.46
 
         if.true
             push.1
-            loc_store.30 drop
+            loc_store.78 drop
         end
     
     # Cell is dead (0) and might come alive   
@@ -991,22 +1095,24 @@ proc.cell_14_transition.46
 
         if.true
             push.1
-            loc_store.30 drop
+            loc_store.78 drop
         end
     end
 end
 # State transition for cell 15
 
-proc.cell_15_transition.47
+proc.cell_15_transition.143
    
    # We assume a cell is dead (0) in the next round until proven otherwise
    push.0
-   loc_store.31 drop
+   loc_store.79 drop
     
    # We load all the cell's neighbours to check their status
-   loc_load.10
-   loc_load.11
+   loc_load.6
+   loc_load.7
    loc_load.14
+   loc_load.22
+   loc_load.23
 
    # We load the cell itself to check its status
    loc_load.15
@@ -1027,7 +1133,7 @@ proc.cell_15_transition.47
 
         if.true
             push.1
-            loc_store.31 drop
+            loc_store.79 drop
         end
 
         # We want to compare the sum with 3
@@ -1036,7 +1142,7 @@ proc.cell_15_transition.47
 
         if.true
             push.1
-            loc_store.31 drop
+            loc_store.79 drop
         end
     
     # Cell is dead (0) and might come alive   
@@ -1051,21 +1157,24 @@ proc.cell_15_transition.47
 
         if.true
             push.1
-            loc_store.31 drop
+            loc_store.79 drop
         end
     end
 end
 # State transition for cell 16
 
-proc.cell_16_transition.48
+proc.cell_16_transition.144
    
    # We assume a cell is dead (0) in the next round until proven otherwise
    push.0
-   loc_store.32 drop
+   loc_store.80 drop
     
    # We load all the cell's neighbours to check their status
-   loc_load.12
-   loc_load.13
+   loc_load.8
+   loc_load.9
+   loc_load.17
+   loc_load.24
+   loc_load.25
 
    # We load the cell itself to check its status
    loc_load.16
@@ -1086,7 +1195,7 @@ proc.cell_16_transition.48
 
         if.true
             push.1
-            loc_store.32 drop
+            loc_store.80 drop
         end
 
         # We want to compare the sum with 3
@@ -1095,7 +1204,7 @@ proc.cell_16_transition.48
 
         if.true
             push.1
-            loc_store.32 drop
+            loc_store.80 drop
         end
     
     # Cell is dead (0) and might come alive   
@@ -1110,7 +1219,3066 @@ proc.cell_16_transition.48
 
         if.true
             push.1
-            loc_store.32 drop
+            loc_store.80 drop
+        end
+    end
+end
+# State transition for cell 17
+
+proc.cell_17_transition.145
+   
+   # We assume a cell is dead (0) in the next round until proven otherwise
+   push.0
+   loc_store.81 drop
+    
+   # We load all the cell's neighbours to check their status
+   loc_load.8
+   loc_load.9
+   loc_load.10
+   loc_load.16
+   loc_load.18
+   loc_load.24
+   loc_load.25
+   loc_load.26
+
+   # We load the cell itself to check its status
+   loc_load.17
+
+   # Cell is alice (1) and might stay alive 
+
+    if.true
+        # We add all the cells possible neighbours (max 8) togther -> if sum >= 2 < 4 cell stays alive    
+        repeat.7
+            add
+        end
+
+        dup
+
+        # We want to compare the sum with 2
+        push.2
+        eq
+
+        if.true
+            push.1
+            loc_store.81 drop
+        end
+
+        # We want to compare the sum with 3
+        push.3
+        eq
+
+        if.true
+            push.1
+            loc_store.81 drop
+        end
+    
+    # Cell is dead (0) and might come alive   
+    else
+
+        repeat.7
+            add
+        end
+
+        push.3
+        eq
+
+        if.true
+            push.1
+            loc_store.81 drop
+        end
+    end
+end
+# State transition for cell 18
+
+proc.cell_18_transition.146
+   
+   # We assume a cell is dead (0) in the next round until proven otherwise
+   push.0
+   loc_store.82 drop
+    
+   # We load all the cell's neighbours to check their status
+   loc_load.9
+   loc_load.10
+   loc_load.11
+   loc_load.17
+   loc_load.19
+   loc_load.25
+   loc_load.26
+   loc_load.27
+
+   # We load the cell itself to check its status
+   loc_load.18
+
+   # Cell is alice (1) and might stay alive 
+
+    if.true
+        # We add all the cells possible neighbours (max 8) togther -> if sum >= 2 < 4 cell stays alive    
+        repeat.7
+            add
+        end
+
+        dup
+
+        # We want to compare the sum with 2
+        push.2
+        eq
+
+        if.true
+            push.1
+            loc_store.82 drop
+        end
+
+        # We want to compare the sum with 3
+        push.3
+        eq
+
+        if.true
+            push.1
+            loc_store.82 drop
+        end
+    
+    # Cell is dead (0) and might come alive   
+    else
+
+        repeat.7
+            add
+        end
+
+        push.3
+        eq
+
+        if.true
+            push.1
+            loc_store.82 drop
+        end
+    end
+end
+# State transition for cell 19
+
+proc.cell_19_transition.147
+   
+   # We assume a cell is dead (0) in the next round until proven otherwise
+   push.0
+   loc_store.83 drop
+    
+   # We load all the cell's neighbours to check their status
+   loc_load.10
+   loc_load.11
+   loc_load.12
+   loc_load.18
+   loc_load.20
+   loc_load.26
+   loc_load.27
+   loc_load.28
+
+   # We load the cell itself to check its status
+   loc_load.19
+
+   # Cell is alice (1) and might stay alive 
+
+    if.true
+        # We add all the cells possible neighbours (max 8) togther -> if sum >= 2 < 4 cell stays alive    
+        repeat.7
+            add
+        end
+
+        dup
+
+        # We want to compare the sum with 2
+        push.2
+        eq
+
+        if.true
+            push.1
+            loc_store.83 drop
+        end
+
+        # We want to compare the sum with 3
+        push.3
+        eq
+
+        if.true
+            push.1
+            loc_store.83 drop
+        end
+    
+    # Cell is dead (0) and might come alive   
+    else
+
+        repeat.7
+            add
+        end
+
+        push.3
+        eq
+
+        if.true
+            push.1
+            loc_store.83 drop
+        end
+    end
+end
+# State transition for cell 20
+
+proc.cell_20_transition.148
+   
+   # We assume a cell is dead (0) in the next round until proven otherwise
+   push.0
+   loc_store.84 drop
+    
+   # We load all the cell's neighbours to check their status
+   loc_load.11
+   loc_load.12
+   loc_load.13
+   loc_load.19
+   loc_load.21
+   loc_load.27
+   loc_load.28
+   loc_load.29
+
+   # We load the cell itself to check its status
+   loc_load.20
+
+   # Cell is alice (1) and might stay alive 
+
+    if.true
+        # We add all the cells possible neighbours (max 8) togther -> if sum >= 2 < 4 cell stays alive    
+        repeat.7
+            add
+        end
+
+        dup
+
+        # We want to compare the sum with 2
+        push.2
+        eq
+
+        if.true
+            push.1
+            loc_store.84 drop
+        end
+
+        # We want to compare the sum with 3
+        push.3
+        eq
+
+        if.true
+            push.1
+            loc_store.84 drop
+        end
+    
+    # Cell is dead (0) and might come alive   
+    else
+
+        repeat.7
+            add
+        end
+
+        push.3
+        eq
+
+        if.true
+            push.1
+            loc_store.84 drop
+        end
+    end
+end
+# State transition for cell 21
+
+proc.cell_21_transition.149
+   
+   # We assume a cell is dead (0) in the next round until proven otherwise
+   push.0
+   loc_store.85 drop
+    
+   # We load all the cell's neighbours to check their status
+   loc_load.12
+   loc_load.13
+   loc_load.14
+   loc_load.20
+   loc_load.22
+   loc_load.28
+   loc_load.29
+   loc_load.30
+
+   # We load the cell itself to check its status
+   loc_load.21
+
+   # Cell is alice (1) and might stay alive 
+
+    if.true
+        # We add all the cells possible neighbours (max 8) togther -> if sum >= 2 < 4 cell stays alive    
+        repeat.7
+            add
+        end
+
+        dup
+
+        # We want to compare the sum with 2
+        push.2
+        eq
+
+        if.true
+            push.1
+            loc_store.85 drop
+        end
+
+        # We want to compare the sum with 3
+        push.3
+        eq
+
+        if.true
+            push.1
+            loc_store.85 drop
+        end
+    
+    # Cell is dead (0) and might come alive   
+    else
+
+        repeat.7
+            add
+        end
+
+        push.3
+        eq
+
+        if.true
+            push.1
+            loc_store.85 drop
+        end
+    end
+end
+# State transition for cell 22
+
+proc.cell_22_transition.150
+   
+   # We assume a cell is dead (0) in the next round until proven otherwise
+   push.0
+   loc_store.86 drop
+    
+   # We load all the cell's neighbours to check their status
+   loc_load.13
+   loc_load.14
+   loc_load.15
+   loc_load.21
+   loc_load.23
+   loc_load.29
+   loc_load.30
+   loc_load.31
+
+   # We load the cell itself to check its status
+   loc_load.22
+
+   # Cell is alice (1) and might stay alive 
+
+    if.true
+        # We add all the cells possible neighbours (max 8) togther -> if sum >= 2 < 4 cell stays alive    
+        repeat.7
+            add
+        end
+
+        dup
+
+        # We want to compare the sum with 2
+        push.2
+        eq
+
+        if.true
+            push.1
+            loc_store.86 drop
+        end
+
+        # We want to compare the sum with 3
+        push.3
+        eq
+
+        if.true
+            push.1
+            loc_store.86 drop
+        end
+    
+    # Cell is dead (0) and might come alive   
+    else
+
+        repeat.7
+            add
+        end
+
+        push.3
+        eq
+
+        if.true
+            push.1
+            loc_store.86 drop
+        end
+    end
+end
+# State transition for cell 23
+
+proc.cell_23_transition.151
+   
+   # We assume a cell is dead (0) in the next round until proven otherwise
+   push.0
+   loc_store.87 drop
+    
+   # We load all the cell's neighbours to check their status
+   loc_load.14
+   loc_load.15
+   loc_load.22
+   loc_load.30
+   loc_load.31
+
+   # We load the cell itself to check its status
+   loc_load.23
+
+   # Cell is alice (1) and might stay alive 
+
+    if.true
+        # We add all the cells possible neighbours (max 8) togther -> if sum >= 2 < 4 cell stays alive    
+        repeat.7
+            add
+        end
+
+        dup
+
+        # We want to compare the sum with 2
+        push.2
+        eq
+
+        if.true
+            push.1
+            loc_store.87 drop
+        end
+
+        # We want to compare the sum with 3
+        push.3
+        eq
+
+        if.true
+            push.1
+            loc_store.87 drop
+        end
+    
+    # Cell is dead (0) and might come alive   
+    else
+
+        repeat.7
+            add
+        end
+
+        push.3
+        eq
+
+        if.true
+            push.1
+            loc_store.87 drop
+        end
+    end
+end
+# State transition for cell 24
+
+proc.cell_24_transition.152
+   
+   # We assume a cell is dead (0) in the next round until proven otherwise
+   push.0
+   loc_store.88 drop
+    
+   # We load all the cell's neighbours to check their status
+   loc_load.16
+   loc_load.17
+   loc_load.25
+   loc_load.32
+   loc_load.33
+
+   # We load the cell itself to check its status
+   loc_load.24
+
+   # Cell is alice (1) and might stay alive 
+
+    if.true
+        # We add all the cells possible neighbours (max 8) togther -> if sum >= 2 < 4 cell stays alive    
+        repeat.7
+            add
+        end
+
+        dup
+
+        # We want to compare the sum with 2
+        push.2
+        eq
+
+        if.true
+            push.1
+            loc_store.88 drop
+        end
+
+        # We want to compare the sum with 3
+        push.3
+        eq
+
+        if.true
+            push.1
+            loc_store.88 drop
+        end
+    
+    # Cell is dead (0) and might come alive   
+    else
+
+        repeat.7
+            add
+        end
+
+        push.3
+        eq
+
+        if.true
+            push.1
+            loc_store.88 drop
+        end
+    end
+end
+# State transition for cell 25
+
+proc.cell_25_transition.153
+   
+   # We assume a cell is dead (0) in the next round until proven otherwise
+   push.0
+   loc_store.89 drop
+    
+   # We load all the cell's neighbours to check their status
+   loc_load.16
+   loc_load.17
+   loc_load.18
+   loc_load.24
+   loc_load.26
+   loc_load.32
+   loc_load.33
+   loc_load.34
+
+   # We load the cell itself to check its status
+   loc_load.25
+
+   # Cell is alice (1) and might stay alive 
+
+    if.true
+        # We add all the cells possible neighbours (max 8) togther -> if sum >= 2 < 4 cell stays alive    
+        repeat.7
+            add
+        end
+
+        dup
+
+        # We want to compare the sum with 2
+        push.2
+        eq
+
+        if.true
+            push.1
+            loc_store.89 drop
+        end
+
+        # We want to compare the sum with 3
+        push.3
+        eq
+
+        if.true
+            push.1
+            loc_store.89 drop
+        end
+    
+    # Cell is dead (0) and might come alive   
+    else
+
+        repeat.7
+            add
+        end
+
+        push.3
+        eq
+
+        if.true
+            push.1
+            loc_store.89 drop
+        end
+    end
+end
+# State transition for cell 26
+
+proc.cell_26_transition.154
+   
+   # We assume a cell is dead (0) in the next round until proven otherwise
+   push.0
+   loc_store.90 drop
+    
+   # We load all the cell's neighbours to check their status
+   loc_load.17
+   loc_load.18
+   loc_load.19
+   loc_load.25
+   loc_load.27
+   loc_load.33
+   loc_load.34
+   loc_load.35
+
+   # We load the cell itself to check its status
+   loc_load.26
+
+   # Cell is alice (1) and might stay alive 
+
+    if.true
+        # We add all the cells possible neighbours (max 8) togther -> if sum >= 2 < 4 cell stays alive    
+        repeat.7
+            add
+        end
+
+        dup
+
+        # We want to compare the sum with 2
+        push.2
+        eq
+
+        if.true
+            push.1
+            loc_store.90 drop
+        end
+
+        # We want to compare the sum with 3
+        push.3
+        eq
+
+        if.true
+            push.1
+            loc_store.90 drop
+        end
+    
+    # Cell is dead (0) and might come alive   
+    else
+
+        repeat.7
+            add
+        end
+
+        push.3
+        eq
+
+        if.true
+            push.1
+            loc_store.90 drop
+        end
+    end
+end
+# State transition for cell 27
+
+proc.cell_27_transition.155
+   
+   # We assume a cell is dead (0) in the next round until proven otherwise
+   push.0
+   loc_store.91 drop
+    
+   # We load all the cell's neighbours to check their status
+   loc_load.18
+   loc_load.19
+   loc_load.20
+   loc_load.26
+   loc_load.28
+   loc_load.34
+   loc_load.35
+   loc_load.36
+
+   # We load the cell itself to check its status
+   loc_load.27
+
+   # Cell is alice (1) and might stay alive 
+
+    if.true
+        # We add all the cells possible neighbours (max 8) togther -> if sum >= 2 < 4 cell stays alive    
+        repeat.7
+            add
+        end
+
+        dup
+
+        # We want to compare the sum with 2
+        push.2
+        eq
+
+        if.true
+            push.1
+            loc_store.91 drop
+        end
+
+        # We want to compare the sum with 3
+        push.3
+        eq
+
+        if.true
+            push.1
+            loc_store.91 drop
+        end
+    
+    # Cell is dead (0) and might come alive   
+    else
+
+        repeat.7
+            add
+        end
+
+        push.3
+        eq
+
+        if.true
+            push.1
+            loc_store.91 drop
+        end
+    end
+end
+# State transition for cell 28
+
+proc.cell_28_transition.156
+   
+   # We assume a cell is dead (0) in the next round until proven otherwise
+   push.0
+   loc_store.92 drop
+    
+   # We load all the cell's neighbours to check their status
+   loc_load.19
+   loc_load.20
+   loc_load.21
+   loc_load.27
+   loc_load.29
+   loc_load.35
+   loc_load.36
+   loc_load.37
+
+   # We load the cell itself to check its status
+   loc_load.28
+
+   # Cell is alice (1) and might stay alive 
+
+    if.true
+        # We add all the cells possible neighbours (max 8) togther -> if sum >= 2 < 4 cell stays alive    
+        repeat.7
+            add
+        end
+
+        dup
+
+        # We want to compare the sum with 2
+        push.2
+        eq
+
+        if.true
+            push.1
+            loc_store.92 drop
+        end
+
+        # We want to compare the sum with 3
+        push.3
+        eq
+
+        if.true
+            push.1
+            loc_store.92 drop
+        end
+    
+    # Cell is dead (0) and might come alive   
+    else
+
+        repeat.7
+            add
+        end
+
+        push.3
+        eq
+
+        if.true
+            push.1
+            loc_store.92 drop
+        end
+    end
+end
+# State transition for cell 29
+
+proc.cell_29_transition.157
+   
+   # We assume a cell is dead (0) in the next round until proven otherwise
+   push.0
+   loc_store.93 drop
+    
+   # We load all the cell's neighbours to check their status
+   loc_load.20
+   loc_load.21
+   loc_load.22
+   loc_load.28
+   loc_load.30
+   loc_load.36
+   loc_load.37
+   loc_load.38
+
+   # We load the cell itself to check its status
+   loc_load.29
+
+   # Cell is alice (1) and might stay alive 
+
+    if.true
+        # We add all the cells possible neighbours (max 8) togther -> if sum >= 2 < 4 cell stays alive    
+        repeat.7
+            add
+        end
+
+        dup
+
+        # We want to compare the sum with 2
+        push.2
+        eq
+
+        if.true
+            push.1
+            loc_store.93 drop
+        end
+
+        # We want to compare the sum with 3
+        push.3
+        eq
+
+        if.true
+            push.1
+            loc_store.93 drop
+        end
+    
+    # Cell is dead (0) and might come alive   
+    else
+
+        repeat.7
+            add
+        end
+
+        push.3
+        eq
+
+        if.true
+            push.1
+            loc_store.93 drop
+        end
+    end
+end
+# State transition for cell 30
+
+proc.cell_30_transition.158
+   
+   # We assume a cell is dead (0) in the next round until proven otherwise
+   push.0
+   loc_store.94 drop
+    
+   # We load all the cell's neighbours to check their status
+   loc_load.21
+   loc_load.22
+   loc_load.23
+   loc_load.29
+   loc_load.31
+   loc_load.37
+   loc_load.38
+   loc_load.39
+
+   # We load the cell itself to check its status
+   loc_load.30
+
+   # Cell is alice (1) and might stay alive 
+
+    if.true
+        # We add all the cells possible neighbours (max 8) togther -> if sum >= 2 < 4 cell stays alive    
+        repeat.7
+            add
+        end
+
+        dup
+
+        # We want to compare the sum with 2
+        push.2
+        eq
+
+        if.true
+            push.1
+            loc_store.94 drop
+        end
+
+        # We want to compare the sum with 3
+        push.3
+        eq
+
+        if.true
+            push.1
+            loc_store.94 drop
+        end
+    
+    # Cell is dead (0) and might come alive   
+    else
+
+        repeat.7
+            add
+        end
+
+        push.3
+        eq
+
+        if.true
+            push.1
+            loc_store.94 drop
+        end
+    end
+end
+# State transition for cell 31
+
+proc.cell_31_transition.159
+   
+   # We assume a cell is dead (0) in the next round until proven otherwise
+   push.0
+   loc_store.95 drop
+    
+   # We load all the cell's neighbours to check their status
+   loc_load.22
+   loc_load.23
+   loc_load.30
+   loc_load.38
+   loc_load.39
+
+   # We load the cell itself to check its status
+   loc_load.31
+
+   # Cell is alice (1) and might stay alive 
+
+    if.true
+        # We add all the cells possible neighbours (max 8) togther -> if sum >= 2 < 4 cell stays alive    
+        repeat.7
+            add
+        end
+
+        dup
+
+        # We want to compare the sum with 2
+        push.2
+        eq
+
+        if.true
+            push.1
+            loc_store.95 drop
+        end
+
+        # We want to compare the sum with 3
+        push.3
+        eq
+
+        if.true
+            push.1
+            loc_store.95 drop
+        end
+    
+    # Cell is dead (0) and might come alive   
+    else
+
+        repeat.7
+            add
+        end
+
+        push.3
+        eq
+
+        if.true
+            push.1
+            loc_store.95 drop
+        end
+    end
+end
+# State transition for cell 32
+
+proc.cell_32_transition.160
+   
+   # We assume a cell is dead (0) in the next round until proven otherwise
+   push.0
+   loc_store.96 drop
+    
+   # We load all the cell's neighbours to check their status
+   loc_load.24
+   loc_load.25
+   loc_load.33
+   loc_load.40
+   loc_load.41
+
+   # We load the cell itself to check its status
+   loc_load.32
+
+   # Cell is alice (1) and might stay alive 
+
+    if.true
+        # We add all the cells possible neighbours (max 8) togther -> if sum >= 2 < 4 cell stays alive    
+        repeat.7
+            add
+        end
+
+        dup
+
+        # We want to compare the sum with 2
+        push.2
+        eq
+
+        if.true
+            push.1
+            loc_store.96 drop
+        end
+
+        # We want to compare the sum with 3
+        push.3
+        eq
+
+        if.true
+            push.1
+            loc_store.96 drop
+        end
+    
+    # Cell is dead (0) and might come alive   
+    else
+
+        repeat.7
+            add
+        end
+
+        push.3
+        eq
+
+        if.true
+            push.1
+            loc_store.96 drop
+        end
+    end
+end
+# State transition for cell 33
+
+proc.cell_33_transition.161
+   
+   # We assume a cell is dead (0) in the next round until proven otherwise
+   push.0
+   loc_store.97 drop
+    
+   # We load all the cell's neighbours to check their status
+   loc_load.24
+   loc_load.25
+   loc_load.26
+   loc_load.32
+   loc_load.34
+   loc_load.40
+   loc_load.41
+   loc_load.42
+
+   # We load the cell itself to check its status
+   loc_load.33
+
+   # Cell is alice (1) and might stay alive 
+
+    if.true
+        # We add all the cells possible neighbours (max 8) togther -> if sum >= 2 < 4 cell stays alive    
+        repeat.7
+            add
+        end
+
+        dup
+
+        # We want to compare the sum with 2
+        push.2
+        eq
+
+        if.true
+            push.1
+            loc_store.97 drop
+        end
+
+        # We want to compare the sum with 3
+        push.3
+        eq
+
+        if.true
+            push.1
+            loc_store.97 drop
+        end
+    
+    # Cell is dead (0) and might come alive   
+    else
+
+        repeat.7
+            add
+        end
+
+        push.3
+        eq
+
+        if.true
+            push.1
+            loc_store.97 drop
+        end
+    end
+end
+# State transition for cell 34
+
+proc.cell_34_transition.162
+   
+   # We assume a cell is dead (0) in the next round until proven otherwise
+   push.0
+   loc_store.98 drop
+    
+   # We load all the cell's neighbours to check their status
+   loc_load.25
+   loc_load.26
+   loc_load.27
+   loc_load.33
+   loc_load.35
+   loc_load.41
+   loc_load.42
+   loc_load.43
+
+   # We load the cell itself to check its status
+   loc_load.34
+
+   # Cell is alice (1) and might stay alive 
+
+    if.true
+        # We add all the cells possible neighbours (max 8) togther -> if sum >= 2 < 4 cell stays alive    
+        repeat.7
+            add
+        end
+
+        dup
+
+        # We want to compare the sum with 2
+        push.2
+        eq
+
+        if.true
+            push.1
+            loc_store.98 drop
+        end
+
+        # We want to compare the sum with 3
+        push.3
+        eq
+
+        if.true
+            push.1
+            loc_store.98 drop
+        end
+    
+    # Cell is dead (0) and might come alive   
+    else
+
+        repeat.7
+            add
+        end
+
+        push.3
+        eq
+
+        if.true
+            push.1
+            loc_store.98 drop
+        end
+    end
+end
+# State transition for cell 35
+
+proc.cell_35_transition.163
+   
+   # We assume a cell is dead (0) in the next round until proven otherwise
+   push.0
+   loc_store.99 drop
+    
+   # We load all the cell's neighbours to check their status
+   loc_load.26
+   loc_load.27
+   loc_load.28
+   loc_load.34
+   loc_load.36
+   loc_load.42
+   loc_load.43
+   loc_load.44
+
+   # We load the cell itself to check its status
+   loc_load.35
+
+   # Cell is alice (1) and might stay alive 
+
+    if.true
+        # We add all the cells possible neighbours (max 8) togther -> if sum >= 2 < 4 cell stays alive    
+        repeat.7
+            add
+        end
+
+        dup
+
+        # We want to compare the sum with 2
+        push.2
+        eq
+
+        if.true
+            push.1
+            loc_store.99 drop
+        end
+
+        # We want to compare the sum with 3
+        push.3
+        eq
+
+        if.true
+            push.1
+            loc_store.99 drop
+        end
+    
+    # Cell is dead (0) and might come alive   
+    else
+
+        repeat.7
+            add
+        end
+
+        push.3
+        eq
+
+        if.true
+            push.1
+            loc_store.99 drop
+        end
+    end
+end
+# State transition for cell 36
+
+proc.cell_36_transition.164
+   
+   # We assume a cell is dead (0) in the next round until proven otherwise
+   push.0
+   loc_store.100 drop
+    
+   # We load all the cell's neighbours to check their status
+   loc_load.27
+   loc_load.28
+   loc_load.29
+   loc_load.35
+   loc_load.37
+   loc_load.43
+   loc_load.44
+   loc_load.45
+
+   # We load the cell itself to check its status
+   loc_load.36
+
+   # Cell is alice (1) and might stay alive 
+
+    if.true
+        # We add all the cells possible neighbours (max 8) togther -> if sum >= 2 < 4 cell stays alive    
+        repeat.7
+            add
+        end
+
+        dup
+
+        # We want to compare the sum with 2
+        push.2
+        eq
+
+        if.true
+            push.1
+            loc_store.100 drop
+        end
+
+        # We want to compare the sum with 3
+        push.3
+        eq
+
+        if.true
+            push.1
+            loc_store.100 drop
+        end
+    
+    # Cell is dead (0) and might come alive   
+    else
+
+        repeat.7
+            add
+        end
+
+        push.3
+        eq
+
+        if.true
+            push.1
+            loc_store.100 drop
+        end
+    end
+end
+# State transition for cell 37
+
+proc.cell_37_transition.165
+   
+   # We assume a cell is dead (0) in the next round until proven otherwise
+   push.0
+   loc_store.101 drop
+    
+   # We load all the cell's neighbours to check their status
+   loc_load.28
+   loc_load.29
+   loc_load.30
+   loc_load.36
+   loc_load.38
+   loc_load.44
+   loc_load.45
+   loc_load.46
+
+   # We load the cell itself to check its status
+   loc_load.37
+
+   # Cell is alice (1) and might stay alive 
+
+    if.true
+        # We add all the cells possible neighbours (max 8) togther -> if sum >= 2 < 4 cell stays alive    
+        repeat.7
+            add
+        end
+
+        dup
+
+        # We want to compare the sum with 2
+        push.2
+        eq
+
+        if.true
+            push.1
+            loc_store.101 drop
+        end
+
+        # We want to compare the sum with 3
+        push.3
+        eq
+
+        if.true
+            push.1
+            loc_store.101 drop
+        end
+    
+    # Cell is dead (0) and might come alive   
+    else
+
+        repeat.7
+            add
+        end
+
+        push.3
+        eq
+
+        if.true
+            push.1
+            loc_store.101 drop
+        end
+    end
+end
+# State transition for cell 38
+
+proc.cell_38_transition.166
+   
+   # We assume a cell is dead (0) in the next round until proven otherwise
+   push.0
+   loc_store.102 drop
+    
+   # We load all the cell's neighbours to check their status
+   loc_load.29
+   loc_load.30
+   loc_load.31
+   loc_load.37
+   loc_load.39
+   loc_load.45
+   loc_load.46
+   loc_load.47
+
+   # We load the cell itself to check its status
+   loc_load.38
+
+   # Cell is alice (1) and might stay alive 
+
+    if.true
+        # We add all the cells possible neighbours (max 8) togther -> if sum >= 2 < 4 cell stays alive    
+        repeat.7
+            add
+        end
+
+        dup
+
+        # We want to compare the sum with 2
+        push.2
+        eq
+
+        if.true
+            push.1
+            loc_store.102 drop
+        end
+
+        # We want to compare the sum with 3
+        push.3
+        eq
+
+        if.true
+            push.1
+            loc_store.102 drop
+        end
+    
+    # Cell is dead (0) and might come alive   
+    else
+
+        repeat.7
+            add
+        end
+
+        push.3
+        eq
+
+        if.true
+            push.1
+            loc_store.102 drop
+        end
+    end
+end
+# State transition for cell 39
+
+proc.cell_39_transition.167
+   
+   # We assume a cell is dead (0) in the next round until proven otherwise
+   push.0
+   loc_store.103 drop
+    
+   # We load all the cell's neighbours to check their status
+   loc_load.30
+   loc_load.31
+   loc_load.38
+   loc_load.46
+   loc_load.47
+
+   # We load the cell itself to check its status
+   loc_load.39
+
+   # Cell is alice (1) and might stay alive 
+
+    if.true
+        # We add all the cells possible neighbours (max 8) togther -> if sum >= 2 < 4 cell stays alive    
+        repeat.7
+            add
+        end
+
+        dup
+
+        # We want to compare the sum with 2
+        push.2
+        eq
+
+        if.true
+            push.1
+            loc_store.103 drop
+        end
+
+        # We want to compare the sum with 3
+        push.3
+        eq
+
+        if.true
+            push.1
+            loc_store.103 drop
+        end
+    
+    # Cell is dead (0) and might come alive   
+    else
+
+        repeat.7
+            add
+        end
+
+        push.3
+        eq
+
+        if.true
+            push.1
+            loc_store.103 drop
+        end
+    end
+end
+# State transition for cell 40
+
+proc.cell_40_transition.168
+   
+   # We assume a cell is dead (0) in the next round until proven otherwise
+   push.0
+   loc_store.104 drop
+    
+   # We load all the cell's neighbours to check their status
+   loc_load.32
+   loc_load.33
+   loc_load.41
+   loc_load.48
+   loc_load.49
+
+   # We load the cell itself to check its status
+   loc_load.40
+
+   # Cell is alice (1) and might stay alive 
+
+    if.true
+        # We add all the cells possible neighbours (max 8) togther -> if sum >= 2 < 4 cell stays alive    
+        repeat.7
+            add
+        end
+
+        dup
+
+        # We want to compare the sum with 2
+        push.2
+        eq
+
+        if.true
+            push.1
+            loc_store.104 drop
+        end
+
+        # We want to compare the sum with 3
+        push.3
+        eq
+
+        if.true
+            push.1
+            loc_store.104 drop
+        end
+    
+    # Cell is dead (0) and might come alive   
+    else
+
+        repeat.7
+            add
+        end
+
+        push.3
+        eq
+
+        if.true
+            push.1
+            loc_store.104 drop
+        end
+    end
+end
+# State transition for cell 41
+
+proc.cell_41_transition.169
+   
+   # We assume a cell is dead (0) in the next round until proven otherwise
+   push.0
+   loc_store.105 drop
+    
+   # We load all the cell's neighbours to check their status
+   loc_load.32
+   loc_load.33
+   loc_load.34
+   loc_load.40
+   loc_load.42
+   loc_load.48
+   loc_load.49
+   loc_load.50
+
+   # We load the cell itself to check its status
+   loc_load.41
+
+   # Cell is alice (1) and might stay alive 
+
+    if.true
+        # We add all the cells possible neighbours (max 8) togther -> if sum >= 2 < 4 cell stays alive    
+        repeat.7
+            add
+        end
+
+        dup
+
+        # We want to compare the sum with 2
+        push.2
+        eq
+
+        if.true
+            push.1
+            loc_store.105 drop
+        end
+
+        # We want to compare the sum with 3
+        push.3
+        eq
+
+        if.true
+            push.1
+            loc_store.105 drop
+        end
+    
+    # Cell is dead (0) and might come alive   
+    else
+
+        repeat.7
+            add
+        end
+
+        push.3
+        eq
+
+        if.true
+            push.1
+            loc_store.105 drop
+        end
+    end
+end
+# State transition for cell 42
+
+proc.cell_42_transition.170
+   
+   # We assume a cell is dead (0) in the next round until proven otherwise
+   push.0
+   loc_store.106 drop
+    
+   # We load all the cell's neighbours to check their status
+   loc_load.33
+   loc_load.34
+   loc_load.35
+   loc_load.41
+   loc_load.43
+   loc_load.49
+   loc_load.50
+   loc_load.51
+
+   # We load the cell itself to check its status
+   loc_load.42
+
+   # Cell is alice (1) and might stay alive 
+
+    if.true
+        # We add all the cells possible neighbours (max 8) togther -> if sum >= 2 < 4 cell stays alive    
+        repeat.7
+            add
+        end
+
+        dup
+
+        # We want to compare the sum with 2
+        push.2
+        eq
+
+        if.true
+            push.1
+            loc_store.106 drop
+        end
+
+        # We want to compare the sum with 3
+        push.3
+        eq
+
+        if.true
+            push.1
+            loc_store.106 drop
+        end
+    
+    # Cell is dead (0) and might come alive   
+    else
+
+        repeat.7
+            add
+        end
+
+        push.3
+        eq
+
+        if.true
+            push.1
+            loc_store.106 drop
+        end
+    end
+end
+# State transition for cell 43
+
+proc.cell_43_transition.171
+   
+   # We assume a cell is dead (0) in the next round until proven otherwise
+   push.0
+   loc_store.107 drop
+    
+   # We load all the cell's neighbours to check their status
+   loc_load.34
+   loc_load.35
+   loc_load.36
+   loc_load.42
+   loc_load.44
+   loc_load.50
+   loc_load.51
+   loc_load.52
+
+   # We load the cell itself to check its status
+   loc_load.43
+
+   # Cell is alice (1) and might stay alive 
+
+    if.true
+        # We add all the cells possible neighbours (max 8) togther -> if sum >= 2 < 4 cell stays alive    
+        repeat.7
+            add
+        end
+
+        dup
+
+        # We want to compare the sum with 2
+        push.2
+        eq
+
+        if.true
+            push.1
+            loc_store.107 drop
+        end
+
+        # We want to compare the sum with 3
+        push.3
+        eq
+
+        if.true
+            push.1
+            loc_store.107 drop
+        end
+    
+    # Cell is dead (0) and might come alive   
+    else
+
+        repeat.7
+            add
+        end
+
+        push.3
+        eq
+
+        if.true
+            push.1
+            loc_store.107 drop
+        end
+    end
+end
+# State transition for cell 44
+
+proc.cell_44_transition.172
+   
+   # We assume a cell is dead (0) in the next round until proven otherwise
+   push.0
+   loc_store.108 drop
+    
+   # We load all the cell's neighbours to check their status
+   loc_load.35
+   loc_load.36
+   loc_load.37
+   loc_load.43
+   loc_load.45
+   loc_load.51
+   loc_load.52
+   loc_load.53
+
+   # We load the cell itself to check its status
+   loc_load.44
+
+   # Cell is alice (1) and might stay alive 
+
+    if.true
+        # We add all the cells possible neighbours (max 8) togther -> if sum >= 2 < 4 cell stays alive    
+        repeat.7
+            add
+        end
+
+        dup
+
+        # We want to compare the sum with 2
+        push.2
+        eq
+
+        if.true
+            push.1
+            loc_store.108 drop
+        end
+
+        # We want to compare the sum with 3
+        push.3
+        eq
+
+        if.true
+            push.1
+            loc_store.108 drop
+        end
+    
+    # Cell is dead (0) and might come alive   
+    else
+
+        repeat.7
+            add
+        end
+
+        push.3
+        eq
+
+        if.true
+            push.1
+            loc_store.108 drop
+        end
+    end
+end
+# State transition for cell 45
+
+proc.cell_45_transition.173
+   
+   # We assume a cell is dead (0) in the next round until proven otherwise
+   push.0
+   loc_store.109 drop
+    
+   # We load all the cell's neighbours to check their status
+   loc_load.36
+   loc_load.37
+   loc_load.38
+   loc_load.44
+   loc_load.46
+   loc_load.52
+   loc_load.53
+   loc_load.54
+
+   # We load the cell itself to check its status
+   loc_load.45
+
+   # Cell is alice (1) and might stay alive 
+
+    if.true
+        # We add all the cells possible neighbours (max 8) togther -> if sum >= 2 < 4 cell stays alive    
+        repeat.7
+            add
+        end
+
+        dup
+
+        # We want to compare the sum with 2
+        push.2
+        eq
+
+        if.true
+            push.1
+            loc_store.109 drop
+        end
+
+        # We want to compare the sum with 3
+        push.3
+        eq
+
+        if.true
+            push.1
+            loc_store.109 drop
+        end
+    
+    # Cell is dead (0) and might come alive   
+    else
+
+        repeat.7
+            add
+        end
+
+        push.3
+        eq
+
+        if.true
+            push.1
+            loc_store.109 drop
+        end
+    end
+end
+# State transition for cell 46
+
+proc.cell_46_transition.174
+   
+   # We assume a cell is dead (0) in the next round until proven otherwise
+   push.0
+   loc_store.110 drop
+    
+   # We load all the cell's neighbours to check their status
+   loc_load.37
+   loc_load.38
+   loc_load.39
+   loc_load.45
+   loc_load.47
+   loc_load.53
+   loc_load.54
+   loc_load.55
+
+   # We load the cell itself to check its status
+   loc_load.46
+
+   # Cell is alice (1) and might stay alive 
+
+    if.true
+        # We add all the cells possible neighbours (max 8) togther -> if sum >= 2 < 4 cell stays alive    
+        repeat.7
+            add
+        end
+
+        dup
+
+        # We want to compare the sum with 2
+        push.2
+        eq
+
+        if.true
+            push.1
+            loc_store.110 drop
+        end
+
+        # We want to compare the sum with 3
+        push.3
+        eq
+
+        if.true
+            push.1
+            loc_store.110 drop
+        end
+    
+    # Cell is dead (0) and might come alive   
+    else
+
+        repeat.7
+            add
+        end
+
+        push.3
+        eq
+
+        if.true
+            push.1
+            loc_store.110 drop
+        end
+    end
+end
+# State transition for cell 47
+
+proc.cell_47_transition.175
+   
+   # We assume a cell is dead (0) in the next round until proven otherwise
+   push.0
+   loc_store.111 drop
+    
+   # We load all the cell's neighbours to check their status
+   loc_load.38
+   loc_load.39
+   loc_load.46
+   loc_load.54
+   loc_load.55
+
+   # We load the cell itself to check its status
+   loc_load.47
+
+   # Cell is alice (1) and might stay alive 
+
+    if.true
+        # We add all the cells possible neighbours (max 8) togther -> if sum >= 2 < 4 cell stays alive    
+        repeat.7
+            add
+        end
+
+        dup
+
+        # We want to compare the sum with 2
+        push.2
+        eq
+
+        if.true
+            push.1
+            loc_store.111 drop
+        end
+
+        # We want to compare the sum with 3
+        push.3
+        eq
+
+        if.true
+            push.1
+            loc_store.111 drop
+        end
+    
+    # Cell is dead (0) and might come alive   
+    else
+
+        repeat.7
+            add
+        end
+
+        push.3
+        eq
+
+        if.true
+            push.1
+            loc_store.111 drop
+        end
+    end
+end
+# State transition for cell 48
+
+proc.cell_48_transition.176
+   
+   # We assume a cell is dead (0) in the next round until proven otherwise
+   push.0
+   loc_store.112 drop
+    
+   # We load all the cell's neighbours to check their status
+   loc_load.40
+   loc_load.41
+   loc_load.49
+   loc_load.56
+   loc_load.57
+
+   # We load the cell itself to check its status
+   loc_load.48
+
+   # Cell is alice (1) and might stay alive 
+
+    if.true
+        # We add all the cells possible neighbours (max 8) togther -> if sum >= 2 < 4 cell stays alive    
+        repeat.7
+            add
+        end
+
+        dup
+
+        # We want to compare the sum with 2
+        push.2
+        eq
+
+        if.true
+            push.1
+            loc_store.112 drop
+        end
+
+        # We want to compare the sum with 3
+        push.3
+        eq
+
+        if.true
+            push.1
+            loc_store.112 drop
+        end
+    
+    # Cell is dead (0) and might come alive   
+    else
+
+        repeat.7
+            add
+        end
+
+        push.3
+        eq
+
+        if.true
+            push.1
+            loc_store.112 drop
+        end
+    end
+end
+# State transition for cell 49
+
+proc.cell_49_transition.177
+   
+   # We assume a cell is dead (0) in the next round until proven otherwise
+   push.0
+   loc_store.113 drop
+    
+   # We load all the cell's neighbours to check their status
+   loc_load.40
+   loc_load.41
+   loc_load.42
+   loc_load.48
+   loc_load.50
+   loc_load.56
+   loc_load.57
+   loc_load.58
+
+   # We load the cell itself to check its status
+   loc_load.49
+
+   # Cell is alice (1) and might stay alive 
+
+    if.true
+        # We add all the cells possible neighbours (max 8) togther -> if sum >= 2 < 4 cell stays alive    
+        repeat.7
+            add
+        end
+
+        dup
+
+        # We want to compare the sum with 2
+        push.2
+        eq
+
+        if.true
+            push.1
+            loc_store.113 drop
+        end
+
+        # We want to compare the sum with 3
+        push.3
+        eq
+
+        if.true
+            push.1
+            loc_store.113 drop
+        end
+    
+    # Cell is dead (0) and might come alive   
+    else
+
+        repeat.7
+            add
+        end
+
+        push.3
+        eq
+
+        if.true
+            push.1
+            loc_store.113 drop
+        end
+    end
+end
+# State transition for cell 50
+
+proc.cell_50_transition.178
+   
+   # We assume a cell is dead (0) in the next round until proven otherwise
+   push.0
+   loc_store.114 drop
+    
+   # We load all the cell's neighbours to check their status
+   loc_load.41
+   loc_load.42
+   loc_load.43
+   loc_load.49
+   loc_load.51
+   loc_load.57
+   loc_load.58
+   loc_load.59
+
+   # We load the cell itself to check its status
+   loc_load.50
+
+   # Cell is alice (1) and might stay alive 
+
+    if.true
+        # We add all the cells possible neighbours (max 8) togther -> if sum >= 2 < 4 cell stays alive    
+        repeat.7
+            add
+        end
+
+        dup
+
+        # We want to compare the sum with 2
+        push.2
+        eq
+
+        if.true
+            push.1
+            loc_store.114 drop
+        end
+
+        # We want to compare the sum with 3
+        push.3
+        eq
+
+        if.true
+            push.1
+            loc_store.114 drop
+        end
+    
+    # Cell is dead (0) and might come alive   
+    else
+
+        repeat.7
+            add
+        end
+
+        push.3
+        eq
+
+        if.true
+            push.1
+            loc_store.114 drop
+        end
+    end
+end
+# State transition for cell 51
+
+proc.cell_51_transition.179
+   
+   # We assume a cell is dead (0) in the next round until proven otherwise
+   push.0
+   loc_store.115 drop
+    
+   # We load all the cell's neighbours to check their status
+   loc_load.42
+   loc_load.43
+   loc_load.44
+   loc_load.50
+   loc_load.52
+   loc_load.58
+   loc_load.59
+   loc_load.60
+
+   # We load the cell itself to check its status
+   loc_load.51
+
+   # Cell is alice (1) and might stay alive 
+
+    if.true
+        # We add all the cells possible neighbours (max 8) togther -> if sum >= 2 < 4 cell stays alive    
+        repeat.7
+            add
+        end
+
+        dup
+
+        # We want to compare the sum with 2
+        push.2
+        eq
+
+        if.true
+            push.1
+            loc_store.115 drop
+        end
+
+        # We want to compare the sum with 3
+        push.3
+        eq
+
+        if.true
+            push.1
+            loc_store.115 drop
+        end
+    
+    # Cell is dead (0) and might come alive   
+    else
+
+        repeat.7
+            add
+        end
+
+        push.3
+        eq
+
+        if.true
+            push.1
+            loc_store.115 drop
+        end
+    end
+end
+# State transition for cell 52
+
+proc.cell_52_transition.180
+   
+   # We assume a cell is dead (0) in the next round until proven otherwise
+   push.0
+   loc_store.116 drop
+    
+   # We load all the cell's neighbours to check their status
+   loc_load.43
+   loc_load.44
+   loc_load.45
+   loc_load.51
+   loc_load.53
+   loc_load.59
+   loc_load.60
+   loc_load.61
+
+   # We load the cell itself to check its status
+   loc_load.52
+
+   # Cell is alice (1) and might stay alive 
+
+    if.true
+        # We add all the cells possible neighbours (max 8) togther -> if sum >= 2 < 4 cell stays alive    
+        repeat.7
+            add
+        end
+
+        dup
+
+        # We want to compare the sum with 2
+        push.2
+        eq
+
+        if.true
+            push.1
+            loc_store.116 drop
+        end
+
+        # We want to compare the sum with 3
+        push.3
+        eq
+
+        if.true
+            push.1
+            loc_store.116 drop
+        end
+    
+    # Cell is dead (0) and might come alive   
+    else
+
+        repeat.7
+            add
+        end
+
+        push.3
+        eq
+
+        if.true
+            push.1
+            loc_store.116 drop
+        end
+    end
+end
+# State transition for cell 53
+
+proc.cell_53_transition.181
+   
+   # We assume a cell is dead (0) in the next round until proven otherwise
+   push.0
+   loc_store.117 drop
+    
+   # We load all the cell's neighbours to check their status
+   loc_load.44
+   loc_load.45
+   loc_load.46
+   loc_load.52
+   loc_load.54
+   loc_load.60
+   loc_load.61
+   loc_load.62
+
+   # We load the cell itself to check its status
+   loc_load.53
+
+   # Cell is alice (1) and might stay alive 
+
+    if.true
+        # We add all the cells possible neighbours (max 8) togther -> if sum >= 2 < 4 cell stays alive    
+        repeat.7
+            add
+        end
+
+        dup
+
+        # We want to compare the sum with 2
+        push.2
+        eq
+
+        if.true
+            push.1
+            loc_store.117 drop
+        end
+
+        # We want to compare the sum with 3
+        push.3
+        eq
+
+        if.true
+            push.1
+            loc_store.117 drop
+        end
+    
+    # Cell is dead (0) and might come alive   
+    else
+
+        repeat.7
+            add
+        end
+
+        push.3
+        eq
+
+        if.true
+            push.1
+            loc_store.117 drop
+        end
+    end
+end
+# State transition for cell 54
+
+proc.cell_54_transition.182
+   
+   # We assume a cell is dead (0) in the next round until proven otherwise
+   push.0
+   loc_store.118 drop
+    
+   # We load all the cell's neighbours to check their status
+   loc_load.45
+   loc_load.46
+   loc_load.47
+   loc_load.53
+   loc_load.55
+   loc_load.61
+   loc_load.62
+   loc_load.63
+
+   # We load the cell itself to check its status
+   loc_load.54
+
+   # Cell is alice (1) and might stay alive 
+
+    if.true
+        # We add all the cells possible neighbours (max 8) togther -> if sum >= 2 < 4 cell stays alive    
+        repeat.7
+            add
+        end
+
+        dup
+
+        # We want to compare the sum with 2
+        push.2
+        eq
+
+        if.true
+            push.1
+            loc_store.118 drop
+        end
+
+        # We want to compare the sum with 3
+        push.3
+        eq
+
+        if.true
+            push.1
+            loc_store.118 drop
+        end
+    
+    # Cell is dead (0) and might come alive   
+    else
+
+        repeat.7
+            add
+        end
+
+        push.3
+        eq
+
+        if.true
+            push.1
+            loc_store.118 drop
+        end
+    end
+end
+# State transition for cell 55
+
+proc.cell_55_transition.183
+   
+   # We assume a cell is dead (0) in the next round until proven otherwise
+   push.0
+   loc_store.119 drop
+    
+   # We load all the cell's neighbours to check their status
+   loc_load.46
+   loc_load.47
+   loc_load.54
+   loc_load.62
+   loc_load.63
+
+   # We load the cell itself to check its status
+   loc_load.55
+
+   # Cell is alice (1) and might stay alive 
+
+    if.true
+        # We add all the cells possible neighbours (max 8) togther -> if sum >= 2 < 4 cell stays alive    
+        repeat.7
+            add
+        end
+
+        dup
+
+        # We want to compare the sum with 2
+        push.2
+        eq
+
+        if.true
+            push.1
+            loc_store.119 drop
+        end
+
+        # We want to compare the sum with 3
+        push.3
+        eq
+
+        if.true
+            push.1
+            loc_store.119 drop
+        end
+    
+    # Cell is dead (0) and might come alive   
+    else
+
+        repeat.7
+            add
+        end
+
+        push.3
+        eq
+
+        if.true
+            push.1
+            loc_store.119 drop
+        end
+    end
+end
+# State transition for cell 56
+
+proc.cell_56_transition.184
+   
+   # We assume a cell is dead (0) in the next round until proven otherwise
+   push.0
+   loc_store.120 drop
+    
+   # We load all the cell's neighbours to check their status
+   loc_load.48
+   loc_load.49
+   loc_load.57
+
+   # We load the cell itself to check its status
+   loc_load.56
+
+   # Cell is alice (1) and might stay alive 
+
+    if.true
+        # We add all the cells possible neighbours (max 8) togther -> if sum >= 2 < 4 cell stays alive    
+        repeat.7
+            add
+        end
+
+        dup
+
+        # We want to compare the sum with 2
+        push.2
+        eq
+
+        if.true
+            push.1
+            loc_store.120 drop
+        end
+
+        # We want to compare the sum with 3
+        push.3
+        eq
+
+        if.true
+            push.1
+            loc_store.120 drop
+        end
+    
+    # Cell is dead (0) and might come alive   
+    else
+
+        repeat.7
+            add
+        end
+
+        push.3
+        eq
+
+        if.true
+            push.1
+            loc_store.120 drop
+        end
+    end
+end
+# State transition for cell 57
+
+proc.cell_57_transition.185
+   
+   # We assume a cell is dead (0) in the next round until proven otherwise
+   push.0
+   loc_store.121 drop
+    
+   # We load all the cell's neighbours to check their status
+   loc_load.48
+   loc_load.49
+   loc_load.50
+   loc_load.56
+   loc_load.58
+
+   # We load the cell itself to check its status
+   loc_load.57
+
+   # Cell is alice (1) and might stay alive 
+
+    if.true
+        # We add all the cells possible neighbours (max 8) togther -> if sum >= 2 < 4 cell stays alive    
+        repeat.7
+            add
+        end
+
+        dup
+
+        # We want to compare the sum with 2
+        push.2
+        eq
+
+        if.true
+            push.1
+            loc_store.121 drop
+        end
+
+        # We want to compare the sum with 3
+        push.3
+        eq
+
+        if.true
+            push.1
+            loc_store.121 drop
+        end
+    
+    # Cell is dead (0) and might come alive   
+    else
+
+        repeat.7
+            add
+        end
+
+        push.3
+        eq
+
+        if.true
+            push.1
+            loc_store.121 drop
+        end
+    end
+end
+# State transition for cell 58
+
+proc.cell_58_transition.186
+   
+   # We assume a cell is dead (0) in the next round until proven otherwise
+   push.0
+   loc_store.122 drop
+    
+   # We load all the cell's neighbours to check their status
+   loc_load.49
+   loc_load.50
+   loc_load.51
+   loc_load.57
+   loc_load.59
+
+   # We load the cell itself to check its status
+   loc_load.58
+
+   # Cell is alice (1) and might stay alive 
+
+    if.true
+        # We add all the cells possible neighbours (max 8) togther -> if sum >= 2 < 4 cell stays alive    
+        repeat.7
+            add
+        end
+
+        dup
+
+        # We want to compare the sum with 2
+        push.2
+        eq
+
+        if.true
+            push.1
+            loc_store.122 drop
+        end
+
+        # We want to compare the sum with 3
+        push.3
+        eq
+
+        if.true
+            push.1
+            loc_store.122 drop
+        end
+    
+    # Cell is dead (0) and might come alive   
+    else
+
+        repeat.7
+            add
+        end
+
+        push.3
+        eq
+
+        if.true
+            push.1
+            loc_store.122 drop
+        end
+    end
+end
+# State transition for cell 59
+
+proc.cell_59_transition.187
+   
+   # We assume a cell is dead (0) in the next round until proven otherwise
+   push.0
+   loc_store.123 drop
+    
+   # We load all the cell's neighbours to check their status
+   loc_load.50
+   loc_load.51
+   loc_load.52
+   loc_load.58
+   loc_load.60
+
+   # We load the cell itself to check its status
+   loc_load.59
+
+   # Cell is alice (1) and might stay alive 
+
+    if.true
+        # We add all the cells possible neighbours (max 8) togther -> if sum >= 2 < 4 cell stays alive    
+        repeat.7
+            add
+        end
+
+        dup
+
+        # We want to compare the sum with 2
+        push.2
+        eq
+
+        if.true
+            push.1
+            loc_store.123 drop
+        end
+
+        # We want to compare the sum with 3
+        push.3
+        eq
+
+        if.true
+            push.1
+            loc_store.123 drop
+        end
+    
+    # Cell is dead (0) and might come alive   
+    else
+
+        repeat.7
+            add
+        end
+
+        push.3
+        eq
+
+        if.true
+            push.1
+            loc_store.123 drop
+        end
+    end
+end
+# State transition for cell 60
+
+proc.cell_60_transition.188
+   
+   # We assume a cell is dead (0) in the next round until proven otherwise
+   push.0
+   loc_store.124 drop
+    
+   # We load all the cell's neighbours to check their status
+   loc_load.51
+   loc_load.52
+   loc_load.53
+   loc_load.59
+   loc_load.61
+
+   # We load the cell itself to check its status
+   loc_load.60
+
+   # Cell is alice (1) and might stay alive 
+
+    if.true
+        # We add all the cells possible neighbours (max 8) togther -> if sum >= 2 < 4 cell stays alive    
+        repeat.7
+            add
+        end
+
+        dup
+
+        # We want to compare the sum with 2
+        push.2
+        eq
+
+        if.true
+            push.1
+            loc_store.124 drop
+        end
+
+        # We want to compare the sum with 3
+        push.3
+        eq
+
+        if.true
+            push.1
+            loc_store.124 drop
+        end
+    
+    # Cell is dead (0) and might come alive   
+    else
+
+        repeat.7
+            add
+        end
+
+        push.3
+        eq
+
+        if.true
+            push.1
+            loc_store.124 drop
+        end
+    end
+end
+# State transition for cell 61
+
+proc.cell_61_transition.189
+   
+   # We assume a cell is dead (0) in the next round until proven otherwise
+   push.0
+   loc_store.125 drop
+    
+   # We load all the cell's neighbours to check their status
+   loc_load.52
+   loc_load.53
+   loc_load.54
+   loc_load.60
+   loc_load.62
+
+   # We load the cell itself to check its status
+   loc_load.61
+
+   # Cell is alice (1) and might stay alive 
+
+    if.true
+        # We add all the cells possible neighbours (max 8) togther -> if sum >= 2 < 4 cell stays alive    
+        repeat.7
+            add
+        end
+
+        dup
+
+        # We want to compare the sum with 2
+        push.2
+        eq
+
+        if.true
+            push.1
+            loc_store.125 drop
+        end
+
+        # We want to compare the sum with 3
+        push.3
+        eq
+
+        if.true
+            push.1
+            loc_store.125 drop
+        end
+    
+    # Cell is dead (0) and might come alive   
+    else
+
+        repeat.7
+            add
+        end
+
+        push.3
+        eq
+
+        if.true
+            push.1
+            loc_store.125 drop
+        end
+    end
+end
+# State transition for cell 62
+
+proc.cell_62_transition.190
+   
+   # We assume a cell is dead (0) in the next round until proven otherwise
+   push.0
+   loc_store.126 drop
+    
+   # We load all the cell's neighbours to check their status
+   loc_load.53
+   loc_load.54
+   loc_load.55
+   loc_load.61
+   loc_load.63
+
+   # We load the cell itself to check its status
+   loc_load.62
+
+   # Cell is alice (1) and might stay alive 
+
+    if.true
+        # We add all the cells possible neighbours (max 8) togther -> if sum >= 2 < 4 cell stays alive    
+        repeat.7
+            add
+        end
+
+        dup
+
+        # We want to compare the sum with 2
+        push.2
+        eq
+
+        if.true
+            push.1
+            loc_store.126 drop
+        end
+
+        # We want to compare the sum with 3
+        push.3
+        eq
+
+        if.true
+            push.1
+            loc_store.126 drop
+        end
+    
+    # Cell is dead (0) and might come alive   
+    else
+
+        repeat.7
+            add
+        end
+
+        push.3
+        eq
+
+        if.true
+            push.1
+            loc_store.126 drop
+        end
+    end
+end
+# State transition for cell 63
+
+proc.cell_63_transition.191
+   
+   # We assume a cell is dead (0) in the next round until proven otherwise
+   push.0
+   loc_store.127 drop
+    
+   # We load all the cell's neighbours to check their status
+   loc_load.54
+   loc_load.55
+   loc_load.62
+
+   # We load the cell itself to check its status
+   loc_load.63
+
+   # Cell is alice (1) and might stay alive 
+
+    if.true
+        # We add all the cells possible neighbours (max 8) togther -> if sum >= 2 < 4 cell stays alive    
+        repeat.7
+            add
+        end
+
+        dup
+
+        # We want to compare the sum with 2
+        push.2
+        eq
+
+        if.true
+            push.1
+            loc_store.127 drop
+        end
+
+        # We want to compare the sum with 3
+        push.3
+        eq
+
+        if.true
+            push.1
+            loc_store.127 drop
+        end
+    
+    # Cell is dead (0) and might come alive   
+    else
+
+        repeat.7
+            add
+        end
+
+        push.3
+        eq
+
+        if.true
+            push.1
+            loc_store.127 drop
+        end
+    end
+end
+# State transition for cell 64
+
+proc.cell_64_transition.192
+   
+   # We assume a cell is dead (0) in the next round until proven otherwise
+   push.0
+   loc_store.128 drop
+    
+   # We load all the cell's neighbours to check their status
+   loc_load.56
+   loc_load.57
+
+   # We load the cell itself to check its status
+   loc_load.64
+
+   # Cell is alice (1) and might stay alive 
+
+    if.true
+        # We add all the cells possible neighbours (max 8) togther -> if sum >= 2 < 4 cell stays alive    
+        repeat.7
+            add
+        end
+
+        dup
+
+        # We want to compare the sum with 2
+        push.2
+        eq
+
+        if.true
+            push.1
+            loc_store.128 drop
+        end
+
+        # We want to compare the sum with 3
+        push.3
+        eq
+
+        if.true
+            push.1
+            loc_store.128 drop
+        end
+    
+    # Cell is dead (0) and might come alive   
+    else
+
+        repeat.7
+            add
+        end
+
+        push.3
+        eq
+
+        if.true
+            push.1
+            loc_store.128 drop
         end
     end
 end
@@ -1137,6 +4305,54 @@ begin
         exec.cell_13_transition exec.clearstack
         exec.cell_14_transition exec.clearstack
         exec.cell_15_transition exec.clearstack
+        exec.cell_16_transition exec.clearstack
+        exec.cell_17_transition exec.clearstack
+        exec.cell_18_transition exec.clearstack
+        exec.cell_19_transition exec.clearstack
+        exec.cell_20_transition exec.clearstack
+        exec.cell_21_transition exec.clearstack
+        exec.cell_22_transition exec.clearstack
+        exec.cell_23_transition exec.clearstack
+        exec.cell_24_transition exec.clearstack
+        exec.cell_25_transition exec.clearstack
+        exec.cell_26_transition exec.clearstack
+        exec.cell_27_transition exec.clearstack
+        exec.cell_28_transition exec.clearstack
+        exec.cell_29_transition exec.clearstack
+        exec.cell_30_transition exec.clearstack
+        exec.cell_31_transition exec.clearstack
+        exec.cell_32_transition exec.clearstack
+        exec.cell_33_transition exec.clearstack
+        exec.cell_34_transition exec.clearstack
+        exec.cell_35_transition exec.clearstack
+        exec.cell_36_transition exec.clearstack
+        exec.cell_37_transition exec.clearstack
+        exec.cell_38_transition exec.clearstack
+        exec.cell_39_transition exec.clearstack
+        exec.cell_40_transition exec.clearstack
+        exec.cell_41_transition exec.clearstack
+        exec.cell_42_transition exec.clearstack
+        exec.cell_43_transition exec.clearstack
+        exec.cell_44_transition exec.clearstack
+        exec.cell_45_transition exec.clearstack
+        exec.cell_46_transition exec.clearstack
+        exec.cell_47_transition exec.clearstack
+        exec.cell_48_transition exec.clearstack
+        exec.cell_49_transition exec.clearstack
+        exec.cell_50_transition exec.clearstack
+        exec.cell_51_transition exec.clearstack
+        exec.cell_52_transition exec.clearstack
+        exec.cell_53_transition exec.clearstack
+        exec.cell_54_transition exec.clearstack
+        exec.cell_55_transition exec.clearstack
+        exec.cell_56_transition exec.clearstack
+        exec.cell_57_transition exec.clearstack
+        exec.cell_58_transition exec.clearstack
+        exec.cell_59_transition exec.clearstack
+        exec.cell_60_transition exec.clearstack
+        exec.cell_61_transition exec.clearstack
+        exec.cell_62_transition exec.clearstack
+        exec.cell_63_transition exec.clearstack
         exec.loadcellsnplus1
     end
 end
