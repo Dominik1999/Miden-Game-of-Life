@@ -242,7 +242,8 @@ impl eframe::App for TemplateApp {
                 ui.heading("The Game of Life Universe");
             });
 
-            //somehow it doesn't work to center the grid
+            // somehow it doesn't work to center the grid
+            // seems impossible, https://github.com/emilk/egui/discussions/1144
             ui.vertical_centered(|ui| {
                 egui::Grid::new("some_unique_id").show(ui, |ui| {
                     for i in 0..=*(sqrt_number_of_cells) as usize  - 1 { 
@@ -285,7 +286,11 @@ impl eframe::App for TemplateApp {
                 ui.heading("Output");
                 
                 let sqrt_output = (outputs.len() as f64).sqrt() as usize;
-                let mut output_grid: Vec<Vec<bool>> = outputs
+                
+                let mut output_reversed: Vec<u64> = outputs.clone();
+                output_reversed.reverse();
+
+                self.front_end_grid = outputs
                     .chunks(sqrt_output)
                     .map(|s| {
                         let mut inner_vec = Vec::new();
@@ -301,18 +306,17 @@ impl eframe::App for TemplateApp {
                     })
                     .collect();
 
-                ui.vertical_centered(|ui| {
-                    egui::Grid::new("some_unique_id").show(ui, |ui| {
-                        for i in 0..=sqrt_output  - 1 { 
-                            for j in 0..=sqrt_output - 1 { 
-                                ui.add(custom_checkbox(&mut output_grid[i][j]));
-                            }
-                            ui.end_row();
-                        }
-                    });
-                });
+                //ui.vertical_centered(|ui| {
+                //    egui::Grid::new("some_unique_id").show(ui, |ui| {
+                //        for i in 0..=sqrt_output  - 1 { 
+                //            for j in 0..=sqrt_output - 1 { 
+                //                ui.add(custom_checkbox(&mut output_grid[i][j]));
+                //            }
+                //            ui.end_row();
+                //        }
+                //    });
 
-                ui.code(RichText::new(format!("{:?}", outputs)).code());
+                ui.code(RichText::new(format!("{:?}", output_reversed)).code());
                 
             });
         }
