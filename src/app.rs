@@ -1,4 +1,4 @@
-use egui::{RichText, Color32};
+use egui::{RichText, Color32, Ui, Response, Sense, vec2};
 use miden::{Assembler, Program, ProgramInputs, ProofOptions, execute, HashFunction, FieldExtension};
 use math::{fields::f64::BaseElement as Felt, StarkField};
 use crate::create_assembly::create_assembly;
@@ -9,12 +9,12 @@ pub struct InputFile {
     pub stack_init: Vec<String>,
 }
 
-pub fn get_program_inputs(stack_init: &[u64]) -> ProgramInputs {
+fn get_program_inputs(stack_init: &[u64]) -> ProgramInputs {
     ProgramInputs::from_stack_inputs(&stack_init).unwrap()
 }
 
 /// Parse stack_init vector of strings to a vector of u64
-pub fn stack_init(inputs_data: InputFile) -> Vec<u64> {
+fn stack_init(inputs_data: InputFile) -> Vec<u64> {
     inputs_data.stack_init
         .iter()
         .map(|v| v.parse::<u64>().unwrap())
@@ -98,11 +98,31 @@ impl eframe::App for TemplateApp {
             inputs_string_frontend,
             outputs } = self;
 
-        // Examples of how to create different panels and windows.
-        // Pick whichever suits you.
-        // Tip: a good default choice is to just keep the `CentralPanel`.
-        // For inspiration and more examples, go to https://emilk.github.io/egui
-
+            fn custom_checkbox(on: &mut bool) -> impl egui::Widget + '_ {
+                move |ui: &mut egui::Ui| custom_checkbox_ui(ui, 15.0, 15.0, on)
+            }       
+        
+            fn custom_checkbox_ui(ui: &mut Ui, width: f32, height: f32, checked: &mut bool) -> Response {
+                // create a `Rect` with given size
+                let (rect, response) = ui.allocate_exact_size(
+                    vec2(width, height), Sense::click(),
+                );
+            
+                // if the rect is visible
+                if ui.is_rect_visible(rect) {
+                    // paint with a background color, depending on whether we're checked
+                    let color = if *checked { Color32::GREEN } else { Color32::RED };
+                    ui.painter().rect_filled(rect, 0.0, color);
+            
+                    // if we're clicked, update the checked state
+                    if response.clicked() {
+                        *checked = !*checked;
+                    }
+                }
+            
+                response
+            }
+        
         #[cfg(not(target_arch = "wasm32"))] // no File->Quit on web pages!
         egui::TopBottomPanel::top("top_panel").show(ctx, |ui| {
             // The top panel is often a good place for a menu bar:
@@ -121,7 +141,7 @@ impl eframe::App for TemplateApp {
             ui.add_space(100.0);
             
             ui.with_layout(egui::Layout::top_down_justified(egui::Align::Center), |ui| { 
-                ui.add(egui::Slider::new(sqrt_number_of_cells, 1..=100).text("sqrt(cells)"));
+                ui.add(egui::Slider::new(sqrt_number_of_cells, 1..=26).text("sqrt(cells)"));
 
                 ui.add_space(50.0);
     
@@ -200,7 +220,6 @@ impl eframe::App for TemplateApp {
 
             });
 
-
             ui.with_layout(egui::Layout::bottom_up(egui::Align::LEFT), |ui| {
                 ui.horizontal(|ui| {
                     ui.spacing_mut().item_spacing.x = 0.0;
@@ -222,13 +241,13 @@ impl eframe::App for TemplateApp {
             ui.vertical_centered(|ui| {
                 ui.heading("The Game of Life Universe");
             });
-            
+
             //somehow it doesn't work to center the grid
             ui.vertical_centered(|ui| {
                 egui::Grid::new("some_unique_id").show(ui, |ui| {
                     for i in 0..=*(sqrt_number_of_cells) as usize  - 1 { 
                         for j in 0..=*(sqrt_number_of_cells) as usize - 1 { 
-                                ui.checkbox(&mut self.front_end_grid[i][j], "");
+                            ui.add(custom_checkbox(&mut self.front_end_grid[i][j]));       
                         }
                         ui.end_row();
                     }
@@ -282,12 +301,11 @@ impl eframe::App for TemplateApp {
                     })
                     .collect();
 
-
                 ui.vertical_centered(|ui| {
                     egui::Grid::new("some_unique_id").show(ui, |ui| {
                         for i in 0..=sqrt_output  - 1 { 
                             for j in 0..=sqrt_output - 1 { 
-                                    ui.checkbox(&mut output_grid[i][j], "");
+                                ui.add(custom_checkbox(&mut output_grid[i][j]));
                             }
                             ui.end_row();
                         }
@@ -336,5 +354,6 @@ impl eframe::App for TemplateApp {
     }
 
     fn post_rendering(&mut self, _window_size_px: [u32; 2], _frame: &eframe::Frame) {}
+
 }
 
